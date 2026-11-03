@@ -223,9 +223,9 @@ function buildChoices(list){
   choices=list.map(file=>{
     const name=clean(file);
     const key=slug(file.replace(/\.svg$/i,''));
-    const variant=file.match(/_(dark|light)\.svg$/i)?.[1]?.toLowerCase();
+    const variant=file.match(/(?:_| )(dark|light)\.svg$/i)?.[1]?.toLowerCase();
     const label=name.replace(/([a-z0-9])([A-Z])/g,'$1 $2').replace(/[-_]+/g,' ').trim();
-    const baseKey=slug(name.replace(/_(dark|light)$/i,''));
+    const baseKey=slug(name.replace(/(?:_| )(dark|light)$/i,''));
     return{key,baseKey,variant,file,label,hay:slug(label)+' '+slug(file)};
   }).sort((a,b)=>collator.compare(a.label,b.label)||collator.compare(a.file,b.file));
   byKey=new Map(choices.map(x=>[x.key,x]));
