@@ -33,3 +33,5 @@ To contribute an icon here, copy its SVG into `icons/` and follow [CONTRIBUTING.
 ## License
 
 See [`LICENSE`](LICENSE). Individual icons may have separate terms; check the source and license before use.
+https://nikomarinovic.github.io/icon-vault/?icons=word%2Cexcel%2Cpowerpoint%2Coutlook%2Conenote%2Csharepoint%2Conedrive&layout=single&theme=all&size=64&gap=16&align=left
+
