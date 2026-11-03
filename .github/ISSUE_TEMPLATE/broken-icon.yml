@@ -1,0 +1,17 @@
+name: Report a broken icon
+description: Report an icon file that does not open or display correctly.
+title: "[Broken icon]: "
+labels: [bug]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: Icon file path
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What happens when you open it?
+    validations:
+      required: true

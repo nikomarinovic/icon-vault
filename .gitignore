@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+optimized-icons/
+metadata/icons-draft.json
+.DS_Store

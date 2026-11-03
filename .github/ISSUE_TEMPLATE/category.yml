@@ -1,0 +1,17 @@
+name: Request a category
+description: Suggest a category for organizing icons.
+title: "[Category]: "
+labels: [category, enhancement]
+body:
+  - type: input
+    id: category
+    attributes:
+      label: Category name
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Why is it useful? Give examples.
+    validations:
+      required: true

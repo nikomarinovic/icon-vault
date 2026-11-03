@@ -1,0 +1,27 @@
+name: Submit an icon
+description: Suggest an icon with source and licensing details.
+title: "[Icon]: "
+labels: [icon-submission]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Icon name
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Original source URL
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License and license URL
+    validations:
+      required: true
+  - type: textarea
+    id: attribution
+    attributes:
+      label: Required attribution

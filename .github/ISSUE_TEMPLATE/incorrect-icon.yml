@@ -1,0 +1,17 @@
+name: Report an incorrect icon
+description: Report inaccurate artwork or information.
+title: "[Correction]: "
+labels: [bug]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: Icon file path
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: What is incorrect?
+    validations:
+      required: true

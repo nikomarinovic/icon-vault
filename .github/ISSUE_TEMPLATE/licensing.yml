@@ -1,0 +1,17 @@
+name: Report a licensing issue
+description: Flag missing or incorrect icon license information.
+title: "[Licensing]: "
+labels: [licensing]
+body:
+  - type: input
+    id: path
+    attributes:
+      label: Icon file path
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Licensing concern and supporting source
+    validations:
+      required: true
