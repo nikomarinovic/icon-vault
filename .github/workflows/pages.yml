@@ -1,0 +1,58 @@
+name: Deploy gallery to GitHub Pages
+
+# Rebuilds the icon index (icons.json) and publishes the site whenever
+# icons or the page change on the default branch. Nothing is committed back
+# to the repo, so this works with branch rulesets that require pull requests.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "icons/**"
+      - "index.html"
+      - "assets/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Build site and icon index
+        run: |
+          mkdir -p _site
+          cp index.html _site/
+          if [ -d assets ]; then cp -r assets _site/assets; fi
+          find icons -maxdepth 1 -type f -name '*.svg' -printf '%f\n' \
+            | LC_ALL=C sort \
+            | jq -R -s -c 'split("\n") | map(select(length > 0))' > _site/icons.json
+          COUNT=$(jq length _site/icons.json)
+          echo "Indexed $COUNT icons"
+          test "$COUNT" -gt 0
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

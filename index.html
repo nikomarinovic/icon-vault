@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#eceef4"><meta name="description" content="Pick SVG icons and build a shareable IconVault gallery link."><title>IconVault — Gallery Builder</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:wght@400..700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --ink:#15171e;--ink-2:#454b5e;--ink-3:#626a80;
+  --canvas:#eceef4;--paper:#fff;--line:#d8dce8;--line-2:#e6e9f1;
+  --cobalt:#2a47f5;--cobalt-ink:#1b32c4;--cobalt-soft:#e3e7ff;
+  --night:#171a23;--night-line:#2b3040;
+  --display:"Bricolage Grotesque","Avenir Next",ui-sans-serif,system-ui,sans-serif;
+  --body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --stage-bg:#fff;--stage-dot:#d9dded;--stage-text:#626a80;
+  --tile:#fff;--tile-line:#e1e4ee;--tile-text:#454b5e;
+}
+body[data-bg=dark]{--stage-bg:#171a23;--stage-dot:#2c3347;--stage-text:#9aa3ba;--tile:#171a23;--tile-line:#2b3040;--tile-text:#c9cfdf}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:var(--canvas);color:var(--ink);font:15px/1.5 var(--body);-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+button,input{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
+.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+
+/* header + hero */
+.top{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:700 19px/1 var(--display);letter-spacing:-.02em}
+.brand img{width:32px;height:32px}
+.ghlink{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink-2);text-decoration:none;font-size:14px;font-weight:500;transition:border-color .15s,color .15s}
+.ghlink:hover{border-color:var(--cobalt);color:var(--cobalt-ink)}
+.hero{padding:30px 0 30px}
+h1{margin:0;max-width:13ch;font:700 clamp(42px,7.4vw,80px)/.98 var(--display);letter-spacing:-.04em;text-wrap:balance}
+.hero p{margin:16px 0 0;max-width:46ch;color:var(--ink-2);font-size:17px}
+
+/* layout */
+.shell{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:28px;align-items:start;padding-bottom:72px}
+.library{min-width:0}
+
+/* search + tray */
+.lib-head{position:sticky;top:0;z-index:5;padding:10px 0 14px;background:linear-gradient(var(--canvas) 78%,transparent)}
+.searchbox{position:relative}
+.search-ico{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--ink-3);pointer-events:none}
+#search{width:100%;height:52px;padding:0 16px 0 46px;border:1px solid var(--line);border-radius:14px;outline:0;background:var(--paper);font-size:16px;box-shadow:0 1px 2px rgba(20,30,70,.05)}
+#search::placeholder{color:var(--ink-3)}
+#search:focus{border-color:var(--cobalt);box-shadow:0 0 0 4px var(--cobalt-soft)}
+.quick{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 18px}
+.quick button{height:34px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink-2);font-size:13px;font-weight:500;transition:border-color .15s,background .15s}
+.quick button:hover{border-color:var(--cobalt)}
+.quick button[aria-pressed=true]{border-color:var(--cobalt);background:var(--cobalt-soft);color:var(--cobalt-ink)}
+.tray{margin-bottom:22px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+.tray-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.tray-title{display:flex;align-items:center;gap:8px;margin:0;font-size:14px;font-weight:650}
+.count{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 8px;border-radius:99px;background:var(--cobalt-soft);color:var(--cobalt-ink);font-size:12px;font-weight:700}
+.clear{padding:4px 8px;border:0;border-radius:6px;background:none;color:var(--cobalt-ink);font-size:13px;font-weight:600}
+.clear:hover{background:var(--cobalt-soft)}
+.selected{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.empty{color:var(--ink-3);font-size:14px}
+.chip{display:inline-flex;align-items:center;gap:2px;height:30px;padding:0 4px 0 11px;border-radius:8px;background:var(--cobalt-soft);color:var(--cobalt-ink);font-size:13px;font-weight:500}
+.chip button{display:grid;place-items:center;width:22px;height:22px;border:0;border-radius:6px;background:transparent;color:inherit;font-size:17px;line-height:1}
+.chip button:hover{background:#cdd4ff}
+
+/* icon grid */
+.grid-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px}
+.sectitle{margin:0;font:650 22px/1.2 var(--display);letter-spacing:-.02em}
+#resultcount{color:var(--ink-3);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.option{position:relative;min-width:0;min-height:112px;display:grid;justify-items:center;align-content:center;gap:10px;padding:14px 6px 10px;border:1px solid var(--tile-line);border-radius:12px;background:var(--tile);transition:border-color .15s,box-shadow .15s}
+.option:hover{border-color:var(--cobalt)}
+.option[aria-pressed=true]{border-color:var(--cobalt);box-shadow:inset 0 0 0 1px var(--cobalt)}
+.option img{width:44px;height:44px;object-fit:contain}
+.option>span:last-child{width:100%;overflow:hidden;color:var(--tile-text);font-size:12px;text-overflow:ellipsis;white-space:nowrap;text-align:center}
+.check{position:absolute;top:7px;right:7px;display:grid;place-items:center;width:18px;height:18px;border-radius:50%;background:var(--cobalt);color:#fff;opacity:0;transform:scale(.6);transition:opacity .15s,transform .15s}
+.option[aria-pressed=true] .check{opacity:1;transform:none}
+.sentinel{grid-column:1/-1;height:1px}
+.noresults{grid-column:1/-1;padding:40px 12px;color:var(--ink-2);text-align:center}
+
+/* studio */
+.studio{position:sticky;top:16px;max-height:calc(100dvh - 32px);overflow:auto;overscroll-behavior:contain;padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--paper);box-shadow:0 18px 40px -24px rgba(30,40,100,.35);scrollbar-width:thin}
+.grabber{display:none;width:38px;height:4px;margin:2px auto 10px;border-radius:4px;background:var(--line)}
+.studio-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
+.studio-head h2{margin:0;font:650 24px/1.1 var(--display);letter-spacing:-.025em}
+.sheet-close{display:none}
+.stage-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}
+.stage-count{color:var(--ink-2);font-size:13px;font-weight:600}
+.stage-tools{display:flex;align-items:center;gap:6px}
+.iconbtn{display:grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink-2);transition:border-color .15s,color .15s}
+.iconbtn:hover{border-color:var(--cobalt);color:var(--cobalt-ink)}
+.stage{display:flex;flex-direction:column;justify-content:safe center;min-height:168px;max-height:min(46vh,380px);padding:20px;overflow:auto;border:1px solid var(--line);border-radius:14px;background-color:var(--stage-bg);background-image:radial-gradient(var(--stage-dot) 1px,transparent 1.3px);background-size:16px 16px;scrollbar-width:thin;scrollbar-color:#aab3d0 transparent}
+body[data-bg=dark] .stage{border-color:var(--night-line)}
+.previewgrid{display:flex;flex-direction:column;gap:var(--gap,16px);width:100%}
+.preview-row{display:flex;flex-wrap:nowrap;justify-content:var(--align,flex-start);align-items:center;gap:var(--gap,16px);width:100%;overflow-x:auto;overflow-y:hidden;padding-bottom:3px;scrollbar-width:thin;scrollbar-color:#aab3d0 transparent}
+.previewcard{display:grid;place-items:center;flex:0 0 var(--size,64px);width:var(--size,64px);height:var(--size,64px)}
+.previewcard img{width:var(--size,64px);height:var(--size,64px);object-fit:contain}
+.emptypreview{padding:8px;color:var(--stage-text);font-size:14px;text-align:center}
+.fitbox{display:flex;flex:none;justify-content:var(--outer,flex-start);width:100%}
+.fitinner{flex:none;width:100%}
+.fitbox:not(.fit){width:max-content;min-width:100%}
+.fitbox:not(.fit) .fitinner{width:max-content;min-width:100%}
+.fitbox:not(.fit) .previewgrid{width:max-content;min-width:100%}
+.fitbox:not(.fit) .preview-row{overflow:visible;padding-bottom:0}
+.fit .fitinner{overflow:hidden}
+.fit .previewgrid{width:max-content;transform-origin:0 0}
+.fit .preview-row{overflow:visible;padding-bottom:0}
+.lightbox{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:24px;background:rgba(15,18,32,.62)}
+.lb-card{display:flex;flex-direction:column;width:min(1280px,100%);height:min(88dvh,860px);padding:18px 20px 16px;border-radius:20px;background:var(--paper);box-shadow:0 30px 80px -20px rgba(10,14,40,.6)}
+.lb-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.lb-head h2{margin:0 auto 0 0;font:650 22px/1.1 var(--display);letter-spacing:-.02em}
+.lb-count{color:var(--ink-2);font-size:13px;font-weight:600}
+.lb-tools{display:flex;align-items:center;gap:8px}
+.lb-close{height:36px}
+.lb-stage{flex:1;min-height:0;max-height:none;padding:28px}
+.caption{margin:9px 2px 0;color:var(--ink-3);font:12px/1.5 var(--mono)}
+.share{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-top:16px}
+#share{min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;background:var(--canvas);color:var(--ink-2);font:12px var(--mono)}
+#share:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-soft)}
+.btn{height:44px;padding:0 18px;border:0;border-radius:10px;font-size:14px;font-weight:650;white-space:nowrap;transition:background .15s}
+.btn-primary{background:var(--cobalt);color:#fff}
+.btn-primary:hover{background:var(--cobalt-ink)}
+.btn-quiet{background:var(--canvas);color:var(--ink)}
+.btn-quiet:hover{background:#e0e3ee}
+.hint{margin:8px 0 0;color:var(--ink-3);font-size:13px}
+.settings{display:grid;gap:18px;margin-top:20px;padding-top:20px;border-top:1px solid var(--line-2)}
+.lab{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:7px;font-size:13px;font-weight:650}
+.lab output{color:var(--ink-3);font:500 12px var(--mono)}
+.field-hint{margin:7px 0 0;color:var(--ink-3);font-size:13px}
+.seg{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;gap:3px;padding:3px;border-radius:11px;background:var(--canvas)}
+.seg button{height:36px;padding:0 8px;border:0;border-radius:8px;background:transparent;color:var(--ink-2);font-size:13px;font-weight:600;white-space:nowrap}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-pressed=true]{background:var(--paper);color:var(--cobalt-ink);box-shadow:0 1px 3px rgba(20,30,70,.18)}
+.seg.small button{height:28px;padding:0 12px;font-size:12px}
+#columns{width:100%;height:42px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;background:var(--paper)}
+#columns:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-soft)}
+#spacing{width:100%;accent-color:var(--cobalt)}
+
+/* mobile dock + sheet */
+.dock{display:none}
+.scrim{position:fixed;inset:0;z-index:40;background:rgba(15,18,32,.5)}
+footer{padding:0 0 28px;color:var(--ink-3);text-align:center;font-size:13px}
+footer a{color:var(--cobalt-ink);text-decoration:none;font-weight:600}
+footer a:hover{text-decoration:underline}
+
+@media(max-width:960px){
+  .shell{grid-template-columns:1fr;padding-bottom:120px}
+  .dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--paper)}
+  .strip{display:flex;flex:1;align-items:center;gap:6px;min-width:0;height:44px;padding:0 10px;overflow:hidden;border:1px solid var(--tile-line);border-radius:10px;background:var(--tile);color:var(--tile-text);font-size:13px;white-space:nowrap}
+  .strip img{flex:0 0 auto;width:26px;height:26px;object-fit:contain}
+  .strip span{flex:0 0 auto;font-weight:600}
+  .studio{position:fixed;top:auto;left:0;right:0;bottom:0;z-index:50;max-height:88dvh;padding:10px 18px calc(22px + env(safe-area-inset-bottom));border:0;border-radius:22px 22px 0 0;box-shadow:0 -20px 50px -20px rgba(15,20,50,.5);visibility:hidden;transform:translateY(102%);transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility 0s .28s}
+  .studio.open{visibility:visible;transform:none;transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility 0s}
+  .grabber{display:block}
+  .sheet-close{display:inline-flex;align-items:center;height:36px}
+}
+@media(max-width:560px){
+  .wrap{width:calc(100% - 28px)}
+  .top{height:60px}
+  .hero{padding:18px 0 20px}
+  .hero p{font-size:16px}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
+  .option{min-height:104px}
+  .btn{padding:0 14px}
+  .lightbox{padding:0}
+  .lb-card{width:100%;height:100dvh;border-radius:0;padding:14px 14px 12px}
+  .lb-stage{padding:18px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{transition:none!important;scroll-behavior:auto!important}}
+</style></head>
+<body data-bg="light">
+<header class="top wrap"><a class="brand" href="https://github.com/nikomarinovic/icon-vault"><img src="assets/icon-vault.svg" alt=""><span>IconVault</span></a><a class="ghlink" href="https://github.com/nikomarinovic/icon-vault/tree/main/icons">Browse all icons on GitHub</a></header>
+<section class="hero wrap"><h1>Build your icon gallery.</h1><p>Pick from <span id="filecount">805</span> open-source SVGs, set the layout, and share one link.</p></section>
+<main class="shell wrap">
+<section class="library" aria-label="Icon library">
+<div class="lib-head"><div class="searchbox"><svg class="search-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search" type="search" placeholder="Search icons by name" autocomplete="off" aria-label="Search icons"></div></div>
+<div class="quick" id="quick" role="group" aria-label="Popular icons"></div>
+<div class="tray"><div class="tray-head"><h2 class="tray-title">Your selection <span id="selected-count" class="count">0</span></h2><button id="clear" class="clear" type="button" hidden>Clear selection</button></div><div id="selected" class="selected"></div></div>
+<div class="grid-head"><h2 class="sectitle">Icon library</h2><span id="resultcount"></span></div>
+<div id="grid" class="grid"></div>
+</section>
+<aside id="studio" class="studio" aria-labelledby="studio-title">
+<div class="grabber" aria-hidden="true"></div>
+<div class="studio-head"><h2 id="studio-title">Your gallery</h2><button id="sheet-close" class="btn btn-quiet sheet-close" type="button">Done</button></div>
+<div class="stage-bar"><span id="total" class="stage-count">0 icons</span><div class="stage-tools"><div class="seg small" data-key="view" role="group" aria-label="Preview size"><button type="button" data-value="actual">Actual</button><button type="button" data-value="fit">Fit</button></div><button type="button" class="iconbtn bg-toggle"></button><button id="expand" type="button" class="iconbtn" title="Open large preview" aria-label="Open large preview"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button></div></div>
+<div class="stage"><div id="stage-box" class="fitbox"><div id="stage-inner" class="fitinner"><div id="preview" class="previewgrid" aria-live="polite"></div></div></div></div>
+<p id="meta" class="caption"></p>
+<div class="share"><input id="share" aria-label="Shareable gallery link" readonly><button class="btn btn-primary copy-btn" type="button">Copy link</button></div>
+<p id="hint" class="hint" aria-live="polite">The link saves your selected icons and display settings.</p>
+<div class="settings">
+<div class="field"><span class="lab" id="lab-layout">Gallery layout</span><div class="seg" data-key="layout" role="group" aria-labelledby="lab-layout"><button type="button" data-value="single">One row</button><button type="button" data-value="custom">Custom grid</button></div><p id="layout-description" class="field-hint"></p></div>
+<div class="field" id="custom-row-setting" hidden><label class="lab" for="columns">Icons per row</label><input id="columns" type="number" min="1" max="80" step="1" value="5" inputmode="numeric"></div>
+<div class="field"><span class="lab" id="lab-theme">Icon style</span><div class="seg" data-key="theme" role="group" aria-labelledby="lab-theme"><button type="button" data-value="all">All</button><button type="button" data-value="light">Light</button><button type="button" data-value="dark">Dark</button></div></div>
+<div class="field"><span class="lab" id="lab-size">Icon size</span><div class="seg" data-key="size" role="group" aria-labelledby="lab-size"><button type="button" data-value="32">Small</button><button type="button" data-value="48">Medium</button><button type="button" data-value="64">Large</button></div></div>
+<div class="field"><label class="lab" for="spacing">Space between icons <output id="spacing-value" for="spacing">16 px</output></label><input id="spacing" type="range" min="0" max="48" step="2" value="16"></div>
+<div class="field"><span class="lab" id="lab-align">Align icons</span><div class="seg" data-key="align" role="group" aria-labelledby="lab-align"><button type="button" data-value="left">Left</button><button type="button" data-value="center">Center</button><button type="button" data-value="right">Right</button></div></div>
+</div>
+</aside>
+</main>
+<div id="scrim" class="scrim" hidden></div>
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden><div class="lb-card"><div class="lb-head"><h2 id="lb-title">Gallery preview</h2><span id="lb-count" class="lb-count"></span><div class="lb-tools"><div class="seg small" data-key="lbview" role="group" aria-label="Preview size"><button type="button" data-value="actual">Actual size</button><button type="button" data-value="fit">Fit all</button></div><button type="button" class="iconbtn bg-toggle"></button><button id="lb-close" type="button" class="btn btn-quiet lb-close">Close</button></div></div><div class="stage lb-stage"><div id="lb-box" class="fitbox"><div id="lb-inner" class="fitinner"><div id="big-preview" class="previewgrid"></div></div></div></div><p id="lb-meta" class="caption"></p></div></div>
+<div class="dock"><div id="strip" class="strip" aria-live="polite"></div><button id="customize" class="btn btn-quiet" type="button" aria-expanded="false" aria-controls="studio">Customize</button><button class="btn btn-primary copy-btn" type="button">Copy link</button></div>
+<footer class="wrap">Made for developers. <a href="https://github.com/nikomarinovic/icon-vault">IconVault</a></footer>
+<script>
+const fallbackIcons=["Ableton.svg", "Ableton_dark.svg", "Activision.svg", "Activision_dark.svg", "ActivityPub.svg", "ActivityPub_dark.svg", "Actix.svg", "Actix_dark.svg", "Adidas.svg", "Adidas_dark.svg", "Adonis.svg", "AfterEffects.svg", "AiScript.svg", "AiScript_dark.svg", "AirPods_blue.svg", "AirPods_green.svg", "AirPods_pink.svg", "AirPods_purple.svg", "Airtable.svg", "Airtable_dark.svg", "Akka.svg", "Akka_dark.svg", "AliExpress.svg", "AliExpress_dark.svg", "AlpineJS.svg", "AlpineJS_dark.svg", "Amazon.svg", "AmazonChime.svg", "AmazonChime_dark.svg", "AmazonConnect-Inverted_Light.svg", "AmazonConnect-Inverted_dark.svg", "AmazonConnect.svg", "AmazonConnect_dark.svg", "Amazon_dark.svg", "Anaconda.svg", "Anaconda_dark.svg", "AndroidStudio.svg", "AndroidStudio_dark.svg", "Angular-Wordmark.svg", "Angular-Wordmark_dark.svg", "Angular.svg", "Angular_dark.svg", "Ansible.svg", "Apollo.svg", "Appbaseio-Wordmark.svg", "Appbaseio-Wordmark_dark.svg", "Appbaseio.svg", "Appbaseio_dark.svg", "ApplePay.svg", "ApplePay_dark.svg", "AppleTV.svg", "AppleTV_gray.svg", "AppleTV_red.svg", "Apple_1977.svg", "Apple_1977_dark.svg", "Appwrite.svg", "Armory.svg", "Armory_dark.svg", "Asana.svg", "Astro.svg", "Atom.svg", "Audition.svg", "AutoCAD.svg", "AutoCAD_dark.svg", "AwesomeLinks.svg", "Azul.svg", "Azure-Logo.svg", "Azure-Logo_dark.svg", "Azure.svg", "Azure_dark.svg", "BBS.svg", "BBS_dark.svg", "BMW-MSeries.svg", "BMW-MSeries_dark.svg", "BMW-Monocolor.svg", "BMW-Monocolor_dark.svg", "BMW.svg", "BMW_dark.svg", "BOSS.svg", "BOSS_dark.svg", "BSD.svg", "BSD_dark.svg", "Babel.svg", "Baseball.svg", "Baseball_dark.svg", "Basketball.svg", "Basketball_dark.svg", "Bevy.svg", "Bevy_dark.svg", "BitBucket.svg", "BitBucket_dark.svg", "Bitcoin.svg", "Bitcoin_dark.svg", "Bitfinex.svg", "Bitly.svg", "Bitly_dark.svg", "Blender.svg", "Blender_dark.svg", "Booking.svg", "Booking_dark.svg", "Bootstrap.svg", "Buffer.svg", "Buffer_dark.svg", "Bun.svg", "Bun_dark.svg", "C.svg", "CLion.svg", "CLion_dark.svg", "CMake.svg", "CMake_dark.svg", "CPP.svg", "CS.svg", "CSS.svg", "CakePHP.svg", "CakePHP_dark.svg", "Cardano.svg", "Cardano_dark.svg", "Cassandra.svg", "Cassandra_dark.svg", "Chanel.svg", "Chanel_dark.svg", "ChatGPT.svg", "ChatGPT_dark.svg", "Cigarette.svg", "Cigarette_light.svg", "ClaudeAI.svg", "ClaudeAI_dark.svg", "Clojure.svg", "Clojure_dark.svg", "CocaCola.svg", "CocaCola_dark.svg", "Coconut.svg", "Coconut_dark.svg", "CodeIgniter.svg", "CodeIgniter_orange.svg", "CodePen.svg", "CodePen_dark.svg", "CoffeeBean.svg", "CoffeeBean_dark.svg", "CoffeeBean_green.svg", "CoffeeBean_light.svg", "Crystal.svg", "Crystal_dark.svg", "Cypress.svg", "Cypress_dark.svg", "D3.svg", "D3_dark.svg", "DELL.svg", "DELL_blue.svg", "DENO.svg", "DENO_dark.svg", "Dart.svg", "Dart_dark.svg", "Debian.svg", "Debian_dark.svg", "DevTo.svg", "DevTo_dark.svg", "Dice.svg", "Dice_dark.svg", "DiscordBots.svg", "DiscordJS.svg", "DiscordJS_dark.svg", "Django.svg", "DonPerignon.svg", "DonPerignon_white.svg", "DotNet.svg", "DynamoDB.svg", "DynamoDB_dark.svg", "Eclipse.svg", "Eclipse_dark.svg", "Elasticsearch.svg", "Elasticsearch_dark.svg", "Electron.svg", "Elixir.svg", "Elixir_dark.svg", "Elysia.svg", "Elysia_dark.svg", "Emacs.svg", "Epicgames.svg", "Epicgames_dark.svg", "Etherium.svg", "Etherium_dark.svg", "Excel.svg", "Excel_dark.svg", "ExpressJS.svg", "ExpressJS_dark.svg", "FILA.svg", "Facebook.svg", "Falcon.svg", "Falcon_dark.svg", "FastAPI.svg", "Fediverse.svg", "Fediverse_dark.svg", "Ferrari-Horse_Red.svg", "Ferrari-Horse_Yellow.svg", "Ferrari-Wordmark_Black.svg", "Ferrari-Wordmark_Red.svg", "Ferrari-Wordmark_Yellow.svg", "Ferrari.svg", "Ferrari_dark.svg", "Flask.svg", "Flask_dark.svg", "FlyEmirates.svg", "FlyEmirates_blue.svg", "FlyEmirates_dark.svg", "Formula1.svg", "Formula1_dark.svg", "Forth.svg", "Fortran.svg", "GO.svg", "GTA.svg", "GTA_black.svg", "GTA_white.svg", "GameMakerStudio.svg", "Gatsby.svg", "Gherkin.svg", "Gherkin_dark.svg", "GithubActions.svg", "GithubActions_dark.svg", "Godot.svg", "Godot_dark.svg", "Google-Wordmark.svg", "Google-Wordmark_dark.svg", "GoogleAssistant.svg", "GoogleAssistant_dark.svg", "GoogleCalendar.svg", "GoogleCalendar_dark.svg", "GoogleChrome.svg", "GoogleChrome_dark.svg", "GoogleDocs.svg", "GoogleDocs_dark.svg", "GoogleDrive.svg", "GoogleDrive_dark.svg", "GoogleFitness.svg", "GoogleFitness_dark.svg", "GoogleHome.svg", "GoogleHome_dark.svg", "GoogleMaps.svg", "GoogleMaps_dark.svg", "GoogleMeet.svg", "GoogleMeet_dark.svg", "GoogleOne.svg", "GoogleOne_dark.svg", "GooglePay.svg", "GooglePhotos.svg", "GooglePhotos_dark.svg", "GooglePlay.svg", "GooglePlay_dark.svg", "GooglePodcast.svg", "GooglePodcast_dark.svg", "GoogleShopping.svg", "GoogleShopping_dark.svg", "Gradle.svg", "Gradle_dark.svg", "Grafana.svg", "Grafana_dark.svg", "GraphQL.svg", "GraphQL_dark.svg", "Grunt.svg", "Grunt_dark.svg", "Guinness.svg", "Guinness_dark.svg", "Gulp.svg", "HDMI-Gray.svg", "HDMI-Gray_dark.svg", "HDMI-Red.svg", "HDMI-Red_dark.svg", "HDMI.svg", "HDMI_dark.svg", "HM.svg", "HM_black.svg", "HM_dark.svg", "HM_white.svg", "HTML.svg", "Haskell.svg", "Haskell_dark.svg", "Haxe.svg", "HaxeFlixel.svg", "HaxeFlixel_dark.svg", "Haxe_dark.svg", "Heineken-Default_white.svg", "Heineken-Short_green.svg", "Heineken-Short_white.svg", "Heineken-Text_green.svg", "Heineken-Text_white.svg", "Heineken.svg", "Heineken_Wordmark.svg", "Heroku.svg", "Hibernate.svg", "Hibernate_dark.svg", "Htmx.svg", "Htmx_dark.svg", "IBM.svg", "IBM_dark.svg", "IPFS.svg", "IPFS_dark.svg", "Idea.svg", "Idea_dark.svg", "Illustrator.svg", "Instagram.svg", "JBL.svg", "JBL_black.svg", "JBL_white.svg", "JQuery.svg", "JavaScript.svg", "Jenkins.svg", "Jenkins_dark.svg", "Jest.svg", "JohnnieWalker.svg", "JohnnieWalker_black.svg", "JohnnieWalker_brown.svg", "JohnnieWalker_red.svg", "Jordan.svg", "Jordan_black.svg", "Jordan_blue.svg", "Jordan_green.svg", "Jordan_pink.svg", "Jordan_red.svg", "Jordan_yellow.svg", "Julia.svg", "Julia_dark.svg", "KFC.svg", "Kafka.svg", "Kebab.svg", "Kebab_light.svg", "Kotlin.svg", "Kotlin_dark.svg", "Ktor.svg", "Ktor_dark.svg", "Kubernetes.svg", "LG.svg", "LaTeX.svg", "LaTeX_dark.svg", "Laravel.svg", "Laravel_dark.svg", "Less.svg", "Less_dark.svg", "Levis.svg", "Levis_dark.svg", "LinuxMint.svg", "LinuxMint_dark.svg", "Lit.svg", "Lit_dark.svg", "Lua.svg", "Lua_dark.svg", "MSSQL.svg", "MSSQL_dark.svg", "Markdown.svg", "Markdown_dark.svg", "Marlboro.svg", "Marlboro_blue.svg", "Marlboro_gold.svg", "MasterCard-Wordmark.svg", "MasterCard.svg", "MasterCard_dark.svg", "Mastodon.svg", "Mastodon_dark.svg", "MaterialUI.svg", "MaterialUI_dark.svg", "Matlab.svg", "Matlab_dark.svg", "Maven.svg", "Maven_dark.svg", "Mcdonals.svg", "Mcdonals_dark.svg", "Mclaren-Wordmark.svg", "Mclaren-Wordmark_dark.svg", "Mclaren.svg", "Mclaren_dark.svg", "Mercedes-AMG.svg", "Mercedes-AMG_Petronas.svg", "Mercedes-AMG_dark.svg", "Mercedes.svg", "Mercedes_Petronas.svg", "Mercedes_dark.svg", "Michelin.svg", "Misskey.svg", "Misskey_dark.svg", "Mitsubishi.svg", "MongoDB.svg", "MongoDB_light.svg", "MySQL.svg", "MySQL_dark.svg", "NASA.svg", "NASA_dark.svg", "NVIDIA.svg", "NVIDIA_dark.svg", "NeoVim.svg", "NeoVim_dark.svg", "NestJS.svg", "NestJS_dark.svg", "Netflix-Wordmark.svg", "Netflix-Wordmark_dark.svg", "Netflix.svg", "Netflix_dark.svg", "NextJS.svg", "NextJS_dark.svg", "Nginx.svg", "Nike.svg", "Nike_dark.svg", "Nim.svg", "Nim_dark.svg", "Nitendo.svg", "Nitendo_dark.svg", "Nix.svg", "Nix_dark.svg", "NodeJS.svg", "NodeJS_dark.svg", "Nokia.svg", "Nokia_dark.svg", "NorthFace.svg", "NorthFace_dark.svg", "NuxtJS.svg", "NuxtJS_dark.svg", "OCaml.svg", "Obsidian.svg", "Obsidian_dark.svg", "Octave.svg", "Octave_dark.svg", "OneNote.svg", "OneNote_dark.svg", "Opa.svg", "Opa_dark.svg", "OpenCV.svg", "OpenCV_dark.svg", "OpenShift.svg", "OpenStack.svg", "OpenStack_dark.svg", "Oracle.svg", "Oracle_dark.svg", "Outlook.svg", "Outlook_dark.svg", "PayPal-Wordmark.svg", "PayPal-Wordmark_dark.svg", "PayPal.svg", "PayPal_dark.svg", "Perl.svg", "Petronas.svg", "Phalcon.svg", "Phalcon_dark.svg", "Photoshop.svg", "PhpStorm.svg", "PhpStorm_dark.svg", "Pinia.svg", "Pinia_dark.svg", "Pinterest.svg", "Pinterest_dark.svg", "Pkl.svg", "Pkl_dark.svg", "PlanetScale.svg", "PlanetScale_dark.svg", "Playstation.svg", "Playstation_dark.svg", "Playstation_light.svg", "Pnpm.svg", "Pnpm_dark.svg", "PostgreSQL.svg", "PostgreSQL_dark.svg", "Postman.svg", "Powerpoint.svg", "Powerpoint_dark.svg", "Powerstrip.svg", "Powerstrip_dark.svg", "Premiere.svg", "Prisma.svg", "Processing.svg", "Processing_dark.svg", "Prometheus.svg", "PyCharm.svg", "PyCharm_dark.svg", "PyTorch.svg", "PyTorch_dark.svg", "QT.svg", "QT_dark.svg", "R.svg", "ROS.svg", "ROS_dark.svg", "R_dark.svg", "RabbitMQ.svg", "RabbitMQ_dark.svg", "Rails.svg", "RaspberryPi.svg", "RaspberryPi_dark.svg", "RayBan.svg", "RayBan_red.svg", "RayBan_white.svg", "Razer.svg", "ReactiveX.svg", "ReactiveX_dark.svg", "RedBull.svg", "RedBull_dark.svg", "Redis.svg", "Redis_dark.svg", "Redux.svg", "Regex.svg", "Regex_dark.svg", "Remix.svg", "Remix_dark.svg", "Replit.svg", "Replit_dark.svg", "Rider.svg", "Rider_dark.svg", "RobloxStudio.svg", "Rocket.svg", "RollupJS.svg", "RollupJS_dark.svg", "Ruby.svg", "Rugby.svg", "Rugby_dark.svg", "Rust.svg", "Ryzen.svg", "SQLite.svg", "SVG.svg", "SVG_dark.svg", "Salesforce.svg", "Salesforce_dark.svg", "Samsung-Classic.svg", "Samsung.svg", "Samsung_dark.svg", "Scala.svg", "Scala_dark.svg", "Sentry.svg", "Sequelize.svg", "Sequelize_dark.svg", "SharePoint.svg", "SharePoint_dark.svg", "Shell.svg", "Shopify.svg", "Shopify_dark.svg", "Sketchup.svg", "Sketchup_dark.svg", "Slack.svg", "Slack_dark.svg", "SolidJS.svg", "SolidJS_dark.svg", "Solidity.svg", "Sony.svg", "Sony_light.svg", "SpaceX-Logo_Light.svg", "SpaceX.svg", "SpaceX_dark.svg", "Spartan.svg", "Spartan_dark.svg", "SpeakerDeck-Default_Light.svg", "SpeakerDeck.svg", "SpeakerDeck_dark.svg", "Spring.svg", "Spring_dark.svg", "StackOverFlow.svg", "StackOverFlow_dark.svg", "Starbucks.svg", "Steam.svg", "Steam_dark.svg", "StellaArtios.svg", "StopSign.svg", "StopSign_dark.svg", "Sublime.svg", "Sublime_dark.svg", "Supreme.svg", "Supreme_dark.svg", "Sushi1.svg", "Sushi10.svg", "Sushi10_dark.svg", "Sushi11.svg", "Sushi11_dark.svg", "Sushi12.svg", "Sushi13.svg", "Sushi13_dark.svg", "Sushi14.svg", "Sushi14_dark.svg", "Sushi15.svg", "Sushi2.svg", "Sushi3.svg", "Sushi4.svg", "Sushi5.svg", "Sushi6.svg", "Sushi7.svg", "Sushi8.svg", "Sushi9.svg", "SushiStack1.svg", "SushiStack1_dark.svg", "SushiStack2.svg", "SushiStack2_dark.svg", "Svelte.svg", "TOR-Wordmark.svg", "TOR.svg", "TOR_dark.svg", "Tauri.svg", "Tauri_dark.svg", "Teams.svg", "Teams_dark.svg", "Telegram.svg", "Telegram_dark.svg", "TensorFlow.svg", "TensorFlow_dark.svg", "Terraform.svg", "Terraform_dark.svg", "Tesla.svg", "Tesla_dark.svg", "Tesla_red.svg", "ThreeJS.svg", "ThreeJS_dark.svg", "TikTok.svg", "TikTok_darkl.svg", "Tripadvisor.svg", "Tripadvisor_dark.svg", "Twitch.svg", "Twitch_dark.svg", "TypeScript.svg", "USB-Green.svg", "USB-Green_dark.svg", "USB.svg", "USBA.svg", "USBA_dark.svg", "USB_dark.svg", "Uber.svg", "Uber_dark.svg", "UnderArmour.svg", "UnderArmour_dark.svg", "Unity.svg", "Unity_dark.svg", "UnrealEngine.svg", "UnrealEngine_dark.svg", "V.svg", "VIM.svg", "VIM_dark.svg", "VSCodium.svg", "VSCodium_dark.svg", "VScode.svg", "VScode_dark.svg", "V_dark.svg", "Vala.svg", "Vercel.svg", "Vercel_dark.svg", "Verilog.svg", "Visa.svg", "Visa_dark.svg", "VisualStudio.svg", "VisualStudio_dark.svg", "Vite.svg", "Vite_dark.svg", "Vitest.svg", "Vitest_dark.svg", "VueJS.svg", "VueJS_dark.svg", "Vuetify.svg", "Vuetify_dark.svg", "Walmart.svg", "WebAssembly.svg", "WebStorm.svg", "WebStorm_dark.svg", "Webflow.svg", "Webpack.svg", "Webpack_dark.svg", "Whatsapp-Wordmark.svg", "Whatsapp.svg", "Whatsapp_dark.svg", "WindiCSS.svg", "WindiCSS_dark.svg", "Word.svg", "Word_dark.svg", "Wordpress.svg", "Workers.svg", "Workers_dark.svg", "XBOX-ONE_dark.svg", "XBOX-ONE_light.svg", "XBOX-Wordmark_dark.svg", "XBOX-Wordmark_light.svg", "XBOX.svg", "XD.svg", "Xing.svg", "Xing_dark.svg", "Yarn.svg", "Yarn_dark.svg", "Yew.svg", "Yew_dark.svg", "YouTube.svg", "YouTube_dark.svg", "ZARA.svg", "ZARA_dark.svg", "Zig.svg", "Zig_dark.svg", "android-Wordmark.svg", "android-Wordmark_dark.svg", "android.svg", "android_dark.svg", "apple.svg", "apple_dark.svg", "archlinux.svg", "archlinux_dark.svg", "arduino-Default_Light.svg", "arduino.svg", "arduino_dark.svg", "aws.svg", "aws_dark.svg", "backblaze.svg", "bash.svg", "bash_dark.svg", "cisco.svg", "cisco_dark.svg", "cloudflare.svg", "cloudflare_dark.svg", "coffeescript.svg", "coffeescript_dark.svg", "crypto.svg", "cucmber.svg", "cucmber_dark.svg", "database.svg", "database_dark.svg", "decathlon.svg", "discord.svg", "docker.svg", "docker_dark.svg", "dropbox.svg", "dropbox_dark.svg", "drupal.svg", "ebay.svg", "ebay_dark.svg", "figma.svg", "figma_dark.svg", "firebase.svg", "firebase_dark.svg", "flutter.svg", "flutter_dark.svg", "gcp.svg", "gcp_dark.svg", "git.svg", "github.svg", "github_dark.svg", "gitlab.svg", "gitlab_dark.svg", "gmail.svg", "gmail_dark.svg", "gnome.svg", "gnome_dark.svg", "google.svg", "google_dark.svg", "http.svg", "http_dark.svg", "icon.svg", "java.svg", "java_dark.svg", "joystick.svg", "joystick_dark.svg", "json.svg", "json_light.svg", "kali.svg", "kali_dark.svg", "lenovo.svg", "lenovo_dark.svg", "linkedin.svg", "linkedin_dark.svg", "linux.svg", "linux_dark.svg", "lyft.svg", "lyft_dark.svg", "microsoft.svg", "microsoft_dark.svg", "mongoDB_dark.svg", "netlify.svg", "netlify_dark.svg", "notion.svg", "notion_dark.svg", "npm.svg", "npm_dark.svg", "p5js.svg", "pack.svg", "pack_dark.svg", "packer.svg", "packer_dark.svg", "php.svg", "php_dark.svg", "png.svg", "png_dark.svg", "powershell.svg", "powershell_dark.svg", "python.svg", "python_dark.svg", "react.svg", "react_dark.svg", "reddit.svg", "reddit_dark.svg", "redhat.svg", "redhat_dark.svg", "spotify.svg", "spotify_dark.svg", "supabase.svg", "supabase_dark.svg", "swift.svg", "tailwind.svg", "tailwind_dark.svg", "twitter.svg", "ubuntu.svg", "ubuntu_dark.svg", "uc.svg", "uc_dark.svg", "waypoint.svg", "waypoint_dark.svg", "windows.svg", "windows_dark.svg", "xcode.svg", "xcode_dark.svg", "xml.svg", "xml_dark.svg", "Škoda.svg"];
+let iconFiles=fallbackIcons;
+const aliases={vs:'visualstudio',vscode:'vscode',visualstudio:'visualstudio',xcode:'xcode',node:'nodejs','node.js':'nodejs',ts:'typescript',js:'javascript'};
+const raw='https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/';
+const params=new URLSearchParams(location.search);
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const search=$('#search'),grid=$('#grid'),preview=$('#preview'),columns=$('#columns'),spacing=$('#spacing'),studio=$('#studio'),scrim=$('#scrim'),selected=[];
+const state={layout:'single',align:'left',theme:'all',size:'64',bg:'light',view:'actual',lbview:'fit'};
+const tiles=new Map();
+const lightbox=$('#lightbox'),bigPreview=$('#big-preview'),stageBox=$('#stage-box'),stageInner=$('#stage-inner'),lbBox=$('#lb-box'),lbInner=$('#lb-inner');
+const ICON_MOON='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
+const ICON_SUN='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+let lbReturn=null;
+const clampN=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
+const slug=s=>s.toLocaleLowerCase().replace(/[^a-z0-9]/g,'');
+const clean=s=>s.replace(/\.svg$/i,'').replace(/_(dark|light)$/i,'');
+let choices=[],byKey=new Map();
+const collator=new Intl.Collator();
+function buildChoices(list){
+  const groups=new Map();
+  for(const file of list){const k=slug(clean(file));if(!groups.has(k))groups.set(k,[]);groups.get(k).push(file)}
+  choices=[...groups].map(([key,variants])=>{
+    const file=variants.find(f=>!/_(dark|light)\.svg$/i.test(f))||variants[0];
+    const label=clean(file).replace(/([a-z0-9])([A-Z])/g,'$1 $2').replace(/[-_]+/g,' ').trim();
+    return{key,variants,file,label,hay:slug(label)+' '+variants.map(slug).join(' ')};
+  }).sort((a,b)=>collator.compare(a.label,b.label));
+  byKey=new Map(choices.map(x=>[x.key,x]));
+}
+function resolve(name){return byKey.get(aliases[name.toLowerCase()]||slug(name))}
+function themed(item){const suffix=state.theme==='dark'?'_dark.svg':state.theme==='light'?'_light.svg':null;return(suffix&&item.variants.find(f=>f.toLowerCase().endsWith(suffix)))||item.variants.find(f=>!/_(dark|light)\.svg$/i.test(f))||item.file}
+function img(item,lazy){const el=document.createElement('img');el.src=raw+encodeURIComponent(themed(item));el.alt=item.label;if(lazy)el.loading='lazy';el.decoding='async';el.onerror=()=>{el.style.opacity='.25';el.title='Could not load this SVG'};return el}
+
+function syncControls(){
+  for(const seg of $$('.seg'))for(const b of seg.querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.value===state[seg.dataset.key]));
+  $('#custom-row-setting').hidden=state.layout!=='custom';
+  $('#layout-description').textContent=state.layout==='single'?'Keep every selected icon together on one scrollable row.':'Choose how many icons appear before a new row starts.';
+  $('#spacing-value').textContent=spacing.value+' px';
+  document.body.dataset.bg=state.bg;
+  for(const b of $$('.bg-toggle')){const t=state.bg==='light'?'Switch to dark backdrop':'Switch to light backdrop';b.innerHTML=state.bg==='light'?ICON_MOON:ICON_SUN;b.title=t;b.setAttribute('aria-label',t)}
+}
+function updateUrl(){
+  const url=new URL(location.href);url.search='';
+  if(selected.length)url.searchParams.set('icons',selected.map(x=>x.key).join(','));
+  url.searchParams.set('layout',state.layout);
+  if(state.layout==='custom')url.searchParams.set('perrow',columns.value);
+  url.searchParams.set('theme',state.theme);url.searchParams.set('size',state.size);url.searchParams.set('gap',spacing.value);url.searchParams.set('align',state.align);
+  if(state.bg!=='light')url.searchParams.set('bg',state.bg);
+  history.replaceState(null,'',url);$('#share').value=url.toString();
+}
+function perRowCount(){return state.layout==='single'?Math.max(selected.length,1):clampN(Number(columns.value)||5,1,80)}
+function metaText(s,mode){
+  if(!selected.length)return 'Pick icons to see the layout here.';
+  let t=`${state.layout==='single'?'One row':perRowCount()+' per row'}, ${state.size} px icons, ${spacing.value} px gap, ${state.align} aligned`;
+  if(mode==='fit'&&s<0.995)t+=`, shown at ${Math.round(s*100)}%`;
+  return t;
+}
+function layoutInto(target){
+  const perRow=perRowCount();
+  target.style.setProperty('--size',state.size+'px');
+  target.style.setProperty('--gap',spacing.value+'px');
+  target.style.setProperty('--align',state.align==='right'?'safe flex-end':state.align==='center'?'safe center':'flex-start');
+  target.replaceChildren();
+  if(!selected.length){const e=document.createElement('div');e.className='emptypreview';e.textContent='Your gallery appears here as you pick icons.';target.append(e);return}
+  for(let i=0;i<selected.length;i+=perRow){
+    const row=document.createElement('div');row.className='preview-row';
+    for(const item of selected.slice(i,i+perRow)){const card=document.createElement('div');card.className='previewcard';card.append(img(item,false));row.append(card)}
+    target.append(row);
+  }
+}
+function applyView(box,inner,grid,mode){
+  box.style.setProperty('--outer',state.align==='right'?'flex-end':state.align==='center'?'center':'flex-start');
+  inner.style.width='';inner.style.height='';
+  if(mode!=='fit'){box.classList.remove('fit');grid.style.transform='';return 1}
+  box.classList.add('fit');grid.style.transform='none';
+  const avail=box.clientWidth,w=grid.offsetWidth,h=grid.offsetHeight;
+  if(avail<=0||w<=0){inner.style.width='';return 1}
+  const s=Math.min(1,avail/w);
+  inner.style.width=Math.ceil(w*s)+'px';inner.style.height=Math.ceil(h*s)+'px';
+  grid.style.transform=s<1?`scale(${s})`:'none';
+  return s;
+}
+function refit(){
+  const s=applyView(stageBox,stageInner,preview,state.view);
+  $('#meta').textContent=metaText(s,state.view);
+  if(!lightbox.hidden){const s2=applyView(lbBox,lbInner,bigPreview,state.lbview);$('#lb-meta').textContent=metaText(s2,state.lbview)}
+}
+function renderPreview(){
+  const label=`${selected.length} ${selected.length===1?'icon':'icons'}`;
+  $('#total').textContent=label;$('#lb-count').textContent=label;
+  layoutInto(preview);
+  if(!lightbox.hidden)layoutInto(bigPreview);
+  refit();
+}
+function openLightbox(){lbReturn=document.activeElement;lightbox.hidden=false;document.body.classList.add('lock');renderPreview();$('#lb-close').focus()}
+function closeLightbox(){lightbox.hidden=true;if(!studio.classList.contains('open'))document.body.classList.remove('lock');if(lbReturn&&lbReturn.focus)lbReturn.focus()}
+function renderStrip(){
+  const strip=$('#strip');strip.replaceChildren();
+  if(!selected.length){strip.textContent='No icons selected yet';return}
+  for(const item of selected.slice(0,6))strip.append(img(item,false));
+  const more=document.createElement('span');more.textContent=selected.length>6?`+${selected.length-6}`:`${selected.length} ${selected.length===1?'icon':'icons'}`;strip.append(more);
+}
+function renderSelected(){
+  const list=$('#selected');list.replaceChildren();
+  $('#selected-count').textContent=selected.length;$('#clear').hidden=!selected.length;
+  if(!selected.length){const empty=document.createElement('span');empty.className='empty';empty.textContent='Nothing yet. Click any icon below to add it.';list.append(empty)}
+  else for(const item of selected){
+    const chip=document.createElement('span');chip.className='chip';chip.append(document.createTextNode(item.label));
+    const remove=document.createElement('button');remove.type='button';remove.textContent='×';remove.setAttribute('aria-label','Remove '+item.label);remove.onclick=()=>toggle(item);chip.append(remove);list.append(chip);
+  }
+  renderPreview();renderStrip();updateUrl();
+}
+function setTile(b,item){const active=selected.some(x=>x.key===item.key);b.setAttribute('aria-pressed',String(active));b.setAttribute('aria-label',`${active?'Remove':'Add'} ${item.label}`)}
+function renderQuick(){
+  const box=$('#quick');box.replaceChildren();
+  for(const name of['vscode','vs','xcode','github','git','python','react','docker','figma','spotify','typescript','nodejs']){
+    const item=resolve(name);if(!item)continue;
+    const b=document.createElement('button');b.type='button';b.textContent=item.label;b.setAttribute('aria-pressed',String(selected.some(x=>x.key===item.key)));b.onclick=()=>toggle(item);box.append(b);
+  }
+}
+const CHUNK=240;let gridObserver=null;
+function makeTile(item){
+  const b=document.createElement('button');b.type='button';b.className='option';b.title=item.label;
+  const check=document.createElement('span');check.className='check';check.innerHTML='<svg viewBox="0 0 12 12" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.5 6.2 2.4 2.4 4.6-5"/></svg>';
+  b.append(check,img(item,true));
+  const label=document.createElement('span');label.textContent=item.label;b.append(label);
+  setTile(b,item);b.onclick=()=>toggle(item);tiles.set(item.key,b);
+  return b;
+}
+function renderGrid(){
+  const q=slug(search.value),matches=q?choices.filter(x=>x.hay.includes(q)):choices;
+  $('#resultcount').textContent=`${matches.length.toLocaleString('en')} ${matches.length===1?'icon':'icons'}`;
+  if(gridObserver){gridObserver.disconnect();gridObserver=null}
+  grid.replaceChildren();tiles.clear();
+  if(!matches.length){const e=document.createElement('div');e.className='noresults';e.textContent='No icons match that search. Try a shorter name.';grid.append(e);return}
+  let shown=0;
+  const sentinel=document.createElement('div');sentinel.className='sentinel';sentinel.setAttribute('aria-hidden','true');
+  grid.append(sentinel);
+  const more=()=>{
+    const frag=document.createDocumentFragment();
+    for(const item of matches.slice(shown,shown+CHUNK))frag.append(makeTile(item));
+    shown=Math.min(shown+CHUNK,matches.length);
+    grid.insertBefore(frag,sentinel);
+    if(shown>=matches.length){sentinel.remove();if(gridObserver){gridObserver.disconnect();gridObserver=null}}
+  };
+  more();
+  if(shown<matches.length&&'IntersectionObserver' in window){
+    gridObserver=new IntersectionObserver(entries=>{
+      if(!entries.some(e=>e.isIntersecting))return;
+      more();
+      if(gridObserver&&shown<matches.length){gridObserver.unobserve(sentinel);gridObserver.observe(sentinel)}
+    },{rootMargin:'900px 0px'});
+    gridObserver.observe(sentinel);
+  }else while(shown<matches.length)more();
+}
+function toggle(item){
+  const i=selected.findIndex(x=>x.key===item.key);
+  if(i<0)selected.push(item);else selected.splice(i,1);
+  renderSelected();renderQuick();
+  const t=tiles.get(item.key);if(t)setTile(t,item);
+}
+function setSheet(open){
+  studio.classList.toggle('open',open);scrim.hidden=!open;
+  $('#customize').setAttribute('aria-expanded',String(open));
+  document.body.classList.toggle('lock',open);
+  (open?$('#sheet-close'):$('#customize')).focus();
+}
+
+/* initial state from URL */
+columns.value=String(clampN(Number(params.get('perrow'))||5,1,80));
+state.layout=params.get('layout')==='custom'||(!params.has('layout')&&params.has('perrow'))?'custom':'single';
+state.theme=['all','light','dark'].includes(params.get('theme'))?params.get('theme'):'all';
+state.size=['32','48','64'].includes(params.get('size'))?params.get('size'):'64';
+const gapValue=params.has('gap')?Number(params.get('gap')):16;
+spacing.value=String(clampN(Number.isFinite(gapValue)?gapValue:16,0,48));
+state.align=['left','center','right'].includes(params.get('align'))?params.get('align'):'left';
+state.bg=params.get('bg')==='dark'?'dark':'light';
+
+/* events */
+let searchTimer;search.oninput=()=>{clearTimeout(searchTimer);searchTimer=setTimeout(renderGrid,120)};
+columns.oninput=()=>{columns.value=String(clampN(Number(columns.value)||1,1,80));renderPreview();updateUrl()};
+spacing.oninput=()=>{syncControls();renderPreview();updateUrl()};
+for(const seg of $$('.seg'))seg.addEventListener('click',e=>{
+  const b=e.target.closest('button');if(!b)return;
+  state[seg.dataset.key]=b.dataset.value;syncControls();
+  if(seg.dataset.key==='theme'){renderGrid();renderSelected()}
+  else if(seg.dataset.key!=='bg'){renderPreview();updateUrl()}
+  else updateUrl();
+});
+$('#clear').onclick=()=>{selected.splice(0);renderSelected();renderQuick();for(const[k,b]of tiles)setTile(b,byKey.get(k))};
+for(const btn of $$('.copy-btn'))btn.onclick=async()=>{
+  const h=$('#hint');
+  try{await navigator.clipboard.writeText($('#share').value)}catch{$('#share').focus();$('#share').select();document.execCommand('copy')}
+  for(const b of $$('.copy-btn'))b.textContent='Copied';
+  h.textContent='Link copied. Share it anywhere.';
+  setTimeout(()=>{for(const b of $$('.copy-btn'))b.textContent='Copy link';h.textContent='The link saves your selected icons and display settings.'},1700);
+};
+$('#customize').onclick=()=>setSheet(true);
+$('#sheet-close').onclick=()=>setSheet(false);
+scrim.onclick=()=>setSheet(false);
+addEventListener('keydown',e=>{
+  if(!lightbox.hidden){
+    if(e.key==='Escape'){closeLightbox();return}
+    if(e.key==='Tab'){
+      const f=[...lightbox.querySelectorAll('button')].filter(b=>b.offsetParent!==null);
+      if(f.length){const first=f[0],last=f[f.length-1];
+        if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus()}
+        else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus()}}
+    }
+    return;
+  }
+  if(e.key==='Escape'&&studio.classList.contains('open'))setSheet(false);
+});
+$('#expand').onclick=openLightbox;
+$('#lb-close').onclick=closeLightbox;
+lightbox.addEventListener('mousedown',e=>{if(e.target===lightbox)closeLightbox()});
+for(const b of $$('.bg-toggle'))b.onclick=()=>{state.bg=state.bg==='light'?'dark':'light';syncControls();updateUrl()};
+const lastW=new Map();
+const ro=new ResizeObserver(entries=>{let need=false;for(const en of entries){const w=Math.round(en.contentRect.width);if(lastW.get(en.target)!==w){lastW.set(en.target,w);need=true}}if(need)refit()});
+ro.observe(stageBox);ro.observe(lbBox);
+matchMedia('(min-width:961px)').addEventListener('change',e=>{if(e.matches&&studio.classList.contains('open')){studio.classList.remove('open');scrim.hidden=true;document.body.classList.remove('lock');$('#customize').setAttribute('aria-expanded','false')}});
+
+function applyIconList(){
+  buildChoices(iconFiles);
+  selected.length=0;
+  for(const name of(params.get('icons')||'').split(',').filter(Boolean)){const item=resolve(name);if(item&&!selected.some(x=>x.key===item.key))selected.push(item)}
+  $('#filecount').textContent=iconFiles.length.toLocaleString('en');
+  renderQuick();renderGrid();renderSelected();
+}
+async function loadIcons(){
+  $('#resultcount').textContent='Loading icons…';
+  try{
+    const ctrl=new AbortController(),timer=setTimeout(()=>ctrl.abort(),8000);
+    const res=await fetch('icons.json',{cache:'no-cache',signal:ctrl.signal});
+    clearTimeout(timer);
+    if(res.ok){
+      const data=await res.json();
+      if(Array.isArray(data)){const list=data.filter(f=>typeof f==='string'&&/\.svg$/i.test(f));if(list.length)iconFiles=list}
+    }
+  }catch(err){/* no icons.json (local file, offline): use the built-in list */}
+  applyIconList();
+}
+syncControls();loadIcons();
+</script></body></html>
