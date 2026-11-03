@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon-vault.svg" width="88" height="88" alt="IconVault logo">
+  <img src="assets/icon-vault.svg" width="100" height="100" alt="IconVault logo">
 </p>
 <h1 align="center">IconVault</h1>
 <p align="center"><strong>Icons for every project.</strong><br>A collection of SVG icons for developers, tools, technologies, and brands.</p>
@@ -13,7 +13,7 @@
 A hand-picked preview of 100 familiar developer tools, technologies, and services. The contact sheet has **10 columns × 10 rows**, with each icon displayed at **50 × 50 px**. Every icon appears once; light and dark duplicate variants are left out of this preview. The full collection remains in [`icons/`](icons/).
 
 <p align="center">
-  <img src="assets/icon-gallery.svg" width="620" height="620" alt="A 10 by 10 grid of 100 different popular developer and product icons, each 50 by 50 pixels">
+  <img src="assets/icon-gallery-15x15-light.svg" width="620" height="620" alt="A 10 by 10 grid of 100 different popular developer and product icons, each 50 by 50 pixels">
 </p>
 
 ## Use an icon in your project
@@ -33,6 +33,10 @@ In a Markdown README, use:
 ```markdown
 ![Spotify icon](https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg)
 ```
+
+**Preview:**
+
+<p><img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg" width="50" height="50" alt="Spotify icon preview"></p>
 
 Use the HTML version when you want to set the display size. Replace `spotify.svg` with the exact icon filename, including capitalization.
 
@@ -55,6 +59,19 @@ Add one `<img>` for each icon. Put the icons for each row inside their own parag
   <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/figma.svg" width="50" height="50" alt="Figma">
 </p>
 ```
+
+**Preview:**
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/python.svg" width="50" height="50" alt="Python"> &nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/react.svg" width="50" height="50" alt="React"> &nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/docker.svg" width="50" height="50" alt="Docker"> &nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg" width="50" height="50" alt="Spotify">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/github.svg" width="50" height="50" alt="GitHub"> &nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/figma.svg" width="50" height="50" alt="Figma">
+</p>
 
 To put more icons in a row, add more `<img>` tags to its paragraph. Start another paragraph for the next row. Change `width` and `height` to resize the icons. These are ordinary image links to files in IconVault; they do not use a separate icon-rendering service.
 
