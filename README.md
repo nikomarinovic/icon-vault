@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon-vault.svg" width="100" height="100" alt="IconVault logo">
+  <img src="assets/icon-vault.svg" width="120" height="120" alt="IconVault logo">
 </p>
 <h1 align="center">IconVault</h1>
 <p align="center"><strong>Icons for every project.</strong><br>A collection of SVG icons for developers, tools, technologies, and brands.</p>
