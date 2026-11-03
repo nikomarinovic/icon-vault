@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-84.48" y="-84.48" width="168.96" height="168.96" viewBox="0 0 512 512"><title xmlns="http://www.w3.org/2000/svg">vllm</title><path xmlns="http://www.w3.org/2000/svg" fill="#434343" fill-rule="evenodd" d="M503.6 8.4L370.1 512H214.7l105.9-407.3zM214.7 116.3H16.8L207.7 498l7-26.8z"/><path xmlns="http://www.w3.org/2000/svg" fill="#fdb515" fill-rule="evenodd" d="M206.3 107.9v395.7L8.4 107.9z"/><path xmlns="http://www.w3.org/2000/svg" fill="#30a2ff" fill-rule="evenodd" d="M206.2 503.6h155.5L495.2 0l-183 96.3z"/></svg></g>
+  
+</svg>
