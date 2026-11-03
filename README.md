@@ -4,7 +4,7 @@
 <h1 align="center">IconVault</h1>
 <p align="center"><strong>Icons for every project.</strong><br>A collection of SVG icons for developers, tools, technologies, and brands.</p>
 
-<p align="center"><a href="#popular-icons">Browse popular icons</a> &nbsp;·&nbsp; <a href="icons/">All 806 SVG files</a> &nbsp;·&nbsp; <a href="CONTRIBUTING.md">Contribute</a></p>
+<p align="center"><a href="#popular-icons">Browse popular icons</a> &nbsp;·&nbsp; <a href="icons/">All 809 SVG files</a> &nbsp;·&nbsp; <a href="CONTRIBUTING.md">Contribute</a></p>
 
 ---
 
