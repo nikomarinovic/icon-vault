@@ -36,8 +36,9 @@ jobs:
       - name: Build site and icon index
         run: |
           mkdir -p _site
-          cp index.html _site/
+          sed "s/__ASSET_VERSION__/${GITHUB_SHA}/g" index.html > _site/index.html
           if [ -d assets ]; then cp -r assets _site/assets; fi
+          cp -r icons _site/icons
           find icons -maxdepth 1 -type f -name '*.svg' -printf '%f\n' \
             | LC_ALL=C sort \
             | jq -R -s -c 'split("\n") | map(select(length > 0))' > _site/icons.json
