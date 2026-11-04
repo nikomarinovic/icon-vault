@@ -1,4 +1,5 @@
 [build]
+  command = "node scripts/build-icons.mjs"
   publish = "."
   functions = "netlify/functions"
 

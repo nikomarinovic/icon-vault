@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>Icons for every project.</strong><br>
-  A curated open-source collection of <b>839</b> icons for developers, tools, technologies, and brands.
+  A curated open-source collection of icons for developers, tools, technologies, and brands.
 </p>
 
 <p align="center">

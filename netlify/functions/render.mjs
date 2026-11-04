@@ -27,9 +27,24 @@ function escapeXml(value) {
 }
 
 function safeSvg(source, prefix) {
-  const match = source.match(/<svg\b([^>]*?)(?:\/\s*>|>([\s\S]*?)<\/svg\s*>)/i);
-  if (!match) return null;
-  const attributes = match[1];
+  const tags = [...source.matchAll(/<\/?svg\b[^>]*>/gi)];
+  const root = tags[0];
+  if (!root || /^<\//.test(root[0])) return null;
+  const selfClosing = /\/\s*>$/.test(root[0]);
+  const attributes = root[0].slice(4, root[0].length - (selfClosing ? 2 : 1));
+  let body = '';
+  if (!selfClosing) {
+    let depth = 1;
+    for (const tag of tags.slice(1)) {
+      if (/^<\//.test(tag[0])) depth -= 1;
+      else if (!/\/\s*>$/.test(tag[0])) depth += 1;
+      if (depth === 0) {
+        body = source.slice(root.index + root[0].length, tag.index);
+        break;
+      }
+    }
+    if (body === '') return null;
+  }
   const viewBox = attributes.match(/\bviewBox\s*=\s*(["'])([0-9eE+.,\s-]+)\1/i)?.[2]?.trim();
   if (!viewBox || viewBox.split(/[ ,]+/).length !== 4) return null;
   const rootAttrs = ['fill', 'stroke', 'stroke-width', 'fill-rule', 'clip-rule']
@@ -38,7 +53,7 @@ function safeSvg(source, prefix) {
       return value ? ` ${name}="${escapeXml(value)}"` : '';
     }).join('');
 
-  let body = (match[2] || '')
+  body = body
     .replace(/<!--[\s\S]*?-->/g, '')
     .replace(/<(script|foreignObject|iframe|object|embed)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, '')
     .replace(/\s+on[a-z]+\s*=\s*(["']).*?\1/gi, '')
