@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/icon-vault.svg" width="96" height="96" alt="IconVault logo">
+</p>
+
 <h1 align="center">IconVault</h1>
 
 <p align="center">
@@ -22,56 +26,68 @@
 <a name="popular-icons"></a>
 ## Popular icons
 
-Browse the collection in the **[IconVault Gallery Builder](https://YOUR_NETLIFY_SITE.netlify.app/)** and select icons to make a gallery.
+225 different icons in a **15 × 15** grid. The original SVGs stay crisp at any size.
+
+<p align="center">
+  <img src="assets/icon-gallery-15x15.svg" width="600" height="600" alt="A 15 by 15 gallery of 225 developer, technology, and brand icons">
+</p>
 
 <a name="gallery-builder"></a>
 ## Gallery Builder
 
-The **[Gallery Builder](https://YOUR_NETLIFY_SITE.netlify.app/)** creates a shareable web page URL with your selection and display settings. Use it to select icons and preview layouts.
+Open the **[IconVault Gallery Builder](https://icon-vault.netlify.app/)** to select icons, preview the layout, and copy either a share link or Markdown image code.
 
-The builder saves your selection and display settings in one readable URL. You can edit the comma-separated icon names in the URL directly.
+The `/image` endpoint returns one combined SVG image. Use comma-separated icon keys and adjust `size`, `gap`, `align`, and `row` in its URL.
 
 <a name="examples"></a>
 ## Examples
 
-Each image is rendered by the Netlify image endpoint. Click one to open its image URL.
+Each example shows the Markdown to paste into a README, followed by the rendered image.
 
-### Inline row, light mode
+### Inline row
 
-![Word, Excel, PowerPoint, OneNote and Outlook](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=left)
+```markdown
+![Word, Excel, PowerPoint, OneNote and Outlook](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=left)
+```
 
-### Inline row, dark mode
+![Word, Excel, PowerPoint, OneNote and Outlook](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=left)
 
-![Word, Excel, PowerPoint, OneNote and Outlook dark variants](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=left)
+### Dark variants
 
-### Grid, 4 per row, centered
+```markdown
+![Word, Excel, PowerPoint, OneNote and Outlook dark variants](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=left)
+```
 
-![C, C++, C sharp, Python, HTML, CSS, React and TypeScript](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=c,cpp,cs,python,html,css,react,typescript&size=64&gap=16&align=center&row=4)
+![Word, Excel, PowerPoint, OneNote and Outlook dark variants](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=left)
+
+### Grid, 4 per row
+
+```markdown
+![C, C++, C sharp, Python, HTML, CSS, React and TypeScript](https://icon-vault.netlify.app/image?icons=c,cpp,cs,python,html,css,react,typescript&size=64&gap=16&align=center&row=4)
+```
+
+![C, C++, C sharp, Python, HTML, CSS, React and TypeScript](https://icon-vault.netlify.app/image?icons=c,cpp,cs,python,html,css,react,typescript&size=64&gap=16&align=center&row=4)
 
 ### Developer tools
 
-![VS Code, Xcode, GitHub, Docker and Figma](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=vscode,xcode,github,docker,figma&size=48&gap=12&align=left)
+```markdown
+![VS Code, Xcode, GitHub, Docker and Figma](https://icon-vault.netlify.app/image?icons=vscode,xcode,github,docker,figma&size=48&gap=12&align=left)
+```
+
+![VS Code, Xcode, GitHub, Docker and Figma](https://icon-vault.netlify.app/image?icons=vscode,xcode,github,docker,figma&size=48&gap=12&align=left)
 
 <a name="add-icons-manually"></a>
 ## Add icons manually
 
-Use the `/image` endpoint in a Markdown image. Replace `YOUR_NETLIFY_SITE` with the site's Netlify subdomain, then change the icon names or settings directly in the URL:
+Write the Markdown image link directly. Replace the names in `icons=` with any keys from the collection:
 
 ```markdown
-![My Skills](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=azuredark,azure,python&size=64&gap=64&align=left&row=4)
+![My Skills](https://icon-vault.netlify.app/image?icons=azuredark,azure,python&size=64&gap=64&align=left&row=4)
 ```
 
-The endpoint returns one combined SVG image for the selected icons. `gap` controls the space between icons, and `row=4` places four icons on each row.
+The `row` option is optional. For example, remove `&row=4` to place every selected icon on one row. `gap` accepts values from `0` to `256`.
 
-For four icons per row, set `row=4` in the URL:
-
-```markdown
-![Python, C, C++ and C sharp](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=python,c,cpp,cs&size=64&gap=64&align=center&row=4)
-```
-
-Change the names in `icons=` to any icon keys, such as `xcode`, `python`, `cpp`, `github`, or `worddark`. Adjust `size`, `gap`, `row`, and `align` directly in the URL.
-
-The repository includes Netlify configuration for the site and image function. Replace `YOUR_NETLIFY_SITE` with the Netlify subdomain assigned to your site.
+The builder creates the same Markdown image link for you. Choose icons and layout, then press **Copy Markdown**.
 
 <a name="contributing"></a>
 ## Contributing
