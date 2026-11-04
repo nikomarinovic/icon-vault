@@ -1,59 +1,88 @@
 <p align="center">
-  <img src="assets/icon-vault.svg" width="120" height="120" alt="IconVault logo">
+  <img src="assets/icon-vault.svg" width="112" height="112" alt="IconVault logo">
 </p>
 <h1 align="center">IconVault</h1>
-<p align="center"><strong>Icons for every project.</strong><br>A collection of SVG icons for developers, tools, technologies, and brands.</p>
+<p align="center"><strong>Icons for every project.</strong><br>A curated open-source collection of SVG icons for developers, tools, technologies, and brands.</p>
 
-<p align="center"><a href="#popular-icons">Browse popular icons</a> &nbsp;·&nbsp; <a href="icons/">All 809 SVG files</a> &nbsp;·&nbsp; <a href="CONTRIBUTING.md">Contribute</a></p>
+<p align="center"><a href="#popular-icons">Popular icons</a> &nbsp;·&nbsp; <a href="icons/">Browse all 839 icons</a> &nbsp;·&nbsp; <a href="#use-icons-in-your-project">Use the icons</a> &nbsp;·&nbsp; <a href="CONTRIBUTING.md">Contribute</a></p>
 
 ---
 
 ## Popular icons
 
-A hand-picked preview of 100 familiar developer tools, technologies, and services. The contact sheet has **10 columns × 10 rows**, with each icon displayed at **50 × 50 px**. Every icon appears once; light and dark duplicate variants are left out of this preview. The full collection remains in [`icons/`](icons/).
+225 different icons in a **15 × 15** grid, each displayed at about **50 × 50 px**. The original SVG vectors sit in closely spaced light tiles against a dark background, so the marks stay crisp when resized.
 
 <p align="center">
-  <img src="assets/icon-gallery.svg" width="620" height="620" alt="A 10 by 10 grid of 100 different popular developer and product icons, each 50 by 50 pixels">
+  <img src="assets/icon-gallery-15x15.svg" width="930" height="930" alt="A sharp 15 by 15 gallery of 225 different developer, technology, and brand SVG icons">
 </p>
 
-## Make a gallery with one link
+## Build a custom gallery link
 
-Open the [IconVault Gallery Builder](https://nikomarinovic.github.io/icon-vault/), search the library, and click icons to add or remove them. Each SVG file, including light and dark variants, appears as its own icon. Choose **One row** or **Custom** to set how many icons appear on each row. Set the exact gap between icons and align each row left, center, or right. The live preview shows only the icons, and the shareable link updates with your layout, size, and spacing. Use **Copy link** to share your gallery.
+Open the [IconVault Gallery Builder](https://nikomarinovic.github.io/icon-vault/), choose icons, set the rows, spacing, alignment, size, and background, then copy your link. The link keeps those settings so someone can open the same gallery in a browser.
 
-The builder includes all SVG files in this repository.
+## Use icons in your project
 
-The gallery page needs GitHub Pages enabled for this repository (Settings → Pages → deploy from the `main` branch). README files cannot run the gallery page inside an image, so the examples below show the selected icons as static previews; click a preview to open the live, interactive gallery.
+Use an icon directly from GitHub with its raw SVG URL. Replace the filename in the URL with the exact file from [`icons/`](icons/).
 
-### Example galleries
+### Add one icon to HTML
 
-Open either link to see the gallery exactly as it will look. Use the **Copy link** button on the page to copy a shareable URL, or copy a URL below.
-
-**Office suite** — a single row of Microsoft Office icons.
-
-<p align="center"><a href="https://nikomarinovic.github.io/icon-vault/?icons=word%2Cexcel%2Cpowerpoint%2Coutlook%2Conenote%2Csharepoint%2Conedrive&layout=single&size=64&gap=16&align=left"><img src="icons/Word.svg" width="64" height="64" alt="Word"><img src="icons/Excel.svg" width="64" height="64" alt="Excel"><img src="icons/Powerpoint.svg" width="64" height="64" alt="PowerPoint"><img src="icons/Outlook.svg" width="64" height="64" alt="Outlook"><img src="icons/OneNote.svg" width="64" height="64" alt="OneNote"><img src="icons/SharePoint.svg" width="64" height="64" alt="SharePoint"><img src="icons/one%20drive.svg" width="64" height="64" alt="OneDrive"></a></p>
-
-[Open live preview](https://nikomarinovic.github.io/icon-vault/?icons=word%2Cexcel%2Cpowerpoint%2Coutlook%2Conenote%2Csharepoint%2Conedrive&layout=single&size=64&gap=16&align=left)
-
-```text
-https://nikomarinovic.github.io/icon-vault/?icons=word%2Cexcel%2Cpowerpoint%2Coutlook%2Conenote%2Csharepoint%2Conedrive&layout=single&size=64&gap=16&align=left
+```html
+<img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg" width="48" height="48" alt="Spotify">
 ```
 
-**Programming languages** — a centered grid with four icons per row.
+### Add one icon to Markdown
 
-<p align="center"><a href="https://nikomarinovic.github.io/icon-vault/?icons=c%2Ccpp%2Ccs%2Chtml%2Ccss%2Cjavascript%2Ctypescript%2Cpython&layout=custom&perrow=4&size=64&gap=16&align=center"><img src="icons/C.svg" width="64" height="64" alt="C">&nbsp;&nbsp;&nbsp;&nbsp;<img src="icons/CPP.svg" width="64" height="64" alt="C++">&nbsp;&nbsp;&nbsp;&nbsp;<img src="icons/CS.svg" width="64" height="64" alt="C sharp">&nbsp;&nbsp;&nbsp;&nbsp;<img src="icons/HTML.svg" width="64" height="64" alt="HTML"><br><img src="icons/CSS.svg" width="64" height="64" alt="CSS">&nbsp;&nbsp;&nbsp;&nbsp;<img src="icons/JavaScript.svg" width="64" height="64" alt="JavaScript">&nbsp;&nbsp;&nbsp;&nbsp;<img src="icons/TypeScript.svg" width="64" height="64" alt="TypeScript">&nbsp;&nbsp;&nbsp;&nbsp;<img src="icons/python.svg" width="64" height="64" alt="Python"></a></p>
-
-[Open live preview](https://nikomarinovic.github.io/icon-vault/?icons=c%2Ccpp%2Ccs%2Chtml%2Ccss%2Cjavascript%2Ctypescript%2Cpython&layout=custom&perrow=4&size=64&gap=16&align=center)
-
-```text
-https://nikomarinovic.github.io/icon-vault/?icons=c%2Ccpp%2Ccs%2Chtml%2Ccss%2Cjavascript%2Ctypescript%2Cpython&layout=custom&perrow=4&size=64&gap=16&align=center
+```markdown
+![Spotify icon](https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg)
 ```
 
-To use a single icon directly, use its raw SVG URL, such as [Spotify SVG](https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg). To download it, save that link into your project.
+### Show icons in rows in your README
 
-### Add an icon to IconVault
+Put one image for each icon inside a paragraph. Use `&nbsp;` between images for a small, consistent gap, and start a new paragraph for the next row.
 
-To contribute an icon here, copy its SVG into `icons/` and follow [CONTRIBUTING.md](CONTRIBUTING.md). Include its source and license.
+```html
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/python.svg" width="48" height="48" alt="Python">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/react.svg" width="48" height="48" alt="React">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/github.svg" width="48" height="48" alt="GitHub">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg" width="48" height="48" alt="Spotify">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/docker.svg" width="48" height="48" alt="Docker">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/figma.svg" width="48" height="48" alt="Figma">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/xcode.svg" width="48" height="48" alt="Xcode">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/VScode.svg" width="48" height="48" alt="Visual Studio Code">
+</p>
+```
 
-## License
+**Rendered example:**
 
-See [`LICENSE`](LICENSE). Individual icons may have separate terms; check the source and license before use.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/python.svg" width="48" height="48" alt="Python">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/react.svg" width="48" height="48" alt="React">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/github.svg" width="48" height="48" alt="GitHub">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg" width="48" height="48" alt="Spotify">
+</p>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/docker.svg" width="48" height="48" alt="Docker">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/figma.svg" width="48" height="48" alt="Figma">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/xcode.svg" width="48" height="48" alt="Xcode">&nbsp;
+  <img src="https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/VScode.svg" width="48" height="48" alt="Visual Studio Code">
+</p>
+
+### Download icons into your project
+
+```bash
+mkdir -p public/icons
+curl -L "https://raw.githubusercontent.com/nikomarinovic/icon-vault/main/icons/spotify.svg" -o public/icons/spotify.svg
+```
+
+Then use `public/icons/spotify.svg` from your app or README.
+
+## Add an icon to IconVault
+
+Copy the SVG into [`icons/`](icons/) and follow [CONTRIBUTING.md](CONTRIBUTING.md). Include the source and license information.
+
+## Contributors
+
+- [Niko Marinović](https://github.com/nikomarinovic)
