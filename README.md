@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/icon-vault.svg" width="96" height="96" alt="IconVault logo">
+  <img src="assets/icon-vault.svg" width="132" height="132" alt="IconVault logo">
 </p>
 
 <h1 align="center">IconVault</h1>
@@ -10,15 +10,15 @@
 </p>
 
 <p align="center">
-  <a href="#popular-icons">Popular</a>
+  <a href="https://icon-vault.netlify.app">Website</a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#gallery-builder">Gallery Builder</a>
+  <a href="https://icon-vault.netlify.app">Gallery Builder</a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#examples">Examples</a>
   &nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#add-icons-manually">Add icons</a>
   &nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#contributing">Contribute</a>
+  <a href="#contributors">Contributors</a>
 </p>
 
 ---
@@ -47,34 +47,48 @@ Each example shows the Markdown to paste into a README, followed by the rendered
 ### Inline row
 
 ```markdown
-![Word, Excel, PowerPoint, OneNote and Outlook](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=left)
+![My Skills](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=center)
 ```
 
-![Word, Excel, PowerPoint, OneNote and Outlook](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=left)
+![My Skills](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=center)
 
 ### Dark variants
 
 ```markdown
-![Word, Excel, PowerPoint, OneNote and Outlook dark variants](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=left)
+![My Skills](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=center)
 ```
 
-![Word, Excel, PowerPoint, OneNote and Outlook dark variants](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=left)
+![My Skills](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=center)
 
 ### Grid, 4 per row
 
 ```markdown
-![C, C++, C sharp, Python, HTML, CSS, React and TypeScript](https://icon-vault.netlify.app/image?icons=c,cpp,cs,python,html,css,react,typescript&size=64&gap=16&align=center&row=4)
+![My Skills](https://icon-vault.netlify.app/image?icons=airtable,akka,azurelogo,figma,firebase,cakephp,dynamodb,elixir&size=64&gap=16&align=center&row=4)
 ```
 
-![C, C++, C sharp, Python, HTML, CSS, React and TypeScript](https://icon-vault.netlify.app/image?icons=c,cpp,cs,python,html,css,react,typescript&size=64&gap=16&align=center&row=4)
+![My Skills](https://icon-vault.netlify.app/image?icons=airtable,akka,azurelogo,figma,firebase,cakephp,dynamodb,elixir&size=64&gap=16&align=center&row=4)
 
 ### Developer tools
 
 ```markdown
-![VS Code, Xcode, GitHub, Docker and Figma](https://icon-vault.netlify.app/image?icons=vscode,xcode,github,docker,figma&size=48&gap=12&align=left)
+<p align="center">
+  <img src="https://icon-vault.netlify.app/image?icons=vscode,visualstudio,github,gitlab&amp;size=64&amp;gap=16&amp;align=center" alt="My Skills">
+</p>
 ```
 
-![VS Code, Xcode, GitHub, Docker and Figma](https://icon-vault.netlify.app/image?icons=vscode,xcode,github,docker,figma&size=48&gap=12&align=left)
+<p align="center">  <img src="https://icon-vault.netlify.app/image?icons=vscode,visualstudio,github,gitlab&amp;size=64&amp;gap=16&amp;align=center" alt="My Skills"></p>
+
+### Centering the image in a README
+
+Plain Markdown can't center anything. GitHub READMEs only center content when it is wrapped in HTML, so the image has to be an `<img>` tag inside a `<p align="center">`. Note that `&` must be written as `&amp;` in the HTML URL.
+
+```html
+<p align="center">
+  <img src="https://icon-vault.netlify.app/image?icons=react,nodejs,docker&amp;size=64&amp;gap=16&amp;align=center" alt="My Skills">
+</p>
+```
+
+The same works for headings and text: use `<h1 align="center">` or `<p align="center">` instead of `#` and plain paragraphs. The `align=center` in the URL only positions icons *inside* the image, while the HTML wrapper positions the *whole image* on the page, so use both together.
 
 <a name="add-icons-manually"></a>
 ## Add icons manually
@@ -89,12 +103,25 @@ The `row` option is optional. For example, remove `&row=4` to place every select
 
 The builder creates both forms for you. **Copy Markdown** makes the image embed; **Copy HTML** wraps it in a centered paragraph so it appears centered in a GitHub README. The `align` URL option positions icons inside the image rows, while the HTML wrapper positions the whole image on the README page.
 
-<a name="contributing"></a>
-## Contributing
+<div id="contributors">
 
-Missing an icon? Add it to the [`icons/`](icons/) collection and follow [CONTRIBUTING.md](CONTRIBUTING.md). Please include the source and license information.
+<p align="center">
+  <img
+    src="https://capsule-render.vercel.app/api?type=waving&height=120&section=header&color=4338CA&text=Contributors&fontSize=42&fontColor=FFFFFF&fontAlignY=55"
+    width="100%"
+    alt="Contributors"
+  />
+  <strong>THE PEOPLE BEHIND THE COLLECTION</strong>
+</p>
 
-## Contributors
+---
+
+<br>
+
+<p align="center">
+  IconVault is built with contributions from the community.<br>
+  Every new icon, correction, and improvement helps make the collection better.
+</p>
 
 <p align="center">
   <a href="https://github.com/nikomarinovic">
@@ -103,3 +130,25 @@ Missing an icon? Add it to the [`icons/`](icons/) collection and follow [CONTRIB
   <br>
   <a href="https://github.com/nikomarinovic"><sub><b>Niko Marinović</b></sub></a>
 </p>
+
+<br>
+
+<p align="center">
+  <strong>Missing an icon? Have something worth adding?</strong>
+</p>
+
+<p align="center">
+  <a href="https://github.com/nikomarinovic/icon-vault/issues/new">Open an Issue</a>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="https://github.com/nikomarinovic/icon-vault/compare">Submit a Pull Request</a>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="LICENSE">MIT License</a>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="https://github.com/nikomarinovic/icon-vault">View Repository</a>
+</p>
+
+<p align="center">
+  <sub>Curated and maintained by the IconVault community.</sub>
+</p>
+
+</div>
