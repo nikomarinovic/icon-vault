@@ -87,7 +87,7 @@ Write the Markdown image link directly. Replace the names in `icons=` with any k
 
 The `row` option is optional. For example, remove `&row=4` to place every selected icon on one row. `gap` accepts values from `0` to `256`.
 
-The builder creates the same Markdown image link for you. Choose icons and layout, then press **Copy Markdown**.
+The builder creates both forms for you. **Copy Markdown** makes the image embed; **Copy HTML** wraps it in a centered paragraph so it appears centered in a GitHub README. The `align` URL option positions icons inside the image rows, while the HTML wrapper positions the whole image on the README page.
 
 <a name="contributing"></a>
 ## Contributing
