@@ -191,7 +191,7 @@ footer a:hover{text-decoration:underline}
 <div class="field"><span class="lab" id="lab-layout">Gallery layout</span><div class="seg" data-key="layout" role="group" aria-labelledby="lab-layout"><button type="button" data-value="single">One row</button><button type="button" data-value="custom">Custom grid</button></div><p id="layout-description" class="field-hint"></p></div>
 <div class="field" id="custom-row-setting" hidden><label class="lab" for="columns">Icons per row</label><input id="columns" type="number" min="1" max="80" step="1" value="5" inputmode="numeric"></div>
 <div class="field"><span class="lab" id="lab-size">Icon size</span><div class="seg" data-key="size" role="group" aria-labelledby="lab-size"><button type="button" data-value="32">Small</button><button type="button" data-value="48">Medium</button><button type="button" data-value="64">Large</button></div></div>
-<div class="field"><label class="lab" for="spacing">Space between icons <output id="spacing-value" for="spacing">16 px</output></label><input id="spacing" type="range" min="0" max="48" step="2" value="16"></div>
+<div class="field"><label class="lab" for="spacing">Space between icons <output id="spacing-value" for="spacing">16 px</output></label><input id="spacing" type="range" min="0" max="64" step="2" value="16"></div>
 <div class="field"><span class="lab" id="lab-align">Align icons</span><div class="seg" data-key="align" role="group" aria-labelledby="lab-align"><button type="button" data-value="left">Left</button><button type="button" data-value="center">Center</button><button type="button" data-value="right">Right</button></div></div>
 </div>
 </aside>
@@ -254,12 +254,12 @@ function syncControls(){
   for(const b of $$('.bg-toggle')){const t=state.bg==='light'?'Switch to dark backdrop':'Switch to light backdrop';b.innerHTML=state.bg==='light'?ICON_MOON:ICON_SUN;b.title=t;b.setAttribute('aria-label',t)}
 }
 function updateUrl(){
-  const url=new URL(location.href);url.search='';
-  if(selected.length)url.searchParams.set('icons',selected.map(x=>x.key).join(','));
-  url.searchParams.set('layout',state.layout);
-  if(state.layout==='custom')url.searchParams.set('perrow',columns.value);
-  url.searchParams.set('size',state.size);url.searchParams.set('gap',spacing.value);url.searchParams.set('align',state.align);
-  if(state.bg!=='light')url.searchParams.set('bg',state.bg);
+  const url=new URL(location.href);const query=[];
+  if(selected.length)query.push('icons='+selected.map(x=>x.key).join(','));
+  query.push('size='+state.size,'gap='+spacing.value,'align='+state.align);
+  if(state.layout==='custom')query.push('row='+columns.value);
+  if(state.bg!=='light')query.push('bg='+state.bg);
+  url.search=query.join('&');
   history.replaceState(null,'',url);$('#share').value=url.toString();
 }
 function perRowCount(){return state.layout==='single'?Math.max(selected.length,1):clampN(Number(columns.value)||5,1,80)}
@@ -381,11 +381,11 @@ function setSheet(open){
 }
 
 /* initial state from URL */
-columns.value=String(clampN(Number(params.get('perrow'))||5,1,80));
-state.layout=params.get('layout')==='custom'||(!params.has('layout')&&params.has('perrow'))?'custom':'single';
+columns.value=String(clampN(Number(params.get('row')||params.get('perrow'))||5,1,80));
+state.layout=params.get('layout')==='custom'||params.has('row')||(!params.has('layout')&&params.has('perrow'))?'custom':'single';
 state.size=['32','48','64'].includes(params.get('size'))?params.get('size'):'64';
 const gapValue=params.has('gap')?Number(params.get('gap')):16;
-spacing.value=String(clampN(Number.isFinite(gapValue)?gapValue:16,0,48));
+spacing.value=String(clampN(Number.isFinite(gapValue)?gapValue:16,0,64));
 state.align=['left','center','right'].includes(params.get('align'))?params.get('align'):'left';
 state.bg=params.get('bg')==='dark'?'dark':'light';
 
