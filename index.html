@@ -116,6 +116,7 @@ body[data-bg=dark] .stage{border-color:var(--night-line)}
 .caption{margin:9px 2px 0;color:var(--ink-3);font:12px/1.5 var(--mono)}
 .share{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-top:16px}
 #share{min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;background:var(--canvas);color:var(--ink-2);font:12px var(--mono)}
+#embed{min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;background:var(--canvas);color:var(--ink-2);font:12px var(--mono)}
 #share:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-soft)}
 .btn{height:44px;padding:0 18px;border:0;border-radius:10px;font-size:14px;font-weight:650;white-space:nowrap;transition:background .15s}
 .btn-primary{background:var(--cobalt);color:#fff}
@@ -187,6 +188,8 @@ footer a:hover{text-decoration:underline}
 <p id="meta" class="caption"></p>
 <div class="share"><input id="share" aria-label="Shareable gallery link" readonly><button class="btn btn-primary copy-btn" type="button">Copy link</button></div>
 <p id="hint" class="hint" aria-live="polite">The link saves your selected icons and display settings.</p>
+<div class="share"><input id="embed" aria-label="README image Markdown" readonly placeholder="Select icons to create a README image"><button id="copy-embed" class="btn btn-quiet" type="button" disabled>Copy Markdown</button></div>
+<p id="embed-hint" class="hint" aria-live="polite">Copies a Markdown image that displays the selected icons.</p>
 <div class="settings">
 <div class="field"><span class="lab" id="lab-layout">Gallery layout</span><div class="seg" data-key="layout" role="group" aria-labelledby="lab-layout"><button type="button" data-value="single">One row</button><button type="button" data-value="custom">Custom grid</button></div><p id="layout-description" class="field-hint"></p></div>
 <div class="field" id="custom-row-setting" hidden><label class="lab" for="columns">Icons per row</label><input id="columns" type="number" min="1" max="80" step="1" value="5" inputmode="numeric"></div>
@@ -261,6 +264,9 @@ function updateUrl(){
   if(state.bg!=='light')query.push('bg='+state.bg);
   url.search=query.join('&');
   history.replaceState(null,'',url);$('#share').value=url.toString();
+  const markdownUrl=url.origin+'/image'+url.search;
+  $('#embed').value=selected.length?'![My Skills]('+markdownUrl+')':'';
+  $('#copy-embed').disabled=!selected.length;
 }
 function perRowCount(){return state.layout==='single'?Math.max(selected.length,1):clampN(Number(columns.value)||5,1,80)}
 function metaText(s,mode){
@@ -400,6 +406,12 @@ for(const seg of $$('.seg'))seg.addEventListener('click',e=>{
   else updateUrl();
 });
 $('#clear').onclick=()=>{selected.splice(0);renderSelected();renderQuick();for(const[k,b]of tiles)setTile(b,byKey.get(k))};
+$('#copy-embed').onclick=async()=>{
+  if(!$('#embed').value)return;
+  try{await navigator.clipboard.writeText($('#embed').value)}catch{$('#embed').focus();$('#embed').select();document.execCommand('copy')}
+  const hint=$('#embed-hint');hint.textContent='README image Markdown copied.';
+  setTimeout(()=>{hint.textContent='Copies a Markdown image that displays the selected icons.'},1700);
+};
 for(const btn of $$('.copy-btn'))btn.onclick=async()=>{
   const h=$('#hint');
   try{await navigator.clipboard.writeText($('#share').value)}catch{$('#share').focus();$('#share').select();document.execCommand('copy')}

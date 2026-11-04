@@ -22,56 +22,56 @@
 <a name="popular-icons"></a>
 ## Popular icons
 
-Browse the collection in the **[IconVault Gallery Builder](https://nikomarinovic.github.io/icon-vault/)** and select icons to make a gallery.
+Browse the collection in the **[IconVault Gallery Builder](https://YOUR_NETLIFY_SITE.netlify.app/)** and select icons to make a gallery.
 
 <a name="gallery-builder"></a>
 ## Gallery Builder
 
-The **[Gallery Builder](https://nikomarinovic.github.io/icon-vault/)** creates a shareable web page URL with your selection and display settings. Use it to select icons and preview layouts.
+The **[Gallery Builder](https://YOUR_NETLIFY_SITE.netlify.app/)** creates a shareable web page URL with your selection and display settings. Use it to select icons and preview layouts.
 
 The builder saves your selection and display settings in one readable URL. You can edit the comma-separated icon names in the URL directly.
 
 <a name="examples"></a>
 ## Examples
 
-Each link opens the builder with its icon selection and display settings already loaded.
+Each image is rendered by the Netlify image endpoint. Click one to open its image URL.
 
 ### Inline row, light mode
 
-<https://nikomarinovic.github.io/icon-vault/?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=left>
+![Word, Excel, PowerPoint, OneNote and Outlook](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=left)
 
 ### Inline row, dark mode
 
-<https://nikomarinovic.github.io/icon-vault/?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=left>
+![Word, Excel, PowerPoint, OneNote and Outlook dark variants](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=left)
 
 ### Grid, 4 per row, centered
 
-<https://nikomarinovic.github.io/icon-vault/?icons=c,cpp,cs,python,html,css,react,typescript&size=64&gap=16&align=center&row=4>
+![C, C++, C sharp, Python, HTML, CSS, React and TypeScript](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=c,cpp,cs,python,html,css,react,typescript&size=64&gap=16&align=center&row=4)
 
 ### Developer tools
 
-<https://nikomarinovic.github.io/icon-vault/?icons=vscode,xcode,github,docker,figma&size=48&gap=12&align=left>
+![VS Code, Xcode, GitHub, Docker and Figma](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=vscode,xcode,github,docker,figma&size=48&gap=12&align=left)
 
 <a name="add-icons-manually"></a>
 ## Add icons manually
 
-Open the builder with icon names in the URL, separated by commas. Change the names and settings in the address bar whenever you want:
+Use the `/image` endpoint in a Markdown image. Replace `YOUR_NETLIFY_SITE` with the site's Netlify subdomain, then change the icon names or settings directly in the URL:
 
 ```markdown
-https://nikomarinovic.github.io/icon-vault/?icons=xcode,python,cpp&size=64&gap=16
+![My Skills](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=azuredark,azure,python&size=64&gap=64&align=left&row=4)
 ```
 
-The builder loads that selection automatically. Tune the size, gap, and layout, then copy the link. Use `row=4` to show four icons per row; `gap` accepts values up to `64`.
+The endpoint returns one combined SVG image for the selected icons. `gap` controls the space between icons, and `row=4` places four icons on each row.
 
 For four icons per row, set `row=4` in the URL:
 
 ```markdown
-https://nikomarinovic.github.io/icon-vault/?icons=python,c,cpp,cs&size=64&gap=64&align=center&row=4
+![Python, C, C++ and C sharp](https://YOUR_NETLIFY_SITE.netlify.app/image?icons=python,c,cpp,cs&size=64&gap=64&align=center&row=4)
 ```
 
 Change the names in `icons=` to any icon keys, such as `xcode`, `python`, `cpp`, `github`, or `worddark`. Adjust `size`, `gap`, `row`, and `align` directly in the URL.
 
-GitHub Pages serves the builder, so no Netlify deployment or extra setup is required.
+The repository includes Netlify configuration for the site and image function. Replace `YOUR_NETLIFY_SITE` with the Netlify subdomain assigned to your site.
 
 <a name="contributing"></a>
 ## Contributing
