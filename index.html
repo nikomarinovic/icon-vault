@@ -68,10 +68,17 @@ h1{margin:0;max-width:16ch;font:700 clamp(36px,5.4vw,60px)/1 var(--display);lett
 .chip button:hover{background:#cdd4ff}
 
 /* icon grid */
-.grid-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:12px}
+.grid-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px}
 .sectitle{margin:0;font:650 22px/1.2 var(--display);letter-spacing:-.02em}
 #resultcount{color:var(--ink-3);font-size:13px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.grid[data-view=big]{grid-template-columns:repeat(auto-fit,minmax(min(100%,160px),1fr));gap:12px}
+.grid[data-view=big] .option{min-height:176px;gap:12px}
+.grid[data-view=big] .option img{width:96px;height:96px}
+.grid[data-view=more]{grid-template-columns:repeat(auto-fit,minmax(min(100%,76px),1fr));gap:8px}
+.grid[data-view=more] .option{min-height:96px;gap:7px;padding:10px 5px 8px}
+.grid[data-view=more] .option img{width:36px;height:36px}
+.grid-views{margin-left:auto}
 .option{position:relative;min-width:0;min-height:112px;display:grid;justify-items:center;align-content:center;gap:10px;padding:14px 6px 10px;border:1px solid var(--tile-line);border-radius:12px;background:var(--tile);transition:border-color .15s,box-shadow .15s}
 .option:hover{border-color:var(--cobalt)}
 .option[aria-pressed=true]{border-color:var(--cobalt);box-shadow:inset 0 0 0 1px var(--cobalt)}
@@ -192,8 +199,8 @@ footer a:hover{text-decoration:underline}
   <div class="cats" id="cats" role="group" aria-label="Filter by category"></div>
 </div>
 <div class="tray"><div class="tray-head"><h2 class="tray-title">Your selection <span id="selected-count" class="count">0</span></h2><button id="clear" class="clear" type="button" hidden>Clear selection</button></div><div id="selected" class="selected"></div></div>
-<div class="grid-head"><h2 class="sectitle" id="grid-title">Icon library</h2><span id="resultcount"></span></div>
-<div id="grid" class="grid"></div>
+<div class="grid-head"><h2 class="sectitle" id="grid-title">Icon library</h2><span id="resultcount"></span><div id="grid-views" class="seg small grid-views" role="group" aria-label="Icon library view"><button type="button" data-view="big" aria-pressed="false">Big icons</button><button type="button" data-view="default" aria-pressed="true">Default</button><button type="button" data-view="more" aria-pressed="false">More icons</button></div></div>
+<div id="grid" class="grid" data-view="default"></div>
 </section>
 
 <aside id="studio" class="studio" aria-labelledby="studio-title">
@@ -470,6 +477,11 @@ for(const seg of $$('.seg'))seg.addEventListener('click',e=>{
   renderPreview();updateUrl();
 });
 $('#clear').onclick=()=>{selected.splice(0);renderSelected();for(const[k,b]of tiles)setTile(b,byKey.get(k))};
+$('#grid-views').addEventListener('click',e=>{
+  const b=e.target.closest('button[data-view]');if(!b)return;
+  grid.dataset.view=b.dataset.view;
+  for(const button of $('#grid-views').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button===b));
+});
 async function copyValue(val,btn,msg){
   if(!val)return;
   try{await navigator.clipboard.writeText(val)}catch{const s=$('#share');s.value=val;s.focus();s.select();document.execCommand('copy')}
