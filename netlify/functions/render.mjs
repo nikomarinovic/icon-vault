@@ -2,12 +2,28 @@ import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 
 const ICON_DIR = join(process.cwd(), 'icons');
-const iconFiles = await readdir(ICON_DIR);
-const iconByKey = new Map(
-  iconFiles
-    .filter((file) => file.toLowerCase().endsWith('.svg'))
-    .map((file) => [slug(file.replace(/\.svg$/i, '')), file]),
-);
+
+// Recursively collect every .svg under icons/, in any number of category folders.
+async function walk(dir, rel = '') {
+  const entries = await readdir(join(dir, rel), { withFileTypes: true });
+  const out = [];
+  for (const entry of entries) {
+    const next = rel ? `${rel}/${entry.name}` : entry.name;
+    if (entry.isDirectory()) out.push(...(await walk(dir, next)));
+    else if (entry.name.toLowerCase().endsWith('.svg')) out.push(next);
+  }
+  return out;
+}
+
+// Key = slug of the file name (folder is ignored), so URLs never change when
+// icons move between categories. On duplicate names the first (sorted) path wins.
+const iconByKey = new Map();
+for (const file of (await walk(ICON_DIR)).sort()) {
+  const base = file.slice(file.lastIndexOf('/') + 1).replace(/\.svg$/i, '');
+  const key = slug(base);
+  if (iconByKey.has(key)) console.warn(`Duplicate icon key "${key}": ${file} ignored`);
+  else iconByKey.set(key, file);
+}
 
 function slug(value) {
   return value.toLocaleLowerCase().replace(/[^a-z0-9]/g, '');
