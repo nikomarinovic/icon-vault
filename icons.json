@@ -36,14 +36,6 @@
     "category": "ai"
   },
   {
-    "file": "ai/copilot dark.svg",
-    "category": "ai"
-  },
-  {
-    "file": "ai/copilot.svg",
-    "category": "ai"
-  },
-  {
     "file": "ai/cursor ai.svg",
     "category": "ai"
   },
@@ -60,19 +52,19 @@
     "category": "ai"
   },
   {
-    "file": "ai/google gemini dark.svg",
-    "category": "ai"
-  },
-  {
-    "file": "ai/google gemini.svg",
-    "category": "ai"
-  },
-  {
     "file": "ai/grok dark.svg",
     "category": "ai"
   },
   {
     "file": "ai/grok.svg",
+    "category": "ai"
+  },
+  {
+    "file": "ai/mistral ai dark.svg",
+    "category": "ai"
+  },
+  {
+    "file": "ai/mistral ai.svg",
     "category": "ai"
   },
   {
@@ -116,512 +108,108 @@
     "category": "ai"
   },
   {
-    "file": "apps/ActivityPub dark.svg",
-    "category": "apps"
+    "file": "amazon/amazon aws dark.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/ActivityPub.svg",
-    "category": "apps"
+    "file": "amazon/amazon aws.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/Airtable dark.svg",
-    "category": "apps"
+    "file": "amazon/amazon chime dark.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/Airtable.svg",
-    "category": "apps"
+    "file": "amazon/amazon chime.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/aliexpress wordmark.svg",
-    "category": "apps"
+    "file": "amazon/amazon connect dark.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/aliexpress.svg",
-    "category": "apps"
+    "file": "amazon/amazon connect.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/apple music.svg",
-    "category": "apps"
+    "file": "amazon/amazon dark.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/AppleTV gray.svg",
-    "category": "apps"
+    "file": "amazon/amazon dynamodb dark.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/AppleTV red.svg",
-    "category": "apps"
+    "file": "amazon/amazon dynamodb.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/AppleTV.svg",
-    "category": "apps"
+    "file": "amazon/amazon s3 dark.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/Asana.svg",
-    "category": "apps"
+    "file": "amazon/amazon s3.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/Bitly dark.svg",
-    "category": "apps"
+    "file": "amazon/amazon.svg",
+    "category": "amazon"
   },
   {
-    "file": "apps/Bitly.svg",
-    "category": "apps"
+    "file": "apple/apple 1977 dark.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/Booking dark.svg",
-    "category": "apps"
+    "file": "apple/apple 1977.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/Booking.svg",
-    "category": "apps"
+    "file": "apple/apple music.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/Buffer dark.svg",
-    "category": "apps"
+    "file": "apple/apple pay dark.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/Buffer.svg",
-    "category": "apps"
+    "file": "apple/apple pay.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/discord.svg",
-    "category": "apps"
+    "file": "apple/apple tv gray.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/DiscordBots.svg",
-    "category": "apps"
+    "file": "apple/apple tv red.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/dropbox dark.svg",
-    "category": "apps"
+    "file": "apple/apple tv.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/dropbox.svg",
-    "category": "apps"
+    "file": "apple/apple xcode black.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/drupal.svg",
-    "category": "apps"
+    "file": "apple/apple xcode blue.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/ebay dark.svg",
-    "category": "apps"
+    "file": "apple/apple xcode dark.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/ebay.svg",
-    "category": "apps"
+    "file": "apple/apple xcode.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/Excel dark.svg",
-    "category": "apps"
+    "file": "apple/apple.svg",
+    "category": "apple"
   },
   {
-    "file": "apps/Excel.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Facebook.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Fediverse dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Fediverse.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/gmail dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/gmail.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleAssistant dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleAssistant.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleCalendar dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleCalendar.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleChrome dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleChrome.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleDocs dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleDocs.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleDrive dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleDrive.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleFitness dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleFitness.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleHome dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleHome.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleMaps dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleMaps.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleMeet dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleMeet.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleOne dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleOne.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GooglePhotos dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GooglePhotos.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GooglePlay dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GooglePlay.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GooglePodcast dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GooglePodcast.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleShopping dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/GoogleShopping.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Instagram.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/linkedin dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/linkedin.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/lyft dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/lyft.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Mastodon dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Mastodon.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Misskey dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Misskey.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Netflix dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Netflix-Wordmark dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Netflix-Wordmark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Netflix.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/notion dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/notion.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Obsidian dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Obsidian.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/one drive.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/OneNote dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/OneNote.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Outlook dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Outlook.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Pinterest dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Pinterest.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Powerpoint dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Powerpoint.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/reddit dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/reddit.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Salesforce dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Salesforce.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/SharePoint dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/SharePoint.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Shopify dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Shopify.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Slack dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Slack.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/spotify dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/spotify.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Teams dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Teams.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Telegram dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Telegram.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/TikTok darkl.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/TikTok.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/TOR dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/TOR-Wordmark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/TOR.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Tripadvisor dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Tripadvisor.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Twitch dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Twitch.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/twitter.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Uber dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Uber.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/uc dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/uc.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Webflow.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Whatsapp dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Whatsapp-Wordmark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Whatsapp.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Word dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Word.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Wordpress dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Wordpress.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Xing dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/Xing.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/YouTube dark.svg",
-    "category": "apps"
-  },
-  {
-    "file": "apps/YouTube.svg",
-    "category": "apps"
+    "file": "apple/safari.svg",
+    "category": "apple"
   },
   {
     "file": "automotive/BBS dark.svg",
@@ -924,6 +512,10 @@
     "category": "brands"
   },
   {
+    "file": "brands/yamaha.svg",
+    "category": "brands"
+  },
+  {
     "file": "brands/ZARA dark.svg",
     "category": "brands"
   },
@@ -937,30 +529,6 @@
   },
   {
     "file": "cloud/Akka.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/Amazon S3 dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/Amazon S3.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/AmazonChime dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/AmazonChime.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/AmazonConnect dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/AmazonConnect.svg",
     "category": "cloud"
   },
   {
@@ -980,31 +548,7 @@
     "category": "cloud"
   },
   {
-    "file": "cloud/aws dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/aws.svg",
-    "category": "cloud"
-  },
-  {
     "file": "cloud/Azul.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/Azure dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/Azure-Logo dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/Azure-Logo.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/Azure.svg",
     "category": "cloud"
   },
   {
@@ -1041,22 +585,6 @@
   },
   {
     "file": "cloud/docker.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/firebase dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/firebase.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/gcp dark.svg",
-    "category": "cloud"
-  },
-  {
-    "file": "cloud/gcp.svg",
     "category": "cloud"
   },
   {
@@ -1101,6 +629,22 @@
   },
   {
     "file": "cloud/Kubernetes.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/microsoft azure dark.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/microsoft azure logo dark.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/microsoft azure logo.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/microsoft azure.svg",
     "category": "cloud"
   },
   {
@@ -1196,14 +740,6 @@
     "category": "cloud"
   },
   {
-    "file": "companies/Amazon dark.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/Amazon.svg",
-    "category": "companies"
-  },
-  {
     "file": "companies/Appbaseio dark.svg",
     "category": "companies"
   },
@@ -1220,47 +756,11 @@
     "category": "companies"
   },
   {
-    "file": "companies/Apple 1977 dark.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/Apple 1977.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/apple.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/google dark.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/Google-Wordmark dark.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/Google-Wordmark.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/google.svg",
-    "category": "companies"
-  },
-  {
     "file": "companies/IBM dark.svg",
     "category": "companies"
   },
   {
     "file": "companies/IBM.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/microsoft dark.svg",
-    "category": "companies"
-  },
-  {
-    "file": "companies/microsoft.svg",
     "category": "companies"
   },
   {
@@ -1284,14 +784,6 @@
     "category": "databases"
   },
   {
-    "file": "databases/DynamoDB dark.svg",
-    "category": "databases"
-  },
-  {
-    "file": "databases/DynamoDB.svg",
-    "category": "databases"
-  },
-  {
     "file": "databases/Elasticsearch dark.svg",
     "category": "databases"
   },
@@ -1304,6 +796,14 @@
     "category": "databases"
   },
   {
+    "file": "databases/microsoft mssql dark.svg",
+    "category": "databases"
+  },
+  {
+    "file": "databases/microsoft mssql.svg",
+    "category": "databases"
+  },
+  {
     "file": "databases/mongoDB dark.svg",
     "category": "databases"
   },
@@ -1313,14 +813,6 @@
   },
   {
     "file": "databases/MongoDB.svg",
-    "category": "databases"
-  },
-  {
-    "file": "databases/MSSQL dark.svg",
-    "category": "databases"
-  },
-  {
-    "file": "databases/MSSQL.svg",
     "category": "databases"
   },
   {
@@ -1512,11 +1004,11 @@
     "category": "devtools"
   },
   {
-    "file": "devtools/cucmber dark.svg",
+    "file": "devtools/cucumber dark.svg",
     "category": "devtools"
   },
   {
-    "file": "devtools/cucmber.svg",
+    "file": "devtools/cucumber.svg",
     "category": "devtools"
   },
   {
@@ -1792,22 +1284,6 @@
     "category": "devtools"
   },
   {
-    "file": "devtools/xcode black.svg",
-    "category": "devtools"
-  },
-  {
-    "file": "devtools/xcode blue.svg",
-    "category": "devtools"
-  },
-  {
-    "file": "devtools/xcode dark.svg",
-    "category": "devtools"
-  },
-  {
-    "file": "devtools/xcode.svg",
-    "category": "devtools"
-  },
-  {
     "file": "devtools/Yarn dark.svg",
     "category": "devtools"
   },
@@ -1816,12 +1292,28 @@
     "category": "devtools"
   },
   {
-    "file": "finance/ApplePay dark.svg",
-    "category": "finance"
+    "file": "ecommerce/aliexpress wordmark.svg",
+    "category": "ecommerce"
   },
   {
-    "file": "finance/ApplePay.svg",
-    "category": "finance"
+    "file": "ecommerce/aliexpress.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/ebay dark.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/ebay.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/Shopify dark.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/Shopify.svg",
+    "category": "ecommerce"
   },
   {
     "file": "finance/Bitcoin dark.svg",
@@ -1848,15 +1340,11 @@
     "category": "finance"
   },
   {
-    "file": "finance/Etherium dark.svg",
+    "file": "finance/Ethereum dark.svg",
     "category": "finance"
   },
   {
-    "file": "finance/Etherium.svg",
-    "category": "finance"
-  },
-  {
-    "file": "finance/GooglePay.svg",
+    "file": "finance/Ethereum.svg",
     "category": "finance"
   },
   {
@@ -2000,11 +1488,11 @@
     "category": "food"
   },
   {
-    "file": "food/Mcdonals dark.svg",
+    "file": "food/McDonalds dark.svg",
     "category": "food"
   },
   {
-    "file": "food/Mcdonals.svg",
+    "file": "food/McDonalds.svg",
     "category": "food"
   },
   {
@@ -2020,7 +1508,7 @@
     "category": "food"
   },
   {
-    "file": "food/StellaArtios.svg",
+    "file": "food/StellaArtois.svg",
     "category": "food"
   },
   {
@@ -2516,11 +2004,11 @@
     "category": "gaming"
   },
   {
-    "file": "gaming/Nitendo dark.svg",
+    "file": "gaming/Nintendo dark.svg",
     "category": "gaming"
   },
   {
-    "file": "gaming/Nitendo.svg",
+    "file": "gaming/Nintendo.svg",
     "category": "gaming"
   },
   {
@@ -2580,8 +2068,204 @@
     "category": "gaming"
   },
   {
-    "file": "gaming/XBOX.svg",
+    "file": "gaming/xbox.svg",
     "category": "gaming"
+  },
+  {
+    "file": "google/google android dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google android wordmark dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google android wordmark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google android.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google assistant dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google assistant.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google calendar dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google calendar.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google chrome dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google chrome.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google docs dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google docs.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google drive dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google drive.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google firebase dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google firebase.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google fitness dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google fitness.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google gcp dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google gcp.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google gemini dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google gemini.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google gmail dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google gmail.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google home dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google home.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google maps dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google maps.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google meet dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google meet.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google one dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google one.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google pay.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google photos dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google photos.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google play dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google play.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google podcast dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google podcast.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google shopping dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google shopping.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google wordmark dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google wordmark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/youtube dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/youtube.svg",
+    "category": "google"
+  },
+  {
+    "file": "hardware/acer black.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/acer.svg",
+    "category": "hardware"
   },
   {
     "file": "hardware/arduino dark.svg",
@@ -2593,6 +2277,10 @@
   },
   {
     "file": "hardware/arduino.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/asus.svg",
     "category": "hardware"
   },
   {
@@ -2636,6 +2324,10 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/hp.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/JBL black.svg",
     "category": "hardware"
   },
@@ -2648,11 +2340,23 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/lenovo black.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/lenovo dark.svg",
     "category": "hardware"
   },
   {
+    "file": "hardware/lenovo red.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/lenovo.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/LG 2.svg",
     "category": "hardware"
   },
   {
@@ -2665,6 +2369,10 @@
   },
   {
     "file": "hardware/logitech g.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/motorola.svg",
     "category": "hardware"
   },
   {
@@ -2681,6 +2389,10 @@
   },
   {
     "file": "hardware/NVIDIA.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/one plus.svg",
     "category": "hardware"
   },
   {
@@ -2701,6 +2413,18 @@
   },
   {
     "file": "hardware/Razer.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/redragon black.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/redragon white.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/redragon.svg",
     "category": "hardware"
   },
   {
@@ -2752,20 +2476,288 @@
     "category": "hardware"
   },
   {
-    "file": "os/android dark.svg",
-    "category": "os"
+    "file": "microsoft/bing dark.svg",
+    "category": "microsoft"
   },
   {
-    "file": "os/android-Wordmark dark.svg",
-    "category": "os"
+    "file": "microsoft/bing.svg",
+    "category": "microsoft"
   },
   {
-    "file": "os/android-Wordmark.svg",
-    "category": "os"
+    "file": "microsoft/microsoft 365 dark.svg",
+    "category": "microsoft"
   },
   {
-    "file": "os/android.svg",
-    "category": "os"
+    "file": "microsoft/microsoft 365.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft access dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft access.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft clipchamp dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft clipchamp.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft copilot dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft copilot.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft defender dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft defender.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft designer dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft designer.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 field service dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 field service.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 finance dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 finance.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 sales dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 sales.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft edge dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft edge.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft editor dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft editor.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft excel dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft excel.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data factory dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data factory.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data science dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data science.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft forms dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft forms.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft foundry dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft foundry.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft office dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft office.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft one drive.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft onelake dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft onelake.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft onenote dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft onenote.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft outlook dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft outlook.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft planner dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft planner.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft power bi dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft power bi.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft powerpoint dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft powerpoint.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft purview dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft purview.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft sharepoint dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft sharepoint.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft store dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft store.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft teams dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft teams.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft todo dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft todo.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft viva pulse dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft viva pulse.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft windows dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft windows.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft word dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft word.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft.svg",
+    "category": "microsoft"
   },
   {
     "file": "os/arch linux dark.svg",
@@ -2848,14 +2840,6 @@
     "category": "os"
   },
   {
-    "file": "os/windows dark.svg",
-    "category": "os"
-  },
-  {
-    "file": "os/windows.svg",
-    "category": "os"
-  },
-  {
     "file": "other/AwesomeLinks.svg",
     "category": "other"
   },
@@ -2870,6 +2854,74 @@
   {
     "file": "other/StopSign.svg",
     "category": "other"
+  },
+  {
+    "file": "productivity/Airtable dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Airtable.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Asana.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Bitly dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Bitly.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Buffer dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Buffer.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/dropbox dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/dropbox.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/notion dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/notion.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Obsidian dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Obsidian.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Salesforce dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Salesforce.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Slack dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/Slack.svg",
+    "category": "productivity"
   },
   {
     "file": "programming/AiScript dark.svg",
@@ -3216,6 +3268,130 @@
     "category": "programming"
   },
   {
+    "file": "social/ActivityPub dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/ActivityPub.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/discord.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/DiscordBots.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Facebook.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Fediverse dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Fediverse.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Instagram.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/linkedin dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/linkedin.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Mastodon dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Mastodon.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Misskey dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Misskey.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Pinterest dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Pinterest.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/reddit dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/reddit.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/snapchat.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Telegram dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Telegram.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/TikTok dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/TikTok.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Twitch dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Twitch.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/twitter.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Whatsapp dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Whatsapp-Wordmark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Whatsapp.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Xing dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/Xing.svg",
+    "category": "social"
+  },
+  {
     "file": "sports/Baseball dark.svg",
     "category": "sports"
   },
@@ -3238,5 +3414,97 @@
   {
     "file": "sports/Rugby.svg",
     "category": "sports"
+  },
+  {
+    "file": "streaming/Netflix dark.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/Netflix-Wordmark dark.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/Netflix-Wordmark.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/Netflix.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/spotify dark.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/spotify.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "travel/Booking dark.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/Booking.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/lyft dark.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/lyft.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/Tripadvisor dark.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/Tripadvisor.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/Uber dark.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/Uber.svg",
+    "category": "travel"
+  },
+  {
+    "file": "web/drupal.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/TOR dark.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/TOR-Wordmark.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/TOR.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/uc dark.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/uc.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/Webflow.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/Wordpress dark.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/Wordpress.svg",
+    "category": "web"
   }
 ]
