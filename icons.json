@@ -1,10 +1,14 @@
 [
   {
-    "file": "ai/ChatGPT dark.svg",
+    "file": "ai/Chat GPT color.svg",
     "category": "ai"
   },
   {
-    "file": "ai/ChatGPT.svg",
+    "file": "ai/Chat GPT dark.svg",
+    "category": "ai"
+  },
+  {
+    "file": "ai/Chat GPT.svg",
     "category": "ai"
   },
   {
@@ -1584,6 +1588,14 @@
     "category": "devtools"
   },
   {
+    "file": "devtools/http blue dark.svg",
+    "category": "devtools"
+  },
+  {
+    "file": "devtools/http blue.svg",
+    "category": "devtools"
+  },
+  {
     "file": "devtools/http dark.svg",
     "category": "devtools"
   },
@@ -1961,22 +1973,6 @@
   },
   {
     "file": "food/Heineken.svg",
-    "category": "food"
-  },
-  {
-    "file": "food/JohnnieWalker black.svg",
-    "category": "food"
-  },
-  {
-    "file": "food/JohnnieWalker brown.svg",
-    "category": "food"
-  },
-  {
-    "file": "food/JohnnieWalker red.svg",
-    "category": "food"
-  },
-  {
-    "file": "food/JohnnieWalker.svg",
     "category": "food"
   },
   {
@@ -2780,14 +2776,6 @@
     "category": "os"
   },
   {
-    "file": "os/archlinux dark.svg",
-    "category": "os"
-  },
-  {
-    "file": "os/archlinux.svg",
-    "category": "os"
-  },
-  {
     "file": "os/BSD dark.svg",
     "category": "os"
   },
@@ -2869,6 +2857,10 @@
   },
   {
     "file": "other/AwesomeLinks.svg",
+    "category": "other"
+  },
+  {
+    "file": "other/emirates.svg",
     "category": "other"
   },
   {
