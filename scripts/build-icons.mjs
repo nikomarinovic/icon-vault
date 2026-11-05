@@ -1,26 +1,36 @@
-import { readdir, readFile, writeFile } from 'node:fs/promises';
+import { readdir, writeFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 
 const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const iconDir = join(root, 'icons');
-const iconFiles = (await readdir(iconDir, { withFileTypes: true }))
-  .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith('.svg'))
-  .map((entry) => entry.name)
-  .sort((left, right) => left.localeCompare(right, 'en'));
+const icons = [];
 
-if (!iconFiles.length) throw new Error('No SVG icons found in icons/.');
+async function collectIcons(directory, relativeDirectory = '') {
+  const entries = await readdir(directory, { withFileTypes: true });
 
-await writeFile(join(root, 'icons.json'), `${JSON.stringify(iconFiles, null, 2)}\n`);
+  for (const entry of entries) {
+    const relativePath = relativeDirectory
+      ? `${relativeDirectory}/${entry.name}`
+      : entry.name;
+    const fullPath = join(directory, entry.name);
 
-const htmlPath = join(root, 'index.html');
-const html = await readFile(htmlPath, 'utf8');
-const fallbackPattern = /const fallbackIcons=\[.*?\];/s;
-if (!fallbackPattern.test(html)) throw new Error('Could not find fallbackIcons in index.html.');
-const updatedHtml = html.replace(
-  fallbackPattern,
-  `const fallbackIcons=${JSON.stringify(iconFiles)};`,
-);
-if (updatedHtml !== html) await writeFile(htmlPath, updatedHtml);
+    if (entry.isDirectory()) {
+      await collectIcons(fullPath, relativePath);
+    } else if (entry.isFile() && entry.name.toLowerCase().endsWith('.svg')) {
+      icons.push({
+        file: relativePath,
+        category: relativePath.split('/')[0] || 'other',
+      });
+    }
+  }
+}
 
-console.log(`Generated the icon catalog with ${iconFiles.length} SVG files.`);
+await collectIcons(iconDir);
+icons.sort((left, right) => left.file.localeCompare(right.file, 'en'));
+
+if (!icons.length) throw new Error('No SVG icons found in icons/.');
+
+await writeFile(join(root, 'icons.json'), `${JSON.stringify(icons, null, 2)}\n`);
+
+console.log(`Generated the icon catalog with ${icons.length} SVG files.`);
