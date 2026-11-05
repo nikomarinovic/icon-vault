@@ -24,34 +24,38 @@ body.lock{overflow:hidden}
 button,input{font:inherit;color:inherit}
 button{cursor:pointer}
 :focus-visible{outline:2px solid var(--cobalt);outline-offset:2px}
-.wrap{width:min(1240px,100% - 48px);margin-inline:auto}
+.wrap{width:min(1320px,100% - 48px);margin-inline:auto}
 
 /* header + hero */
-.top{display:flex;align-items:center;justify-content:space-between;height:68px}
+.top{display:flex;align-items:center;justify-content:space-between;height:64px}
 .brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font:700 19px/1 var(--display);letter-spacing:-.02em}
 .brand img{width:32px;height:32px}
 .ghlink{padding:8px 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink-2);text-decoration:none;font-size:14px;font-weight:500;transition:border-color .15s,color .15s}
 .ghlink:hover{border-color:var(--cobalt);color:var(--cobalt-ink)}
-.hero{padding:30px 0 30px}
-h1{margin:0;max-width:13ch;font:700 clamp(42px,7.4vw,80px)/.98 var(--display);letter-spacing:-.04em;text-wrap:balance}
-.hero p{margin:16px 0 0;max-width:46ch;color:var(--ink-2);font-size:17px}
+.hero{padding:16px 0 14px}
+h1{margin:0;max-width:16ch;font:700 clamp(36px,5.4vw,60px)/1 var(--display);letter-spacing:-.04em;text-wrap:balance}
+.hero p{margin:12px 0 0;max-width:50ch;color:var(--ink-2);font-size:16px}
 
 /* layout */
-.shell{display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:28px;align-items:start;padding-bottom:72px}
+.shell{display:grid;grid-template-columns:minmax(0,1fr) 460px;gap:28px;align-items:start;padding-bottom:72px}
 .library{min-width:0}
 
-/* search + tray */
-.lib-head{position:sticky;top:0;z-index:5;padding:10px 0 14px;background:linear-gradient(var(--canvas) 78%,transparent)}
+/* search + categories */
+.lib-head{position:sticky;top:0;z-index:5;padding:10px 0 12px;background:linear-gradient(var(--canvas) 82%,transparent)}
 .searchbox{position:relative}
 .search-ico{position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--ink-3);pointer-events:none}
 #search{width:100%;height:52px;padding:0 16px 0 46px;border:1px solid var(--line);border-radius:14px;outline:0;background:var(--paper);font-size:16px;box-shadow:0 1px 2px rgba(20,30,70,.05)}
 #search::placeholder{color:var(--ink-3)}
 #search:focus{border-color:var(--cobalt);box-shadow:0 0 0 4px var(--cobalt-soft)}
-.quick{display:flex;flex-wrap:wrap;gap:8px;margin:2px 0 18px}
-.quick button{height:34px;padding:0 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink-2);font-size:13px;font-weight:500;transition:border-color .15s,background .15s}
-.quick button:hover{border-color:var(--cobalt)}
-.quick button[aria-pressed=true]{border-color:var(--cobalt);background:var(--cobalt-soft);color:var(--cobalt-ink)}
-.tray{margin-bottom:22px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
+.cats{display:flex;flex-wrap:nowrap;gap:8px;margin-top:12px;padding-bottom:4px;overflow-x:auto;scrollbar-width:thin;scrollbar-color:#aab3d0 transparent}
+.cats button{flex:none;display:inline-flex;align-items:center;gap:7px;height:34px;padding:0 12px 0 14px;border:1px solid var(--line);border-radius:999px;background:var(--paper);color:var(--ink-2);font-size:13px;font-weight:550;white-space:nowrap;transition:border-color .15s,background .15s}
+.cats button:hover{border-color:var(--cobalt)}
+.cats button[aria-pressed=true]{border-color:var(--cobalt);background:var(--cobalt);color:#fff}
+.cats .n{padding:1px 7px;border-radius:99px;background:var(--canvas);color:var(--ink-3);font-size:11px;font-weight:700}
+.cats button[aria-pressed=true] .n{background:rgba(255,255,255,.22);color:#fff}
+
+/* selection tray */
+.tray{margin:6px 0 22px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:var(--paper)}
 .tray-head{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .tray-title{display:flex;align-items:center;gap:8px;margin:0;font-size:14px;font-weight:650}
 .count{display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 8px;border-radius:99px;background:var(--cobalt-soft);color:var(--cobalt-ink);font-size:12px;font-weight:700}
@@ -82,14 +86,13 @@ h1{margin:0;max-width:13ch;font:700 clamp(42px,7.4vw,80px)/.98 var(--display);le
 .studio{position:sticky;top:16px;max-height:calc(100dvh - 32px);overflow:auto;overscroll-behavior:contain;padding:20px;border:1px solid var(--line);border-radius:20px;background:var(--paper);box-shadow:0 18px 40px -24px rgba(30,40,100,.35);scrollbar-width:thin}
 .grabber{display:none;width:38px;height:4px;margin:2px auto 10px;border-radius:4px;background:var(--line)}
 .studio-head{display:flex;align-items:center;justify-content:space-between;gap:10px}
-.studio-head h2{margin:0;font:650 24px/1.1 var(--display);letter-spacing:-.025em}
+.studio-head h2{display:flex;align-items:center;gap:10px;margin:0;font:650 24px/1.1 var(--display);letter-spacing:-.025em}
 .sheet-close{display:none}
-.stage-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:16px 0 8px}
-.stage-count{color:var(--ink-2);font-size:13px;font-weight:600}
-.stage-tools{display:flex;align-items:center;gap:6px}
+.stage-bar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:14px 0 8px}
+.stage-tools{display:flex;align-items:center;gap:6px;margin-left:auto}
 .iconbtn{display:grid;place-items:center;width:32px;height:32px;padding:0;border:1px solid var(--line);border-radius:9px;background:var(--paper);color:var(--ink-2);transition:border-color .15s,color .15s}
 .iconbtn:hover{border-color:var(--cobalt);color:var(--cobalt-ink)}
-.stage{display:flex;flex-direction:column;justify-content:safe center;min-height:168px;max-height:min(46vh,380px);padding:20px;overflow:auto;border:1px solid var(--line);border-radius:14px;background-color:var(--stage-bg);background-image:radial-gradient(var(--stage-dot) 1px,transparent 1.3px);background-size:16px 16px;scrollbar-width:thin;scrollbar-color:#aab3d0 transparent}
+.stage{display:flex;flex-direction:column;justify-content:safe center;min-height:260px;max-height:min(52vh,460px);padding:22px;overflow:auto;border:1px solid var(--line);border-radius:14px;background-color:var(--stage-bg);background-image:radial-gradient(var(--stage-dot) 1px,transparent 1.3px);background-size:16px 16px;scrollbar-width:thin;scrollbar-color:#aab3d0 transparent}
 body[data-bg=dark] .stage{border-color:var(--night-line)}
 .previewgrid{display:flex;flex-direction:column;gap:var(--gap,16px);width:100%}
 .preview-row{display:flex;flex-wrap:nowrap;justify-content:var(--align,flex-start);align-items:center;gap:var(--gap,16px);width:100%;overflow-x:auto;overflow-y:hidden;padding-bottom:3px;scrollbar-width:thin;scrollbar-color:#aab3d0 transparent}
@@ -105,27 +108,12 @@ body[data-bg=dark] .stage{border-color:var(--night-line)}
 .fit .fitinner{overflow:hidden}
 .fit .previewgrid{width:max-content;transform-origin:0 0}
 .fit .preview-row{overflow:visible;padding-bottom:0}
-.lightbox{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:24px;background:rgba(15,18,32,.62)}
-.lb-card{display:flex;flex-direction:column;width:min(1280px,100%);height:min(88dvh,860px);padding:18px 20px 16px;border-radius:20px;background:var(--paper);box-shadow:0 30px 80px -20px rgba(10,14,40,.6)}
-.lb-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px}
-.lb-head h2{margin:0 auto 0 0;font:650 22px/1.1 var(--display);letter-spacing:-.02em}
-.lb-count{color:var(--ink-2);font-size:13px;font-weight:600}
-.lb-tools{display:flex;align-items:center;gap:8px}
-.lb-close{height:36px}
-.lb-stage{flex:1;min-height:0;max-height:none;padding:28px}
 .caption{margin:9px 2px 0;color:var(--ink-3);font:12px/1.5 var(--mono)}
-.share{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-top:16px}
-#share{min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;background:var(--canvas);color:var(--ink-2);font:12px var(--mono)}
-#embed,#embed-html{min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;background:var(--canvas);color:var(--ink-2);font:12px var(--mono)}
-#share:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-soft)}
-.btn{height:44px;padding:0 18px;border:0;border-radius:10px;font-size:14px;font-weight:650;white-space:nowrap;transition:background .15s}
-.btn-primary{background:var(--cobalt);color:#fff}
-.btn-primary:hover{background:var(--cobalt-ink)}
-.btn-quiet{background:var(--canvas);color:var(--ink)}
-.btn-quiet:hover{background:#e0e3ee}
-.btn:disabled{cursor:not-allowed;opacity:.55}
-.hint{margin:8px 0 0;color:var(--ink-3);font-size:13px}
-.settings{display:grid;gap:18px;margin-top:20px;padding-top:20px;border-top:1px solid var(--line-2)}
+
+.sec{margin-top:22px;padding-top:18px;border-top:1px solid var(--line-2)}
+.sec-title{margin:0 0 12px;color:var(--ink-3);font-size:11px;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.settings{display:grid;grid-template-columns:1fr 1fr;gap:16px 14px}
+.field.wide{grid-column:1/-1}
 .lab{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:7px;font-size:13px;font-weight:650}
 .lab output{color:var(--ink-3);font:500 12px var(--mono)}
 .field-hint{margin:7px 0 0;color:var(--ink-3);font-size:13px}
@@ -138,6 +126,27 @@ body[data-bg=dark] .stage{border-color:var(--night-line)}
 #columns:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-soft)}
 #spacing{width:100%;accent-color:var(--cobalt)}
 
+.share{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;margin-top:10px}
+#share{min-width:0;height:44px;padding:0 12px;border:1px solid var(--line);border-radius:10px;outline:0;background:var(--canvas);color:var(--ink-2);font:12px var(--mono)}
+#share:focus{border-color:var(--cobalt);box-shadow:0 0 0 3px var(--cobalt-soft)}
+.btn{height:44px;padding:0 18px;border:0;border-radius:10px;font-size:14px;font-weight:650;white-space:nowrap;transition:background .15s}
+.btn-primary{background:var(--cobalt);color:#fff}
+.btn-primary:hover{background:var(--cobalt-ink)}
+.btn-quiet{background:var(--canvas);color:var(--ink)}
+.btn-quiet:hover{background:#e0e3ee}
+.btn:disabled{cursor:not-allowed;opacity:.55}
+.hint{margin:8px 0 0;color:var(--ink-3);font-size:13px}
+
+/* lightbox */
+.lightbox{position:fixed;inset:0;z-index:60;display:grid;place-items:center;padding:24px;background:rgba(15,18,32,.62)}
+.lb-card{display:flex;flex-direction:column;width:min(1280px,100%);height:min(88dvh,860px);padding:18px 20px 16px;border-radius:20px;background:var(--paper);box-shadow:0 30px 80px -20px rgba(10,14,40,.6)}
+.lb-head{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+.lb-head h2{margin:0 auto 0 0;font:650 22px/1.1 var(--display);letter-spacing:-.02em}
+.lb-count{color:var(--ink-2);font-size:13px;font-weight:600}
+.lb-tools{display:flex;align-items:center;gap:8px}
+.lb-close{height:36px}
+.lb-stage{flex:1;min-height:0;max-height:none;padding:28px}
+
 /* mobile dock + sheet */
 .dock{display:none}
 .scrim{position:fixed;inset:0;z-index:40;background:rgba(15,18,32,.5)}
@@ -145,6 +154,7 @@ footer{padding:0 0 28px;color:var(--ink-3);text-align:center;font-size:13px}
 footer a{color:var(--cobalt-ink);text-decoration:none;font-weight:600}
 footer a:hover{text-decoration:underline}
 
+@media(max-width:1100px){.shell{grid-template-columns:minmax(0,1fr) 400px}}
 @media(max-width:960px){
   .shell{grid-template-columns:1fr;padding-bottom:120px}
   .dock{position:fixed;left:0;right:0;bottom:0;z-index:30;display:flex;align-items:center;gap:8px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));border-top:1px solid var(--line);background:var(--paper)}
@@ -155,15 +165,17 @@ footer a:hover{text-decoration:underline}
   .studio.open{visibility:visible;transform:none;transition:transform .28s cubic-bezier(.2,.8,.2,1),visibility 0s}
   .grabber{display:block}
   .sheet-close{display:inline-flex;align-items:center;height:36px}
+  .stage{min-height:200px}
 }
 @media(max-width:560px){
   .wrap{width:calc(100% - 28px)}
-  .top{height:60px}
-  .hero{padding:18px 0 20px}
-  .hero p{font-size:16px}
+  .top{height:56px}
+  .hero{padding:10px 0 12px}
+  .hero p{font-size:15px}
   .grid{grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:8px}
   .option{min-height:104px}
   .btn{padding:0 14px}
+  .settings{grid-template-columns:1fr}
   .lightbox{padding:0}
   .lb-card{width:100%;height:100dvh;border-radius:0;padding:14px 14px 12px}
   .lb-stage{padding:18px}
@@ -175,46 +187,64 @@ footer a:hover{text-decoration:underline}
 <section class="hero wrap"><h1>Build your icon gallery.</h1><p>Pick from <span id="filecount">…</span> open-source SVGs, set the layout, and share one link.</p></section>
 <main class="shell wrap">
 <section class="library" aria-label="Icon library">
-<div class="lib-head"><div class="searchbox"><svg class="search-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search" type="search" placeholder="Search icons by name" autocomplete="off" aria-label="Search icons"></div></div>
-<div class="quick" id="quick" role="group" aria-label="Popular icons"></div>
+<div class="lib-head">
+  <div class="searchbox"><svg class="search-ico" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="search" type="search" placeholder="Search by name or category (e.g. database, cloud, python)" autocomplete="off" aria-label="Search icons"></div>
+  <div class="cats" id="cats" role="group" aria-label="Filter by category"></div>
+</div>
 <div class="tray"><div class="tray-head"><h2 class="tray-title">Your selection <span id="selected-count" class="count">0</span></h2><button id="clear" class="clear" type="button" hidden>Clear selection</button></div><div id="selected" class="selected"></div></div>
-<div class="grid-head"><h2 class="sectitle">Icon library</h2><span id="resultcount"></span></div>
+<div class="grid-head"><h2 class="sectitle" id="grid-title">Icon library</h2><span id="resultcount"></span></div>
 <div id="grid" class="grid"></div>
 </section>
+
 <aside id="studio" class="studio" aria-labelledby="studio-title">
 <div class="grabber" aria-hidden="true"></div>
-<div class="studio-head"><h2 id="studio-title">Your gallery</h2><button id="sheet-close" class="btn btn-quiet sheet-close" type="button">Done</button></div>
-<div class="stage-bar"><span id="total" class="stage-count">0 icons</span><div class="stage-tools"><div class="seg small" data-key="view" role="group" aria-label="Preview size"><button type="button" data-value="actual">Actual</button><button type="button" data-value="fit">Fit</button></div><button type="button" class="iconbtn bg-toggle"></button><button id="expand" type="button" class="iconbtn" title="Open large preview" aria-label="Open large preview"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button></div></div>
+<div class="studio-head"><h2 id="studio-title">Your gallery <span id="total" class="count">0</span></h2><button id="sheet-close" class="btn btn-quiet sheet-close" type="button">Done</button></div>
+
+<div class="stage-bar">
+  <div class="seg small" data-key="view" role="group" aria-label="Preview size"><button type="button" data-value="actual">Actual</button><button type="button" data-value="fit">Fit</button></div>
+  <div class="stage-tools"><button type="button" class="iconbtn bg-toggle"></button><button id="expand" type="button" class="iconbtn" title="Open large preview" aria-label="Open large preview"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg></button></div>
+</div>
 <div class="stage"><div id="stage-box" class="fitbox"><div id="stage-inner" class="fitinner"><div id="preview" class="previewgrid" aria-live="polite"></div></div></div></div>
 <p id="meta" class="caption"></p>
-<div class="share"><input id="share" aria-label="Shareable gallery link" readonly><button class="btn btn-primary copy-btn" type="button" disabled>Copy link</button></div>
-<p id="hint" class="hint" aria-live="polite">Choose icons first to create a link with your selection.</p>
-<div class="share"><input id="embed" aria-label="README image Markdown" readonly placeholder="Select icons to create a README image"><button id="copy-embed" class="btn btn-quiet" type="button" disabled>Copy Markdown</button></div>
-<p id="embed-hint" class="hint" aria-live="polite">Copies a Markdown image that displays the selected icons.</p>
-<div class="share"><input id="embed-html" aria-label="Centered README image HTML" readonly placeholder="Select icons to create centered HTML"><button id="copy-html" class="btn btn-quiet" type="button" disabled>Copy HTML</button></div>
-<p id="html-hint" class="hint" aria-live="polite">Use this to center the image in a GitHub README.</p>
-<div class="settings">
-<div class="field"><span class="lab" id="lab-layout">Gallery layout</span><div class="seg" data-key="layout" role="group" aria-labelledby="lab-layout"><button type="button" data-value="single">One row</button><button type="button" data-value="custom">Custom grid</button></div><p id="layout-description" class="field-hint"></p></div>
-<div class="field" id="custom-row-setting" hidden><label class="lab" for="columns">Icons per row</label><input id="columns" type="number" min="1" max="80" step="1" value="5" inputmode="numeric"></div>
-<div class="field"><span class="lab" id="lab-size">Icon size</span><div class="seg" data-key="size" role="group" aria-labelledby="lab-size"><button type="button" data-value="32">Small</button><button type="button" data-value="48">Medium</button><button type="button" data-value="64">Large</button></div></div>
-<div class="field"><label class="lab" for="spacing">Space between icons <output id="spacing-value" for="spacing">16 px</output></label><input id="spacing" type="range" min="0" max="64" step="2" value="16"></div>
-<div class="field"><span class="lab" id="lab-align">Align icons</span><div class="seg" data-key="align" role="group" aria-labelledby="lab-align"><button type="button" data-value="left">Left</button><button type="button" data-value="center">Center</button><button type="button" data-value="right">Right</button></div></div>
+
+<div class="sec">
+  <h3 class="sec-title">Layout</h3>
+  <div class="settings">
+    <div class="field wide"><span class="lab" id="lab-layout">Gallery layout</span><div class="seg" data-key="layout" role="group" aria-labelledby="lab-layout"><button type="button" data-value="single">One row</button><button type="button" data-value="custom">Custom grid</button></div><p id="layout-description" class="field-hint"></p></div>
+    <div class="field wide" id="custom-row-setting" hidden><label class="lab" for="columns">Icons per row</label><input id="columns" type="number" min="1" max="80" step="1" value="5" inputmode="numeric"></div>
+    <div class="field wide"><span class="lab" id="lab-size">Icon size</span><div class="seg" data-key="size" role="group" aria-labelledby="lab-size"><button type="button" data-value="32">Small</button><button type="button" data-value="48">Medium</button><button type="button" data-value="64">Large</button></div></div>
+    <div class="field wide"><span class="lab" id="lab-align">Align icons</span><div class="seg" data-key="align" role="group" aria-labelledby="lab-align"><button type="button" data-value="left">Left</button><button type="button" data-value="center">Center</button><button type="button" data-value="right">Right</button></div></div>
+    <div class="field wide"><label class="lab" for="spacing">Space between icons <output id="spacing-value" for="spacing">16 px</output></label><input id="spacing" type="range" min="0" max="64" step="2" value="16"></div>
+  </div>
+</div>
+
+<div class="sec">
+  <h3 class="sec-title">Share</h3>
+  <div class="seg" data-key="out" role="group" aria-label="Output format"><button type="button" data-value="link">Link</button><button type="button" data-value="md">README Markdown</button><button type="button" data-value="html">README HTML</button></div>
+  <div class="share"><input id="share" aria-label="Output" readonly><button id="copy" class="btn btn-primary" type="button" disabled>Copy</button></div>
+  <p id="hint" class="hint" aria-live="polite"></p>
 </div>
 </aside>
 </main>
 <div id="scrim" class="scrim" hidden></div>
 <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden><div class="lb-card"><div class="lb-head"><h2 id="lb-title">Gallery preview</h2><span id="lb-count" class="lb-count"></span><div class="lb-tools"><div class="seg small" data-key="lbview" role="group" aria-label="Preview size"><button type="button" data-value="actual">Actual size</button><button type="button" data-value="fit">Fit all</button></div><button type="button" class="iconbtn bg-toggle"></button><button id="lb-close" type="button" class="btn btn-quiet lb-close">Close</button></div></div><div class="stage lb-stage"><div id="lb-box" class="fitbox"><div id="lb-inner" class="fitinner"><div id="big-preview" class="previewgrid"></div></div></div></div><p id="lb-meta" class="caption"></p></div></div>
-<div class="dock"><div id="strip" class="strip" aria-live="polite"></div><button id="customize" class="btn btn-quiet" type="button" aria-expanded="false" aria-controls="studio">Customize</button><button class="btn btn-primary copy-btn" type="button" disabled>Copy link</button></div>
+<div class="dock"><div id="strip" class="strip" aria-live="polite"></div><button id="customize" class="btn btn-quiet" type="button" aria-expanded="false" aria-controls="studio">Customize</button><button id="copy-dock" class="btn btn-primary" type="button" disabled>Copy link</button></div>
 <footer class="wrap">Made for developers. <a href="https://github.com/nikomarinovic/icon-vault">IconVault</a></footer>
 <script>
-const fallbackIcons=["Ableton dark.svg","Ableton.svg","Activision dark.svg","Activision.svg","ActivityPub dark.svg","ActivityPub.svg","Actix dark.svg","Actix.svg","Adidas dark.svg","Adidas.svg","Adonis.svg","AfterEffects.svg","Airtable dark.svg","Airtable.svg","AiScript dark.svg","AiScript.svg","Akka dark.svg","Akka.svg","aliexpress wordmark.svg","aliexpress.svg","AlpineJS dark.svg","AlpineJS.svg","Amazon dark.svg","Amazon S3 dark.svg","Amazon S3.svg","Amazon.svg","AmazonChime dark.svg","AmazonChime.svg","AmazonConnect dark.svg","AmazonConnect.svg","Anaconda dark.svg","Anaconda.svg","android dark.svg","android-Wordmark dark.svg","android-Wordmark.svg","android.svg","AndroidStudio dark.svg","AndroidStudio.svg","Angular dark.svg","Angular-Wordmark dark.svg","Angular-Wordmark.svg","Angular.svg","Ansible.svg","Apollo.svg","Appbaseio dark.svg","Appbaseio-Wordmark dark.svg","Appbaseio-Wordmark.svg","Appbaseio.svg","Apple 1977 dark.svg","Apple 1977.svg","apple music.svg","apple.svg","ApplePay dark.svg","ApplePay.svg","AppleTV gray.svg","AppleTV red.svg","AppleTV.svg","Appwrite.svg","arch linux dark.svg","arch linux.svg","archlinux dark.svg","archlinux.svg","arduino dark.svg","arduino-Default Light.svg","arduino.svg","Armory dark.svg","Armory.svg","Asana.svg","Astro.svg","Atom.svg","Audition.svg","AutoCAD dark.svg","AutoCAD.svg","AwesomeLinks.svg","aws dark.svg","aws.svg","Azul.svg","Azure dark.svg","Azure-Logo dark.svg","Azure-Logo.svg","Azure.svg","Babel.svg","backblaze.svg","Baseball dark.svg","Baseball.svg","bash dark.svg","bash.svg","Basketball dark.svg","Basketball.svg","BBS dark.svg","BBS.svg","Bevy dark.svg","Bevy.svg","BitBucket dark.svg","BitBucket.svg","Bitcoin dark.svg","Bitcoin.svg","Bitfinex.svg","Bitly dark.svg","Bitly.svg","Blender dark.svg","Blender.svg","BMW dark.svg","BMW-Monocolor dark.svg","BMW-Monocolor.svg","BMW-MSeries dark.svg","BMW-MSeries.svg","BMW.svg","Booking dark.svg","Booking.svg","Bootstrap.svg","BOSS dark.svg","BOSS.svg","BSD dark.svg","BSD.svg","Buffer dark.svg","Buffer.svg","Bun dark.svg","Bun.svg","C.svg","CakePHP dark.svg","CakePHP.svg","Cardano dark.svg","Cardano.svg","Cassandra dark.svg","Cassandra.svg","Chanel dark.svg","Chanel.svg","ChatGPT dark.svg","ChatGPT.svg","Cigarette light.svg","Cigarette.svg","cisco dark.svg","cisco.svg","claude code.svg","ClaudeAI dark.svg","ClaudeAI.svg","CLion dark.svg","CLion.svg","Clojure dark.svg","Clojure.svg","cloudflare dark.svg","cloudflare.svg","CMake dark.svg","CMake.svg","CocaCola dark.svg","CocaCola.svg","Coconut dark.svg","Coconut.svg","CodeIgniter orange.svg","CodeIgniter.svg","CodePen dark.svg","CodePen.svg","codex dark.svg","codex.svg","CoffeeBean dark.svg","CoffeeBean green.svg","CoffeeBean light.svg","CoffeeBean.svg","coffeescript dark.svg","coffeescript.svg","Cohere.svg","copilot dark.svg","copilot.svg","CouchDB.svg","CPP.svg","crypto.svg","Crystal dark.svg","Crystal.svg","CS.svg","CSS.svg","cucmber dark.svg","cucmber.svg","cursor ai.svg","Cypress dark.svg","Cypress.svg","D3 dark.svg","D3.svg","Dart dark.svg","Dart.svg","database dark.svg","database.svg","Datadog.svg","Debian dark.svg","Debian.svg","decathlon.svg","deepseek.svg","DELL blue.svg","DELL.svg","DENO dark.svg","DENO.svg","DevTo dark.svg","DevTo.svg","Dice dark.svg","Dice.svg","DigitalOcean.svg","discord.svg","DiscordBots.svg","DiscordJS dark.svg","DiscordJS.svg","Django.svg","docker dark.svg","docker.svg","DonPerignon white.svg","DonPerignon.svg","DotNet.svg","dropbox dark.svg","dropbox.svg","drupal.svg","DynamoDB dark.svg","DynamoDB.svg","ebay dark.svg","ebay.svg","Eclipse dark.svg","Eclipse.svg","Elasticsearch dark.svg","Elasticsearch.svg","Electron.svg","Elixir dark.svg","Elixir.svg","Elysia dark.svg","Elysia.svg","Emacs.svg","Epicgames dark.svg","Epicgames.svg","Etherium dark.svg","Etherium.svg","Excel dark.svg","Excel.svg","ExpressJS dark.svg","ExpressJS.svg","Facebook.svg","Falcon dark.svg","Falcon.svg","FastAPI.svg","Fediverse dark.svg","Fediverse.svg","Ferrari dark.svg","Ferrari-Horse Red.svg","Ferrari-Horse Yellow.svg","Ferrari-Wordmark Black.svg","Ferrari-Wordmark Red.svg","Ferrari-Wordmark Yellow.svg","Ferrari.svg","figma dark.svg","figma.svg","FILA.svg","firebase dark.svg","firebase.svg","Flask dark.svg","Flask.svg","flutter dark.svg","flutter.svg","FlyEmirates blue.svg","FlyEmirates dark.svg","FlyEmirates.svg","Formula1 dark.svg","Formula1.svg","Forth.svg","Fortran.svg","GameMakerStudio.svg","Gatsby.svg","gcp dark.svg","gcp.svg","Gherkin dark.svg","Gherkin.svg","git.svg","github copilot dark.svg","github copilot.svg","github dark.svg","github.svg","GithubActions dark.svg","GithubActions.svg","gitlab dark.svg","gitlab.svg","gmail dark.svg","gmail.svg","gnome dark.svg","gnome.svg","GO dark.svg","GO.svg","Godot dark.svg","Godot.svg","google dark.svg","google gemini dark.svg","google gemini.svg","Google-Wordmark dark.svg","Google-Wordmark.svg","google.svg","GoogleAssistant dark.svg","GoogleAssistant.svg","GoogleCalendar dark.svg","GoogleCalendar.svg","GoogleChrome dark.svg","GoogleChrome.svg","GoogleDocs dark.svg","GoogleDocs.svg","GoogleDrive dark.svg","GoogleDrive.svg","GoogleFitness dark.svg","GoogleFitness.svg","GoogleHome dark.svg","GoogleHome.svg","GoogleMaps dark.svg","GoogleMaps.svg","GoogleMeet dark.svg","GoogleMeet.svg","GoogleOne dark.svg","GoogleOne.svg","GooglePay.svg","GooglePhotos dark.svg","GooglePhotos.svg","GooglePlay dark.svg","GooglePlay.svg","GooglePodcast dark.svg","GooglePodcast.svg","GoogleShopping dark.svg","GoogleShopping.svg","Gradle dark.svg","Gradle.svg","Grafana dark.svg","Grafana.svg","GraphQL dark.svg","GraphQL.svg","grok dark.svg","grok.svg","Grunt dark.svg","Grunt.svg","GTA black.svg","GTA white.svg","GTA.svg","Guinness dark.svg","Guinness.svg","Gulp.svg","Haskell dark.svg","Haskell.svg","Haxe dark.svg","Haxe.svg","HaxeFlixel dark.svg","HaxeFlixel.svg","HDMI dark.svg","HDMI-Gray dark.svg","HDMI-Gray.svg","HDMI-Red dark.svg","HDMI-Red.svg","HDMI.svg","Heineken Wordmark.svg","Heineken-Default white.svg","Heineken-Short green.svg","Heineken-Short white.svg","Heineken-Text green.svg","Heineken-Text white.svg","Heineken.svg","Heroku.svg","Hibernate dark.svg","Hibernate.svg","HM black.svg","HM dark.svg","HM white.svg","HM.svg","HTML.svg","Htmx dark.svg","Htmx.svg","http dark.svg","http.svg","IBM dark.svg","IBM.svg","icon.svg","Idea dark.svg","Idea.svg","Illustrator.svg","InfluxDB.svg","Instagram.svg","IntelliJ IDEA.svg","IPFS dark.svg","IPFS.svg","java dark.svg","java.svg","JavaScript.svg","JBL black.svg","JBL white.svg","JBL.svg","Jenkins dark.svg","Jenkins.svg","Jest.svg","JohnnieWalker black.svg","JohnnieWalker brown.svg","JohnnieWalker red.svg","JohnnieWalker.svg","Jordan black.svg","Jordan blue.svg","Jordan green.svg","Jordan pink.svg","Jordan red.svg","Jordan yellow.svg","Jordan.svg","joystick dark.svg","joystick.svg","JQuery.svg","json light.svg","json.svg","Julia dark.svg","Julia.svg","Kafka.svg","kali linux dark.svg","kali linux.svg","Kebab light.svg","Kebab.svg","KFC.svg","Kotlin dark.svg","Kotlin.svg","Ktor dark.svg","Ktor.svg","Kubernetes.svg","Laravel dark.svg","Laravel.svg","LaTeX dark.svg","LaTeX.svg","lenovo dark.svg","lenovo.svg","Less dark.svg","Less.svg","Levis dark.svg","Levis.svg","LG.svg","linkedin dark.svg","linkedin.svg","linux dark.svg","linux mint dark.svg","linux mint.svg","linux.svg","Lit dark.svg","Lit.svg","logitech g dark.svg","logitech g.svg","Lua dark.svg","Lua.svg","lyft dark.svg","lyft.svg","Markdown dark.svg","Markdown.svg","Marlboro blue.svg","Marlboro gold.svg","Marlboro.svg","MasterCard dark.svg","MasterCard-Wordmark.svg","MasterCard.svg","Mastodon dark.svg","Mastodon.svg","MaterialUI dark.svg","MaterialUI.svg","Matlab dark.svg","Matlab.svg","Maven dark.svg","Maven.svg","Mcdonals dark.svg","Mcdonals.svg","Mclaren dark.svg","Mclaren-Wordmark dark.svg","Mclaren-Wordmark.svg","Mclaren.svg","Mercedes dark.svg","Mercedes Petronas.svg","Mercedes-AMG dark.svg","Mercedes-AMG Petronas.svg","Mercedes-AMG.svg","Mercedes.svg","Michelin.svg","microsoft dark.svg","microsoft.svg","Misskey dark.svg","Misskey.svg","Mitsubishi.svg","mongoDB dark.svg","MongoDB light.svg","MongoDB.svg","MSSQL dark.svg","MSSQL.svg","MySQL dark.svg","MySQL.svg","NASA dark.svg","NASA.svg","NeoVim dark.svg","NeoVim.svg","NestJS dark.svg","NestJS.svg","Netflix dark.svg","Netflix-Wordmark dark.svg","Netflix-Wordmark.svg","Netflix.svg","netlify dark.svg","netlify.svg","NextJS dark.svg","NextJS.svg","Nginx.svg","Nike dark.svg","Nike.svg","Nim dark.svg","Nim.svg","Nitendo dark.svg","Nitendo.svg","Nix dark.svg","Nix.svg","NodeJS dark.svg","NodeJS.svg","Nokia dark.svg","Nokia.svg","NorthFace dark.svg","NorthFace.svg","notion dark.svg","notion.svg","npm dark.svg","npm.svg","NuxtJS dark.svg","NuxtJS.svg","NVIDIA dark.svg","NVIDIA.svg","Obsidian dark.svg","Obsidian.svg","OCaml.svg","Octave dark.svg","Octave.svg","one drive.svg","OneNote dark.svg","OneNote.svg","ONNX.svg","Opa dark.svg","Opa.svg","OpenCV dark.svg","OpenCV.svg","OpenShift.svg","OpenStack dark.svg","OpenStack.svg","OpenTofu.svg","Oracle dark.svg","Oracle.svg","Outlook dark.svg","Outlook.svg","OWASP.svg","p5js.svg","pack dark.svg","pack.svg","packer dark.svg","packer.svg","PayPal dark.svg","PayPal-Wordmark dark.svg","PayPal-Wordmark.svg","PayPal.svg","Perl.svg","Perplexity dark.svg","Perplexity.svg","Petronas.svg","Phalcon dark.svg","Phalcon.svg","Photoshop.svg","php dark.svg","php.svg","PhpStorm dark.svg","PhpStorm.svg","Pinia dark.svg","Pinia.svg","Pinterest dark.svg","Pinterest.svg","Pkl dark.svg","Pkl.svg","PlanetScale dark.svg","PlanetScale.svg","Playstation dark.svg","Playstation light.svg","Playstation.svg","png dark.svg","png.svg","Pnpm dark.svg","Pnpm.svg","PostgreSQL dark.svg","PostgreSQL.svg","Postman.svg","Powerpoint dark.svg","Powerpoint.svg","powershell dark.svg","powershell.svg","Powerstrip dark.svg","Powerstrip.svg","Premiere.svg","Prisma.svg","Processing dark.svg","Processing.svg","Prometheus.svg","PyCharm dark.svg","PyCharm.svg","python dark.svg","python.svg","PyTorch dark.svg","PyTorch.svg","QT dark.svg","QT.svg","R dark.svg","R.svg","RabbitMQ dark.svg","RabbitMQ.svg","Rails.svg","RaspberryPi dark.svg","RaspberryPi.svg","RayBan red.svg","RayBan white.svg","RayBan.svg","Razer.svg","react dark.svg","react.svg","ReactiveX dark.svg","ReactiveX.svg","RedBull dark.svg","RedBull.svg","reddit dark.svg","reddit.svg","redhat dark.svg","redhat.svg","Redis dark.svg","Redis.svg","Redux.svg","Regex dark.svg","Regex.svg","Remix dark.svg","Remix.svg","Replit dark.svg","Replit.svg","Rider dark.svg","Rider.svg","RobloxStudio.svg","Rocket.svg","RollupJS dark.svg","RollupJS.svg","ROS dark.svg","ROS.svg","Ruby.svg","Rugby dark.svg","Rugby.svg","Rust.svg","Ryzen.svg","Salesforce dark.svg","Salesforce.svg","Samsung dark.svg","Samsung-Classic.svg","Samsung.svg","Scala dark.svg","Scala.svg","Sentry.svg","Sequelize dark.svg","Sequelize.svg","SharePoint dark.svg","SharePoint.svg","Shell.svg","Shopify dark.svg","Shopify.svg","Sketchup dark.svg","Sketchup.svg","Škoda.svg","Slack dark.svg","Slack.svg","Solidity.svg","SolidJS dark.svg","SolidJS.svg","Sony light.svg","Sony.svg","SpaceX dark.svg","SpaceX-Logo Light.svg","SpaceX.svg","Spartan dark.svg","Spartan.svg","SpeakerDeck dark.svg","SpeakerDeck-Default Light.svg","SpeakerDeck.svg","spotify dark.svg","spotify.svg","Spring dark.svg","Spring.svg","SQLite.svg","StackOverFlow dark.svg","StackOverFlow.svg","Starbucks.svg","Steam dark.svg","Steam.svg","StellaArtios.svg","StopSign dark.svg","StopSign.svg","Sublime dark.svg","Sublime.svg","supabase dark.svg","supabase.svg","Supreme dark.svg","Supreme.svg","Svelte.svg","SVG dark.svg","SVG.svg","swift.svg","tailwind dark.svg","tailwind.svg","Tauri dark.svg","Tauri.svg","Teams dark.svg","Teams.svg","Telegram dark.svg","Telegram.svg","TensorFlow dark.svg","TensorFlow.svg","Terraform dark.svg","Terraform.svg","Tesla dark.svg","Tesla red.svg","Tesla.svg","ThreeJS dark.svg","ThreeJS.svg","TikTok darkl.svg","TikTok.svg","TOR dark.svg","TOR-Wordmark.svg","TOR.svg","Tripadvisor dark.svg","Tripadvisor.svg","Twitch dark.svg","Twitch.svg","twitter.svg","TypeScript.svg","Uber dark.svg","Uber.svg","ubuntu linux dark.svg","ubuntu linux.svg","uc dark.svg","uc.svg","UnderArmour dark.svg","UnderArmour.svg","Unity dark.svg","Unity.svg","UnrealEngine dark.svg","UnrealEngine.svg","USB dark.svg","USB-Green dark.svg","USB-Green.svg","USB.svg","USBA dark.svg","USBA.svg","V dark.svg","V.svg","Vala.svg","Vercel dark.svg","Vercel.svg","Verilog.svg","VIM dark.svg","VIM.svg","Visa dark.svg","Visa.svg","VisualStudio dark.svg","VisualStudio.svg","Vite dark.svg","Vite.svg","Vitest dark.svg","Vitest.svg","vLLM.svg","VScode dark.svg","VScode.svg","VSCodium dark.svg","VSCodium.svg","VueJS dark.svg","VueJS.svg","Vuetify dark.svg","Vuetify.svg","Walmart.svg","waypoint dark.svg","waypoint.svg","WebAssembly.svg","Webflow.svg","Webpack dark.svg","Webpack.svg","WebStorm dark.svg","WebStorm.svg","Whatsapp dark.svg","Whatsapp-Wordmark.svg","Whatsapp.svg","WindiCSS dark.svg","WindiCSS.svg","windows dark.svg","windows.svg","Word dark.svg","Word.svg","Wordpress dark.svg","Wordpress.svg","Workers dark.svg","Workers.svg","XBOX-ONE dark.svg","XBOX-ONE light.svg","XBOX-Wordmark dark.svg","XBOX-Wordmark light.svg","XBOX.svg","xcode black.svg","xcode blue.svg","xcode dark.svg","xcode.svg","XD.svg","Xing dark.svg","Xing.svg","xml dark.svg","xml.svg","Yarn dark.svg","Yarn.svg","Yew dark.svg","Yew.svg","YouTube dark.svg","YouTube.svg","ZARA dark.svg","ZARA.svg","Zig dark.svg","Zig.svg"];
-let iconFiles=fallbackIcons;
+/* icons.json entries contain each icon's path and category. */
+const CAT_ORDER=['programming','frameworks','cloud','databases','devtools','ai','os','design','apps','gaming','hardware','companies','finance','brands','food','automotive','sports','other'];
+const CAT_LABELS={programming:'Programming',frameworks:'Frameworks',cloud:'Cloud & DevOps',databases:'Databases',devtools:'Dev tools',ai:'AI',os:'Operating systems',design:'Design & media',apps:'Apps & services',gaming:'Gaming',hardware:'Hardware',companies:'Tech companies',finance:'Finance & crypto',brands:'Brands',food:'Food & drink',automotive:'Automotive',sports:'Sports',other:'Other'};
+const catLabel=c=>CAT_LABELS[c]||(c.charAt(0).toUpperCase()+c.slice(1).replace(/[-_]+/g,' '));
+const catRank=c=>{const i=CAT_ORDER.indexOf(c);return i<0?999:i};
+
+let iconFiles=[];
 const aliases={vs:'visualstudio',vscode:'vscode',visualstudio:'visualstudio',xcode:'xcode',node:'nodejs','node.js':'nodejs',ts:'typescript',js:'javascript'};
 const assetVersion='__ASSET_VERSION__';
 const params=new URLSearchParams(location.search);
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const search=$('#search'),grid=$('#grid'),preview=$('#preview'),columns=$('#columns'),spacing=$('#spacing'),studio=$('#studio'),scrim=$('#scrim'),selected=[];
-const state={layout:'single',align:'left',size:'64',bg:'light',view:'actual',lbview:'fit'};
+const state={layout:'single',align:'left',size:'64',bg:'light',view:'actual',lbview:'fit',out:'link',cat:'all'};
+const out={link:'',md:'',html:''};
 const tiles=new Map();
 const lightbox=$('#lightbox'),bigPreview=$('#big-preview'),stageBox=$('#stage-box'),stageInner=$('#stage-inner'),lbBox=$('#lb-box'),lbInner=$('#lb-inner');
 const ICON_MOON='<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>';
@@ -225,14 +255,19 @@ const slug=s=>s.toLocaleLowerCase().replace(/[^a-z0-9]/g,'');
 const clean=s=>s.replace(/\.svg$/i,'');
 let choices=[],byKey=new Map(),byBaseKey=new Map();
 const collator=new Intl.Collator();
+
 function buildChoices(list){
-  choices=list.map(file=>{
-    const name=clean(file);
-    const key=slug(file.replace(/\.svg$/i,''));
-    const variant=file.match(/(?:_| )(dark|light)\.svg$/i)?.[1]?.toLowerCase();
+  choices=list.map(entry=>{
+    const file=typeof entry==='string'?entry:entry.file;
+    const base=file.split('/').pop();
+    const name=clean(base);
+    const key=slug(name);
+    const variant=base.match(/(?:_| )(dark|light)\.svg$/i)?.[1]?.toLowerCase();
     const label=name.replace(/([a-z0-9])([A-Z])/g,'$1 $2').replace(/[-_]+/g,' ').trim();
     const baseKey=slug(name.replace(/(?:_| )(dark|light)$/i,''));
-    return{key,baseKey,variant,file,label,hay:slug(label)+' '+slug(file)};
+    const folder=file.includes('/')?file.split('/')[0]:'';
+    const category=(typeof entry==='object'&&entry.category)||folder||'other';
+    return{key,baseKey,variant,file,label,category,hay:slug(label)+' '+slug(name)+' '+slug(category)+' '+slug(catLabel(category))};
   }).sort((a,b)=>collator.compare(a.label,b.label)||collator.compare(a.file,b.file));
   byKey=new Map(choices.map(x=>[x.key,x]));
   byBaseKey=new Map();
@@ -249,7 +284,7 @@ function resolve(name,legacyTheme){
   }
   return base;
 }
-function img(item,lazy){const el=document.createElement('img');el.src='icons/'+encodeURIComponent(item.file)+'?v='+assetVersion;el.alt=item.label;if(lazy)el.loading='lazy';el.decoding='async';el.onerror=()=>{el.style.opacity='.25';el.title='Could not load this SVG'};return el}
+function img(item,lazy){const el=document.createElement('img');el.src='icons/'+item.file.split('/').map(encodeURIComponent).join('/')+'?v='+assetVersion;el.alt=item.label;if(lazy)el.loading='lazy';el.decoding='async';el.onerror=()=>{el.style.opacity='.25';el.title='Could not load this SVG'};return el}
 
 function syncControls(){
   for(const seg of $$('.seg'))for(const b of seg.querySelectorAll('button'))b.setAttribute('aria-pressed',String(b.dataset.value===state[seg.dataset.key]));
@@ -259,6 +294,14 @@ function syncControls(){
   document.body.dataset.bg=state.bg;
   for(const b of $$('.bg-toggle')){const t=state.bg==='light'?'Switch to dark backdrop':'Switch to light backdrop';b.innerHTML=state.bg==='light'?ICON_MOON:ICON_SUN;b.title=t;b.setAttribute('aria-label',t)}
 }
+function refreshOut(){
+  const has=selected.length>0;
+  const sh=$('#share');
+  sh.value=state.out==='link'?out.link:has?out[state.out]:'';
+  sh.placeholder=has?'':'Select icons to generate this';
+  $('#copy').disabled=!has;$('#copy-dock').disabled=!has;
+  $('#hint').textContent=!has?'Choose icons first to create a link with your selection.':state.out==='link'?'The link saves your selected icons and display settings.':state.out==='md'?'Markdown image that displays the selected icons in a README.':'Centered image HTML for a GitHub README.';
+}
 function updateUrl(){
   const url=new URL(location.href);const query=[];
   if(selected.length)query.push('icons='+selected.map(x=>x.key).join(','));
@@ -266,15 +309,12 @@ function updateUrl(){
   if(state.layout==='custom')query.push('row='+columns.value);
   if(state.bg!=='light')query.push('bg='+state.bg);
   url.search=query.join('&');
-  history.replaceState(null,'',url);$('#share').value=url.toString();
-  $$('.copy-btn').forEach(button=>{button.disabled=!selected.length});
-  $('#hint').textContent=selected.length?'The link saves your selected icons and display settings.':'Choose icons first to create a link with your selection.';
-  const markdownUrl=url.origin+'/image'+url.search;
-  $('#embed').value=selected.length?'![My Skills]('+markdownUrl+')':'';
-  $('#copy-embed').disabled=!selected.length;
-  const htmlUrl=markdownUrl.replace(/&/g,'&amp;');
-  $('#embed-html').value=selected.length?`<p align="center">\n  <img src="${htmlUrl}" alt="My Skills">\n</p>`:'';
-  $('#copy-html').disabled=!selected.length;
+  history.replaceState(null,'',url);
+  const mdUrl=url.origin+'/image'+url.search;
+  out.link=url.toString();
+  out.md='![My Skills]('+mdUrl+')';
+  out.html=`<p align="center">\n  <img src="${mdUrl.replace(/&/g,'&amp;')}" alt="My Skills">\n</p>`;
+  refreshOut();
 }
 function perRowCount(){return state.layout==='single'?Math.max(selected.length,1):clampN(Number(columns.value)||5,1,80)}
 function metaText(s,mode){
@@ -314,8 +354,9 @@ function refit(){
   if(!lightbox.hidden){const s2=applyView(lbBox,lbInner,bigPreview,state.lbview);$('#lb-meta').textContent=metaText(s2,state.lbview)}
 }
 function renderPreview(){
-  const label=`${selected.length} ${selected.length===1?'icon':'icons'}`;
-  $('#total').textContent=label;$('#lb-count').textContent=label;
+  const n=selected.length;
+  $('#total').textContent=n;
+  $('#lb-count').textContent=`${n} ${n===1?'icon':'icons'}`;
   layoutInto(preview);
   if(!lightbox.hidden)layoutInto(bigPreview);
   refit();
@@ -339,16 +380,29 @@ function renderSelected(){
   renderPreview();renderStrip();updateUrl();
 }
 function setTile(b,item){const active=selected.some(x=>x.key===item.key);b.setAttribute('aria-pressed',String(active));b.setAttribute('aria-label',`${active?'Remove':'Add'} ${item.label}`)}
-function renderQuick(){
-  const box=$('#quick');box.replaceChildren();
-  for(const name of['vscode','vs','xcode','github','git','python','react','docker','figma','spotify','typescript','nodejs']){
-    const item=resolve(name);if(!item)continue;
-    const b=document.createElement('button');b.type='button';b.textContent=item.label;b.setAttribute('aria-pressed',String(selected.some(x=>x.key===item.key)));b.onclick=()=>toggle(item);box.append(b);
-  }
+
+/* category filters (search matches name OR category, so "database" lists the whole databases group) */
+function renderCats(q){
+  const box=$('#cats');box.replaceChildren();
+  const all=[...new Set(choices.map(x=>x.category))].sort((a,b)=>catRank(a)-catRank(b)||collator.compare(a,b));
+  if(all.length<2){box.hidden=true;return}
+  box.hidden=false;
+  const counts=new Map();let total=0;
+  for(const x of choices)if(!q||x.hay.includes(q)){counts.set(x.category,(counts.get(x.category)||0)+1);total++}
+  const mk=(value,label,n)=>{
+    const b=document.createElement('button');b.type='button';b.setAttribute('aria-pressed',String(state.cat===value));
+    b.append(document.createTextNode(label));
+    const c=document.createElement('span');c.className='n';c.textContent=n;b.append(c);
+    b.onclick=()=>{state.cat=value;renderGrid()};
+    return b;
+  };
+  box.append(mk('all','All',total));
+  for(const c of all)box.append(mk(c,catLabel(c),counts.get(c)||0));
 }
+
 const CHUNK=240;let gridObserver=null;
 function makeTile(item){
-  const b=document.createElement('button');b.type='button';b.className='option';b.title=item.label;
+  const b=document.createElement('button');b.type='button';b.className='option';b.title=item.label+' · '+catLabel(item.category);
   const check=document.createElement('span');check.className='check';check.innerHTML='<svg viewBox="0 0 12 12" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m2.5 6.2 2.4 2.4 4.6-5"/></svg>';
   b.append(check,img(item,true));
   const label=document.createElement('span');label.textContent=item.label;b.append(label);
@@ -356,11 +410,14 @@ function makeTile(item){
   return b;
 }
 function renderGrid(){
-  const q=slug(search.value),matches=q?choices.filter(x=>x.hay.includes(q)):choices;
+  const q=slug(search.value);
+  renderCats(q);
+  const matches=choices.filter(x=>(state.cat==='all'||x.category===state.cat)&&(!q||x.hay.includes(q)));
+  $('#grid-title').textContent=state.cat==='all'?'Icon library':catLabel(state.cat);
   $('#resultcount').textContent=`${matches.length.toLocaleString('en')} ${matches.length===1?'icon':'icons'}`;
   if(gridObserver){gridObserver.disconnect();gridObserver=null}
   grid.replaceChildren();tiles.clear();
-  if(!matches.length){const e=document.createElement('div');e.className='noresults';e.textContent='No icons match that search. Try a shorter name.';grid.append(e);return}
+  if(!matches.length){const e=document.createElement('div');e.className='noresults';e.textContent=choices.length?'No icons match that search. Try a shorter name or another category.':'Could not load icons.json.';grid.append(e);return}
   let shown=0;
   const sentinel=document.createElement('div');sentinel.className='sentinel';sentinel.setAttribute('aria-hidden','true');
   grid.append(sentinel);
@@ -384,7 +441,7 @@ function renderGrid(){
 function toggle(item){
   const i=selected.findIndex(x=>x.key===item.key);
   if(i<0)selected.push(item);else selected.splice(i,1);
-  renderSelected();renderQuick();
+  renderSelected();
   const t=tiles.get(item.key);if(t)setTile(t,item);
 }
 function setSheet(open){
@@ -410,30 +467,17 @@ spacing.oninput=()=>{syncControls();renderPreview();updateUrl()};
 for(const seg of $$('.seg'))seg.addEventListener('click',e=>{
   const b=e.target.closest('button');if(!b)return;
   state[seg.dataset.key]=b.dataset.value;syncControls();
-  if(seg.dataset.key!=='bg'){renderPreview();updateUrl()}
-  else updateUrl();
+  renderPreview();updateUrl();
 });
-$('#clear').onclick=()=>{selected.splice(0);renderSelected();renderQuick();for(const[k,b]of tiles)setTile(b,byKey.get(k))};
-$('#copy-embed').onclick=async()=>{
-  if(!$('#embed').value)return;
-  try{await navigator.clipboard.writeText($('#embed').value)}catch{$('#embed').focus();$('#embed').select();document.execCommand('copy')}
-  const hint=$('#embed-hint');hint.textContent='README image Markdown copied.';
-  setTimeout(()=>{hint.textContent='Copies a Markdown image that displays the selected icons.'},1700);
-};
-$('#copy-html').onclick=async()=>{
-  if(!$('#embed-html').value)return;
-  try{await navigator.clipboard.writeText($('#embed-html').value)}catch{$('#embed-html').focus();$('#embed-html').select();document.execCommand('copy')}
-  const hint=$('#html-hint');hint.textContent='Centered README HTML copied.';
-  setTimeout(()=>{hint.textContent='Use this to center the image in a GitHub README.'},1700);
-};
-for(const btn of $$('.copy-btn'))btn.onclick=async()=>{
-  if(!selected.length)return;
-  const h=$('#hint');
-  try{await navigator.clipboard.writeText($('#share').value)}catch{$('#share').focus();$('#share').select();document.execCommand('copy')}
-  for(const b of $$('.copy-btn'))b.textContent='Copied';
-  h.textContent='Link copied. Share it anywhere.';
-  setTimeout(()=>{for(const b of $$('.copy-btn'))b.textContent='Copy link';h.textContent=selected.length?'The link saves your selected icons and display settings.':'Choose icons first to create a link with your selection.'},1700);
-};
+$('#clear').onclick=()=>{selected.splice(0);renderSelected();for(const[k,b]of tiles)setTile(b,byKey.get(k))};
+async function copyValue(val,btn,msg){
+  if(!val)return;
+  try{await navigator.clipboard.writeText(val)}catch{const s=$('#share');s.value=val;s.focus();s.select();document.execCommand('copy')}
+  const old=btn.textContent;btn.textContent='Copied';$('#hint').textContent=msg;
+  setTimeout(()=>{btn.textContent=old;refreshOut()},1700);
+}
+$('#copy').onclick=()=>copyValue($('#share').value,$('#copy'),state.out==='link'?'Link copied. Share it anywhere.':'Copied to clipboard.');
+$('#copy-dock').onclick=()=>copyValue(out.link,$('#copy-dock'),'Link copied. Share it anywhere.');
 $('#customize').onclick=()=>setSheet(true);
 $('#sheet-close').onclick=()=>setSheet(false);
 scrim.onclick=()=>setSheet(false);
@@ -465,7 +509,7 @@ function applyIconList(){
   const legacyTheme=['dark','light'].includes(params.get('theme'))?params.get('theme'):null;
   for(const name of(params.get('icons')||'').split(',').filter(Boolean)){const item=resolve(name,legacyTheme);if(item&&!selected.some(x=>x.key===item.key))selected.push(item)}
   $('#filecount').textContent=iconFiles.length.toLocaleString('en');
-  renderQuick();renderGrid();renderSelected();
+  renderGrid();renderSelected();
 }
 async function loadIcons(){
   $('#resultcount').textContent='Loading icons…';
@@ -475,9 +519,9 @@ async function loadIcons(){
     clearTimeout(timer);
     if(res.ok){
       const data=await res.json();
-      if(Array.isArray(data)){const list=data.filter(f=>typeof f==='string'&&/\.svg$/i.test(f));if(list.length)iconFiles=list}
+      if(Array.isArray(data))iconFiles=data.filter(f=>typeof f==='string'?/\.svg$/i.test(f):f&&typeof f.file==='string'&&/\.svg$/i.test(f.file));
     }
-  }catch(err){/* no icons.json (local file, offline): use the built-in list */}
+  }catch(err){/* icons.json missing or offline */}
   applyIconList();
 }
 syncControls();loadIcons();
