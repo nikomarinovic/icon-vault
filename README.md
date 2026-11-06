@@ -47,26 +47,25 @@ Each example shows the Markdown to paste into a README, followed by the rendered
 ### Inline row
 
 ```markdown
-![My Skills](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=center)
+![My Skills](https://icon-vault.netlify.app/image?icons=solidjs,tailwind,react,sequelize&size=64&gap=16&align=center)
 ```
 
-![My Skills](https://icon-vault.netlify.app/image?icons=word,excel,powerpoint,onenote,outlook&size=64&gap=16&align=center)
+![My Skills](https://icon-vault.netlify.app/image?icons=solidjs,tailwind,react,sequelize&size=64&gap=16&align=center)
 
 ### Dark variants
 
 ```markdown
-![My Skills](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=center)
+![My Skills](https://icon-vault.netlify.app/image?icons=solidjsdark,tailwinddark,reactdark,sequelizedark&size=64&gap=16&align=center)
 ```
 
-![My Skills](https://icon-vault.netlify.app/image?icons=worddark,exceldark,powerpointdark,onenotedark,outlookdark&size=64&gap=16&align=center)
+![My Skills](https://icon-vault.netlify.app/image?icons=solidjsdark,tailwinddark,reactdark,sequelizedark&size=64&gap=16&align=center)
 
 ### Grid, 4 per row
 
 ```markdown
-![My Skills](https://icon-vault.netlify.app/image?icons=airtable,akka,azurelogo,figma,firebase,cakephp,dynamodb,elixir&size=64&gap=16&align=center&row=4)
+![My Skills](https://icon-vault.netlify.app/image?icons=airtable,akka,microsoftazurelogo,figma,googlefirebase,cakephp,amazondynamodb,elixir&size=64&gap=16&align=center&row=4)
 ```
-
-![My Skills](https://icon-vault.netlify.app/image?icons=airtable,akka,azurelogo,figma,firebase,cakephp,dynamodb,elixir&size=64&gap=16&align=center&row=4)
+![My Skills](https://icon-vault.netlify.app/image?icons=airtable,akka,microsoftazurelogo,figma,googlefirebase,cakephp,amazondynamodb,elixir&size=64&gap=16&align=center&row=4)
 
 ### Developer tools
 
