@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#000000"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-76.8" y="-76.8" width="153.6" height="153.6" viewBox="0 0 512 512"><title xmlns="http://www.w3.org/2000/svg" fill="#ffffff">x</title><path xmlns="http://www.w3.org/2000/svg" d="M304.7 216.8L495.2 0h-45.1L284.6 188.2L152.6 0H.2l199.7 284.7L.2 512h45.1L220 313.2L359.4 512h152.3M61.6 33.3h69.3l319.1 447h-69.3" fill="#ffffff"/></svg></g>
+  
+</svg>

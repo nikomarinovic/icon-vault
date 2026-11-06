@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-99.84" y="-99.84" width="199.68" height="199.68" viewBox="0 0 898 217"><title xmlns="http://www.w3.org/2000/svg">pizza-hut</title><clipPath xmlns="http://www.w3.org/2000/svg" id="SVGq7acidrh"><path d="M0 0h897.426v217H0z"/></clipPath><g xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"><path fill="none" d="M0 0h897.426v217H0z"/><g clip-path="url(#SVGq7acidrh)"><path fill="#e91b23" fill-rule="nonzero" d="M882.212 217H12.232c-13.74 0-17.02-19.17-4.07-23.74l236.2-83.34c2.61-.92 4.81-2.71 6.23-5.08l55.19-91.76A26.98 26.98 0 0 1 328.912 0h322.54c11.53 0 21.4 8.28 23.41 19.63l16.27 83.39a12.1 12.1 0 0 0 7.39 8.93l189.35 75.76c15.52 6.23 11.06 29.29-5.66 29.29"/></g></g></svg></g>
+  
+</svg>
