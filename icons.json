@@ -2300,30 +2300,6 @@
     "category": "hardware"
   },
   {
-    "file": "hardware/HDMI dark.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/HDMI-Gray dark.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/HDMI-Gray.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/HDMI-Red dark.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/HDMI-Red.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/HDMI.svg",
-    "category": "hardware"
-  },
-  {
     "file": "hardware/hp.svg",
     "category": "hardware"
   },
@@ -2396,14 +2372,6 @@
     "category": "hardware"
   },
   {
-    "file": "hardware/Powerstrip dark.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/Powerstrip.svg",
-    "category": "hardware"
-  },
-  {
     "file": "hardware/RaspberryPi dark.svg",
     "category": "hardware"
   },
@@ -2449,30 +2417,6 @@
   },
   {
     "file": "hardware/Sony.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/USB dark.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/USB-Green dark.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/USB-Green.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/USB.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/USBA dark.svg",
-    "category": "hardware"
-  },
-  {
-    "file": "hardware/USBA.svg",
     "category": "hardware"
   },
   {
