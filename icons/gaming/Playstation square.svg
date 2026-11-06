@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-99.84" y="-99.84" width="199.68" height="199.68" viewBox="0 0 24 24"><title xmlns="http://www.w3.org/2000/svg">playstation-square</title><g xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#C56BB1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M12 21a9 9 0 0 0 9-9a9 9 0 0 0-9-9a9 9 0 0 0-9 9a9 9 0 0 0 9 9" stroke="#C56BB1"/><path d="M8 9a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1z" stroke="#C56BB1"/></g></svg></g>
+  
+</svg>

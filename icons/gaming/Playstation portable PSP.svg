@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-92.16" y="-92.16" width="184.32" height="184.32" viewBox="0 0 24 24"><title xmlns="http://www.w3.org/2000/svg">playstation-portable</title><path xmlns="http://www.w3.org/2000/svg" fill="#003791" d="M0 9.93v.296h7.182v1.626H.001v2.217h.295v-1.921h7.182V9.93zm11.29 0v3.844H7.478v.296h4.124v-3.844h3.813V9.93zm5.233 0v.296h7.182v1.626h-7.182v2.217h.296v-1.921H24V9.93z"/></svg></g>
+  
+</svg>
