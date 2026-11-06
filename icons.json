@@ -108,6 +108,10 @@
     "category": "ai"
   },
   {
+    "file": "amazon/amazon alexa.svg",
+    "category": "amazon"
+  },
+  {
     "file": "amazon/amazon aws dark.svg",
     "category": "amazon"
   },
@@ -141,6 +145,18 @@
   },
   {
     "file": "amazon/amazon dynamodb.svg",
+    "category": "amazon"
+  },
+  {
+    "file": "amazon/amazon music.svg",
+    "category": "amazon"
+  },
+  {
+    "file": "amazon/amazon prime video.svg",
+    "category": "amazon"
+  },
+  {
+    "file": "amazon/amazon prime.svg",
     "category": "amazon"
   },
   {
@@ -210,6 +226,14 @@
   {
     "file": "apple/safari.svg",
     "category": "apple"
+  },
+  {
+    "file": "automotive/android auto dark.svg",
+    "category": "automotive"
+  },
+  {
+    "file": "automotive/android auto.svg",
+    "category": "automotive"
   },
   {
     "file": "automotive/BBS dark.svg",
@@ -324,11 +348,19 @@
     "category": "automotive"
   },
   {
+    "file": "automotive/mini.svg",
+    "category": "automotive"
+  },
+  {
     "file": "automotive/Mitsubishi.svg",
     "category": "automotive"
   },
   {
     "file": "automotive/Petronas.svg",
+    "category": "automotive"
+  },
+  {
+    "file": "automotive/renault.svg",
     "category": "automotive"
   },
   {
@@ -345,6 +377,14 @@
   },
   {
     "file": "automotive/Tesla.svg",
+    "category": "automotive"
+  },
+  {
+    "file": "automotive/volkswagen.svg",
+    "category": "automotive"
+  },
+  {
+    "file": "automotive/volvo.svg",
     "category": "automotive"
   },
   {
@@ -369,6 +409,14 @@
   },
   {
     "file": "brands/Chanel.svg",
+    "category": "brands"
+  },
+  {
+    "file": "brands/cnbc dark.svg",
+    "category": "brands"
+  },
+  {
+    "file": "brands/cnbc.svg",
     "category": "brands"
   },
   {
@@ -460,11 +508,11 @@
     "category": "brands"
   },
   {
-    "file": "brands/NorthFace dark.svg",
+    "file": "brands/North Face dark.svg",
     "category": "brands"
   },
   {
-    "file": "brands/NorthFace.svg",
+    "file": "brands/North Face.svg",
     "category": "brands"
   },
   {
@@ -480,11 +528,15 @@
     "category": "brands"
   },
   {
-    "file": "brands/SpaceX dark.svg",
+    "file": "brands/Red Bull Special dark.svg",
     "category": "brands"
   },
   {
-    "file": "brands/SpaceX-Logo Light.svg",
+    "file": "brands/Red Bull Special.svg",
+    "category": "brands"
+  },
+  {
+    "file": "brands/SpaceX dark.svg",
     "category": "brands"
   },
   {
@@ -529,6 +581,10 @@
   },
   {
     "file": "cloud/Akka.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/amnezia.svg",
     "category": "cloud"
   },
   {
@@ -588,6 +644,10 @@
     "category": "cloud"
   },
   {
+    "file": "cloud/dockflare.svg",
+    "category": "cloud"
+  },
+  {
     "file": "cloud/GithubActions dark.svg",
     "category": "cloud"
   },
@@ -632,6 +692,10 @@
     "category": "cloud"
   },
   {
+    "file": "cloud/linuxserver io.svg",
+    "category": "cloud"
+  },
+  {
     "file": "cloud/microsoft azure dark.svg",
     "category": "cloud"
   },
@@ -645,6 +709,10 @@
   },
   {
     "file": "cloud/microsoft azure.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/mullvad vpn.svg",
     "category": "cloud"
   },
   {
@@ -692,6 +760,10 @@
     "category": "cloud"
   },
   {
+    "file": "cloud/pangolin.svg",
+    "category": "cloud"
+  },
+  {
     "file": "cloud/Prometheus.svg",
     "category": "cloud"
   },
@@ -724,6 +796,10 @@
     "category": "cloud"
   },
   {
+    "file": "cloud/vmware.svg",
+    "category": "cloud"
+  },
+  {
     "file": "cloud/waypoint dark.svg",
     "category": "cloud"
   },
@@ -737,6 +813,14 @@
   },
   {
     "file": "cloud/Workers.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/xbackbone.svg",
+    "category": "cloud"
+  },
+  {
+    "file": "cloud/xbaxkbone dark.svg",
     "category": "cloud"
   },
   {
@@ -756,11 +840,31 @@
     "category": "companies"
   },
   {
+    "file": "companies/crowdstrike.svg",
+    "category": "companies"
+  },
+  {
     "file": "companies/IBM dark.svg",
     "category": "companies"
   },
   {
     "file": "companies/IBM.svg",
+    "category": "companies"
+  },
+  {
+    "file": "companies/mint mobile dark.svg",
+    "category": "companies"
+  },
+  {
+    "file": "companies/mint mobile.svg",
+    "category": "companies"
+  },
+  {
+    "file": "companies/t mobile dark.svg",
+    "category": "companies"
+  },
+  {
+    "file": "companies/t mobile.svg",
     "category": "companies"
   },
   {
@@ -908,6 +1012,10 @@
     "category": "design"
   },
   {
+    "file": "design/gimp.svg",
+    "category": "design"
+  },
+  {
     "file": "design/Illustrator.svg",
     "category": "design"
   },
@@ -964,6 +1072,14 @@
     "category": "devtools"
   },
   {
+    "file": "devtools/apache dark.svg",
+    "category": "devtools"
+  },
+  {
+    "file": "devtools/apache.svg",
+    "category": "devtools"
+  },
+  {
     "file": "devtools/Atom.svg",
     "category": "devtools"
   },
@@ -977,6 +1093,10 @@
   },
   {
     "file": "devtools/BitBucket.svg",
+    "category": "devtools"
+  },
+  {
+    "file": "devtools/boson.svg",
     "category": "devtools"
   },
   {
@@ -1001,6 +1121,14 @@
   },
   {
     "file": "devtools/CodePen.svg",
+    "category": "devtools"
+  },
+  {
+    "file": "devtools/crow ci.svg",
+    "category": "devtools"
+  },
+  {
+    "file": "devtools/crowbarr.svg",
     "category": "devtools"
   },
   {
@@ -1044,6 +1172,10 @@
     "category": "devtools"
   },
   {
+    "file": "devtools/gitea.svg",
+    "category": "devtools"
+  },
+  {
     "file": "devtools/github dark.svg",
     "category": "devtools"
   },
@@ -1057,6 +1189,10 @@
   },
   {
     "file": "devtools/gitlab.svg",
+    "category": "devtools"
+  },
+  {
+    "file": "devtools/gomft.svg",
     "category": "devtools"
   },
   {
@@ -1109,6 +1245,10 @@
   },
   {
     "file": "devtools/Jest.svg",
+    "category": "devtools"
+  },
+  {
+    "file": "devtools/komodo cd.svg",
     "category": "devtools"
   },
   {
@@ -1220,6 +1360,10 @@
     "category": "devtools"
   },
   {
+    "file": "devtools/trac.svg",
+    "category": "devtools"
+  },
+  {
     "file": "devtools/VIM dark.svg",
     "category": "devtools"
   },
@@ -1292,6 +1436,10 @@
     "category": "devtools"
   },
   {
+    "file": "ecommerce/alibaba.svg",
+    "category": "ecommerce"
+  },
+  {
     "file": "ecommerce/aliexpress wordmark.svg",
     "category": "ecommerce"
   },
@@ -1304,7 +1452,27 @@
     "category": "ecommerce"
   },
   {
+    "file": "ecommerce/ebay logo dark.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/ebay logo.svg",
+    "category": "ecommerce"
+  },
+  {
     "file": "ecommerce/ebay.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/home depot.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/komplett dark.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/komplett.svg",
     "category": "ecommerce"
   },
   {
@@ -1314,6 +1482,18 @@
   {
     "file": "ecommerce/Shopify.svg",
     "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/target.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "ecommerce/Walmart logo.svg",
+    "category": "ecommerce"
+  },
+  {
+    "file": "finance/american express.svg",
+    "category": "finance"
   },
   {
     "file": "finance/Bitcoin dark.svg",
@@ -1328,6 +1508,10 @@
     "category": "finance"
   },
   {
+    "file": "finance/buy me a coffee.svg",
+    "category": "finance"
+  },
+  {
     "file": "finance/Cardano dark.svg",
     "category": "finance"
   },
@@ -1337,6 +1521,14 @@
   },
   {
     "file": "finance/crypto.svg",
+    "category": "finance"
+  },
+  {
+    "file": "finance/diners logo.svg",
+    "category": "finance"
+  },
+  {
+    "file": "finance/diners.svg",
     "category": "finance"
   },
   {
@@ -1373,6 +1565,14 @@
   },
   {
     "file": "finance/PayPal.svg",
+    "category": "finance"
+  },
+  {
+    "file": "finance/pbz.svg",
+    "category": "finance"
+  },
+  {
+    "file": "finance/samsung pay.svg",
     "category": "finance"
   },
   {
@@ -1417,6 +1617,14 @@
   },
   {
     "file": "food/CoffeeBean.svg",
+    "category": "food"
+  },
+  {
+    "file": "food/dominos pizza logo.svg",
+    "category": "food"
+  },
+  {
+    "file": "food/dominos pizza.svg",
     "category": "food"
   },
   {
@@ -1496,6 +1704,10 @@
     "category": "food"
   },
   {
+    "file": "food/pizza hut.svg",
+    "category": "food"
+  },
+  {
     "file": "food/RedBull dark.svg",
     "category": "food"
   },
@@ -1512,6 +1724,14 @@
     "category": "food"
   },
   {
+    "file": "food/taco bell.svg",
+    "category": "food"
+  },
+  {
+    "file": "food/wendys.svg",
+    "category": "food"
+  },
+  {
     "file": "frameworks/Actix dark.svg",
     "category": "frameworks"
   },
@@ -1521,6 +1741,10 @@
   },
   {
     "file": "frameworks/Adonis.svg",
+    "category": "frameworks"
+  },
+  {
+    "file": "frameworks/alpine.svg",
     "category": "frameworks"
   },
   {
@@ -1545,6 +1769,14 @@
   },
   {
     "file": "frameworks/Angular.svg",
+    "category": "frameworks"
+  },
+  {
+    "file": "frameworks/anycable dark.svg",
+    "category": "frameworks"
+  },
+  {
+    "file": "frameworks/anycable.svg",
     "category": "frameworks"
   },
   {
@@ -1956,6 +2188,14 @@
     "category": "gaming"
   },
   {
+    "file": "gaming/EA dark.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/EA.svg",
+    "category": "gaming"
+  },
+  {
     "file": "gaming/Epicgames dark.svg",
     "category": "gaming"
   },
@@ -2008,7 +2248,35 @@
     "category": "gaming"
   },
   {
+    "file": "gaming/nintendo switch 2.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/nintendo switch.svg",
+    "category": "gaming"
+  },
+  {
     "file": "gaming/Nintendo.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation 2.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation 3.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation 4.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation 5.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation circle.svg",
     "category": "gaming"
   },
   {
@@ -2016,7 +2284,43 @@
     "category": "gaming"
   },
   {
+    "file": "gaming/Playstation family.svg",
+    "category": "gaming"
+  },
+  {
     "file": "gaming/Playstation light.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation original grey.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation original.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation pixel.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation portable PSP.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation square.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation triangle.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation vita.svg",
+    "category": "gaming"
+  },
+  {
+    "file": "gaming/Playstation x.svg",
     "category": "gaming"
   },
   {
@@ -2028,11 +2332,11 @@
     "category": "gaming"
   },
   {
-    "file": "gaming/Steam dark.svg",
+    "file": "gaming/steam deck.svg",
     "category": "gaming"
   },
   {
-    "file": "gaming/Steam.svg",
+    "file": "gaming/steam.svg",
     "category": "gaming"
   },
   {
@@ -2104,11 +2408,19 @@
     "category": "google"
   },
   {
+    "file": "google/google chrome canary.svg",
+    "category": "google"
+  },
+  {
     "file": "google/google chrome dark.svg",
     "category": "google"
   },
   {
     "file": "google/google chrome.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google chromium.svg",
     "category": "google"
   },
   {
@@ -2240,6 +2552,14 @@
     "category": "google"
   },
   {
+    "file": "google/google translate dark.svg",
+    "category": "google"
+  },
+  {
+    "file": "google/google translate.svg",
+    "category": "google"
+  },
+  {
     "file": "google/google wordmark dark.svg",
     "category": "google"
   },
@@ -2268,6 +2588,10 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/anker.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/arduino dark.svg",
     "category": "hardware"
   },
@@ -2292,6 +2616,10 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/corsair.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/DELL blue.svg",
     "category": "hardware"
   },
@@ -2304,6 +2632,10 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/hyperx.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/JBL black.svg",
     "category": "hardware"
   },
@@ -2313,6 +2645,10 @@
   },
   {
     "file": "hardware/JBL.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/kingston.svg",
     "category": "hardware"
   },
   {
@@ -2352,6 +2688,14 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/Nikon white.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/Nikon.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/Nokia dark.svg",
     "category": "hardware"
   },
@@ -2380,6 +2724,10 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/razer dark.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/Razer.svg",
     "category": "hardware"
   },
@@ -2400,15 +2748,27 @@
     "category": "hardware"
   },
   {
+    "file": "hardware/Samsung 2.svg",
+    "category": "hardware"
+  },
+  {
     "file": "hardware/Samsung dark.svg",
     "category": "hardware"
   },
   {
-    "file": "hardware/Samsung-Classic.svg",
+    "file": "hardware/Samsung.svg",
     "category": "hardware"
   },
   {
-    "file": "hardware/Samsung.svg",
+    "file": "hardware/sandisk.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/Sony blue.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/sony bravia.svg",
     "category": "hardware"
   },
   {
@@ -2417,6 +2777,18 @@
   },
   {
     "file": "hardware/Sony.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/tp link dark.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/tp link.svg",
+    "category": "hardware"
+  },
+  {
+    "file": "hardware/xiaomi.svg",
     "category": "hardware"
   },
   {
@@ -2480,6 +2852,46 @@
     "category": "microsoft"
   },
   {
+    "file": "microsoft/microsoft dynamics 365 business central dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 business central.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 commerce dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 commerce.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 contact center dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 contact center.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 customer service dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 customer service.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 customer voice dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 customer voice.svg",
+    "category": "microsoft"
+  },
+  {
     "file": "microsoft/microsoft dynamics 365 field service dark.svg",
     "category": "microsoft"
   },
@@ -2496,11 +2908,43 @@
     "category": "microsoft"
   },
   {
+    "file": "microsoft/microsoft dynamics 365 human resources dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 human resources.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 intelligent order management dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 intelligent order management.svg",
+    "category": "microsoft"
+  },
+  {
     "file": "microsoft/microsoft dynamics 365 sales dark.svg",
     "category": "microsoft"
   },
   {
+    "file": "microsoft/microsoft dynamics 365 sales insights dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 sales insights.svg",
+    "category": "microsoft"
+  },
+  {
     "file": "microsoft/microsoft dynamics 365 sales.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 supply chain management dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft dynamics 365 supply chain management.svg",
     "category": "microsoft"
   },
   {
@@ -2528,6 +2972,14 @@
     "category": "microsoft"
   },
   {
+    "file": "microsoft/microsoft entra id dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft entra id.svg",
+    "category": "microsoft"
+  },
+  {
     "file": "microsoft/microsoft excel dark.svg",
     "category": "microsoft"
   },
@@ -2537,6 +2989,14 @@
   },
   {
     "file": "microsoft/microsoft fabric dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data engineering dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data engineering.svg",
     "category": "microsoft"
   },
   {
@@ -2553,6 +3013,46 @@
   },
   {
     "file": "microsoft/microsoft fabric data science.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data warehouse dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric data warehouse.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric databases dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric databases.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric graph intelligence dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric graph intelligence.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric industry solutions dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric industry solutions.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric real time intelligence dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft fabric real time intelligence.svg",
     "category": "microsoft"
   },
   {
@@ -2676,6 +3176,22 @@
     "category": "microsoft"
   },
   {
+    "file": "microsoft/microsoft viva connections dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft viva connections.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft viva insights dark.svg",
+    "category": "microsoft"
+  },
+  {
+    "file": "microsoft/microsoft viva insights.svg",
+    "category": "microsoft"
+  },
+  {
     "file": "microsoft/microsoft viva pulse dark.svg",
     "category": "microsoft"
   },
@@ -2702,6 +3218,14 @@
   {
     "file": "microsoft/microsoft.svg",
     "category": "microsoft"
+  },
+  {
+    "file": "os/almalinux.svg",
+    "category": "os"
+  },
+  {
+    "file": "os/alpine linux.svg",
+    "category": "os"
   },
   {
     "file": "os/arch linux dark.svg",
@@ -2760,6 +3284,10 @@
     "category": "os"
   },
   {
+    "file": "os/msdos.svg",
+    "category": "os"
+  },
+  {
     "file": "os/Nix dark.svg",
     "category": "os"
   },
@@ -2773,6 +3301,10 @@
   },
   {
     "file": "os/redhat.svg",
+    "category": "os"
+  },
+  {
+    "file": "os/talos.svg",
     "category": "os"
   },
   {
@@ -2800,11 +3332,23 @@
     "category": "other"
   },
   {
+    "file": "other/x p ferd.svg",
+    "category": "other"
+  },
+  {
     "file": "productivity/Airtable dark.svg",
     "category": "productivity"
   },
   {
     "file": "productivity/Airtable.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/appflowy dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/appflowy.svg",
     "category": "productivity"
   },
   {
@@ -2828,11 +3372,151 @@
     "category": "productivity"
   },
   {
+    "file": "productivity/calibre web.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/credly.svg",
+    "category": "productivity"
+  },
+  {
     "file": "productivity/dropbox dark.svg",
     "category": "productivity"
   },
   {
     "file": "productivity/dropbox.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/glance.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/heyform dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/heyform.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/kener dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/kener.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite calendar dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite calendar.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite chat dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite chat.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite chk dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite chk.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite contacts dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite contacts.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite docs dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite docs.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite grids dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite grids.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite kdrive dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite kdrive.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite kmeet dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite kmeet.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite kpaste dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite kpaste.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite mail dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite mail.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite manager dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite manager.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite points dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite points.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite swisstransfer dark.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite swisstransfer.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/ksuite.svg",
+    "category": "productivity"
+  },
+  {
+    "file": "productivity/moodle.svg",
     "category": "productivity"
   },
   {
@@ -3240,6 +3924,14 @@
     "category": "social"
   },
   {
+    "file": "social/gotosocial dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/gotosocial.svg",
+    "category": "social"
+  },
+  {
     "file": "social/Instagram.svg",
     "category": "social"
   },
@@ -3328,6 +4020,14 @@
     "category": "social"
   },
   {
+    "file": "social/x dark.svg",
+    "category": "social"
+  },
+  {
+    "file": "social/x.svg",
+    "category": "social"
+  },
+  {
     "file": "social/Xing dark.svg",
     "category": "social"
   },
@@ -3360,6 +4060,42 @@
     "category": "sports"
   },
   {
+    "file": "sports/sky sports football.svg",
+    "category": "sports"
+  },
+  {
+    "file": "sports/sky sports formula 1.svg",
+    "category": "sports"
+  },
+  {
+    "file": "sports/sky sports main event.svg",
+    "category": "sports"
+  },
+  {
+    "file": "sports/sky sports news.svg",
+    "category": "sports"
+  },
+  {
+    "file": "sports/sky sports premier league.svg",
+    "category": "sports"
+  },
+  {
+    "file": "sports/sky sports.svg",
+    "category": "sports"
+  },
+  {
+    "file": "streaming/ace stream dark.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/ace stream.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/Disney plus.svg",
+    "category": "streaming"
+  },
+  {
     "file": "streaming/Netflix dark.svg",
     "category": "streaming"
   },
@@ -3376,7 +4112,27 @@
     "category": "streaming"
   },
   {
+    "file": "streaming/Red Bull TV.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/samsung bravia core.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/sony pictures core.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/soundcloud.svg",
+    "category": "streaming"
+  },
+  {
     "file": "streaming/spotify dark.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/spotify for creators.svg",
     "category": "streaming"
   },
   {
@@ -3384,11 +4140,31 @@
     "category": "streaming"
   },
   {
+    "file": "streaming/youtube shorts dark.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "streaming/youtube shorts.svg",
+    "category": "streaming"
+  },
+  {
+    "file": "travel/american airlines dark.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/american airlines.svg",
+    "category": "travel"
+  },
+  {
     "file": "travel/Booking dark.svg",
     "category": "travel"
   },
   {
     "file": "travel/Booking.svg",
+    "category": "travel"
+  },
+  {
+    "file": "travel/cairn.svg",
     "category": "travel"
   },
   {
@@ -3416,7 +4192,27 @@
     "category": "travel"
   },
   {
+    "file": "web/brave.svg",
+    "category": "web"
+  },
+  {
     "file": "web/drupal.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/duckduckgo dark.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/duckduckgo.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/globaleaks.svg",
+    "category": "web"
+  },
+  {
+    "file": "web/samsung browser.svg",
     "category": "web"
   },
   {

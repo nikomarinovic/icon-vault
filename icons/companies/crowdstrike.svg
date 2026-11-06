@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-76.8" y="-76.8" width="153.6" height="153.6" viewBox="0 0 512 512"><title xmlns="http://www.w3.org/2000/svg">crowdstrike</title><path xmlns="http://www.w3.org/2000/svg" fill="#fa0001" d="M503.2 512c-17.7-38.8-53-90-190.7-162.4c-63.6-35.3-171.3-88.3-268.4-190.7c8.9 37.1 54.8 118.3 249 218.9C346 406.1 437.8 434.3 503.2 512m-17.7-70.6c-15.9-47.7-44.1-107.7-181.8-196C236.6 201.3 137.7 144.8 8.8 0c8.8 38.8 49.4 139.5 256 270.1c67.1 47.7 155.4 75.9 220.7 171.3"/></svg></g>
+  
+</svg>

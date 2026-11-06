@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-76.8" y="-76.8" width="153.6" height="153.6" viewBox="0 0 512 512"><title xmlns="http://www.w3.org/2000/svg">t-mobile</title><path xmlns="http://www.w3.org/2000/svg" fill="#e20074" d="M368.6 337.9H471V235.5H368.6zM41 0v174.1h30.7V169c0-81.9 46.1-133.1 133.1-133.1h5.1v368.6c0 51.2-20.5 71.7-71.7 71.7h-15.4V512H389v-35.8h-15.4c-51.2 0-71.7-20.5-71.7-71.7V35.8h5.1c87 0 133.1 51.2 133.1 133.1v5.1H471V0zm102.4 337.9H41V235.5h102.4z"/></svg></g>
+  
+</svg>

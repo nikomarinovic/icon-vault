@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-76.8" y="-76.8" width="153.6" height="153.6" viewBox="0 0 512 512"><title xmlns="http://www.w3.org/2000/svg">electronic-arts</title><ellipse xmlns="http://www.w3.org/2000/svg" cx="265.5" cy="265" fill="#fff" fill-rule="evenodd" rx="201.5" ry="192"/><path xmlns="http://www.w3.org/2000/svg" fill="#ff4747" fill-rule="evenodd" d="m399.9 334.1l-22.4-35.7h-65.3l22.4-35.8h20.6l-24.9-39.8l-69.6 111.3H75.1l44.7-71.5H87l22.3-35.8h143.5l-22.3 35.8H162l-22.4 35.8h101.2l89.4-143.1L442 334.1zM154 155.3h147.2l-22.4 35.8H131.6zM256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0"/></svg></g>
+  
+</svg>

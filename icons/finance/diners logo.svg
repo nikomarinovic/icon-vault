@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-76.8" y="-76.8" width="153.6" height="153.6" viewBox="0 0 24 24"><title xmlns="http://www.w3.org/2000/svg">diners-club</title><path xmlns="http://www.w3.org/2000/svg" fill="#004c97" d="M16.506 11.982a6.03 6.03 0 0 0-3.866-5.618V17.6a6.025 6.025 0 0 0 3.866-5.618M8.33 17.598V6.365a6.03 6.03 0 0 0-3.863 5.617a6.03 6.03 0 0 0 3.863 5.616m2.156-15.113A9.497 9.497 0 0 0 .99 11.982a9.495 9.495 0 0 0 9.495 9.494a9.495 9.495 0 0 0 9.496-9.494a9.5 9.5 0 0 0-9.496-9.497Zm-.023 19.888C4.723 22.4 0 17.75 0 12.09C0 5.905 4.723 1.626 10.463 1.627h2.69C18.822 1.627 24 5.903 24 12.09c0 5.658-5.176 10.283-10.848 10.283"/></svg></g>
+  
+</svg>
