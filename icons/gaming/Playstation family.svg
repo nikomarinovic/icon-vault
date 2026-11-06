@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256" width="256" height="256">
+  <defs><clipPath id="bgc"><rect width="256" height="256" rx="51.2"/></clipPath></defs>
+  <rect width="256" height="256" rx="51.2" fill="#f5f5f5"/>
+  
+  <g opacity="1" transform="translate(128,128) rotate(0)"><svg x="-84.48" y="-84.48" width="168.96" height="168.96" viewBox="0 0 48 48"><title xmlns="http://www.w3.org/2000/svg" fill="#000000">playstation-family</title><rect xmlns="http://www.w3.org/2000/svg" width="15.5" height="15.5" x="5.5" y="5.5" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" rx="2" ry="2"/><path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m32.451 6.465l-6.532 11.742C25.223 19.46 26.13 21 27.561 21h13.065c1.433-.002 2.337-1.541 1.64-2.793l-6.53-11.742a1.88 1.88 0 0 0-3.284 0"/><circle xmlns="http://www.w3.org/2000/svg" cx="34.093" cy="34.093" r="8.407" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/><path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" d="m6.232 30.613l3.483 3.482l-3.483 3.483a2.5 2.5 0 0 0 3.536 3.535l3.482-3.482l3.482 3.482a2.5 2.5 0 0 0 3.536-3.535l-3.483-3.483l3.483-3.482a2.5 2.5 0 0 0-3.536-3.535L13.25 30.56l-3.482-3.482a2.5 2.5 0 0 0-3.536 3.535"/></svg></g>
+  
+</svg>
